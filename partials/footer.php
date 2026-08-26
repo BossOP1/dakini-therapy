@@ -1,9 +1,7 @@
 <?php $site = $site ?? require __DIR__ . '/../data/site.php'; ?>
-<footer class="relative z-10 bg-ink-900 text-paper-lighter/70">
-  <!-- solid green band: the first thing the reveal uncovers -->
-  <div aria-hidden="true" class="h-3 w-full bg-citron"></div>
 
-
+<!-- ═══ 1. MAIN SITE FOOTER (Scrolls with page at z-10) ═══ -->
+<footer data-main-footer class="relative z-10 bg-ink-900 text-paper-lighter/70 shadow-curtain">
   <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
 
     <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
@@ -77,8 +75,12 @@
   </div>
 </footer>
 
-<?php require __DIR__ . '/footer-reveal.php'; ?>
+<!-- ═══ 2. PINNED GREEN REVEAL SECTION (Final section revealed from under the footer) ═══ -->
+<div data-green-reveal class="fixed bottom-0 left-0 right-0 z-0 w-full">
+  <?php require __DIR__ . '/footer-reveal.php'; ?>
+</div>
+
 <?php require __DIR__ . '/sticky-cta.php'; ?>
-<script type="module" src="/assets/js/dist/site.js"></script>
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>

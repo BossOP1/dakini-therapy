@@ -1,5 +1,5 @@
 <?php $site = $site ?? require __DIR__ . '/../data/site.php'; ?>
-<header data-header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink text-paper-lighter transition-shadow duration-300">
+<header data-header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/20 text-paper-lighter backdrop-blur-md transition-all duration-300">
   <div class="mx-auto grid h-[76px] max-w-[1800px] grid-cols-[1fr_auto_1fr] items-center md:h-[88px]">
 
     <!-- ── LEFT: menu button, divider, inline nav ── -->
@@ -41,9 +41,9 @@
     <a href="/" class="flex h-full items-center justify-center px-6 lg:px-12 xl:px-16" aria-label="<?= htmlspecialchars($site['legal']) ?> — home">
       <picture>
         <source type="image/webp" srcset="/assets/img/logo-header-230.webp 1x, /assets/img/logo-header-460.webp 2x">
-        <img src="/assets/img/logo-header-460.png" width="460" height="107"
+        <img data-logo src="/assets/img/logo-header-460.png" width="460" height="107"
              alt="<?= htmlspecialchars($site['legal']) ?>" fetchpriority="high" decoding="async"
-             class="h-[38px] w-auto md:h-[52px]">
+             class="h-[38px] w-auto brightness-0 invert transition-all duration-300 md:h-[52px]">
       </picture>
     </a>
 

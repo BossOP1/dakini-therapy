@@ -62,5 +62,5 @@ $canonical = $site['base_url'] . $path;
   ], array_values($site['offices'])),
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?></script>
 </head>
-<body class="bg-paper-lighter font-sans text-ink antialiased">
+<body class="overflow-x-hidden bg-paper-lighter font-sans text-ink antialiased">
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-paper-lighter">Skip to content</a>

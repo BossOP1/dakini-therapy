@@ -13,198 +13,368 @@ $featured = array_slice($testimonials, 0, 6);
 $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
 ?>
 
-<main id="main" class="relative z-20 bg-paper-lighter">
+<main id="main" class="relative z-20 bg-paper-lighter shadow-curtain">
 
-  <!-- ═══ HERO — Bento ═══ -->
-  <section class="px-4 pb-16 pt-28 md:px-8 md:pb-20 md:pt-32 lg:px-12">
-    <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-5 md:grid-cols-2 lg:gap-7">
+  <!-- ═══ HERO — Open Cinematic Video ═══ -->
+  <section class="relative isolate flex min-h-[75vh] flex-col items-center justify-center overflow-hidden px-5 py-24 text-center sm:px-8 md:min-h-[82vh] md:py-32 lg:px-12">
 
-      <!-- Card 01 — the headline, over the arc -->
-      <article class="relative col-span-1 flex min-h-[26rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-sand-200 bg-paper-lighter p-8 shadow-soft md:min-h-[30rem]">
-
-        <header class="relative z-20 flex items-center justify-between text-sm">
-          <span class="flex items-center gap-2 font-semibold tracking-tight">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5 text-gold-700" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/></svg>
-            Dakini Therapy
-          </span>
-          <span class="text-[10px] uppercase tracking-[0.2em] text-sand-700">Tampa · St. Pete</span>
-        </header>
-
-        <div class="relative z-20 mt-auto">
-          <h1 data-reveal-words class="font-display text-3xl font-semibold leading-[1.08] tracking-tight md:text-4xl lg:text-5xl">
-            Cutting through confusion,<br>revealing <span class="text-gold-700">wisdom</span><br>and <span class="text-gold-700">compassion</span>.
-          </h1>
-          <p data-reveal-words class="mt-5 max-w-sm text-sm leading-relaxed text-sand-700">
-            Evidence-based psychotherapy woven with mindfulness practice, for adults navigating anxiety, grief, relationships and change.
-          </p>
-        </div>
-      </article>
-
-      <!-- Card 02 — the offices, on citron -->
-      <article class="relative col-span-1 flex min-h-[26rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-citron-600/30 bg-citron p-8 shadow-soft md:min-h-[30rem]">
-
-        <img src="/assets/img/logo-mark-alpha.png" width="424" height="424" loading="lazy" decoding="async" alt=""
-             aria-hidden="true" class="pointer-events-none absolute -bottom-16 -right-16 z-0 w-72 opacity-20 md:w-80">
-
-        <header class="relative z-20 flex items-center justify-between text-sm text-ink">
-          <span class="font-semibold tracking-tight">Two private offices</span>
-          <span class="text-[10px] uppercase tracking-[0.2em] text-ink/50">In person</span>
-        </header>
-
-        <div class="relative z-20 mt-auto text-ink">
-          <h2 data-reveal-words class="font-display text-3xl font-semibold leading-[1.08] tracking-tight md:text-4xl">
-            Calm rooms.<br>Real presence.
-          </h2>
-          <dl class="mt-7 grid gap-4 text-sm sm:grid-cols-2">
-            <?php foreach ($site['offices'] as $o): ?>
-              <div>
-                <dt class="font-semibold"><?= $o['area'] ?></dt>
-                <dd class="mt-1 text-ink/70"><?= $o['city'] ?>, <?= $o['region'] ?></dd>
-                <dd class="text-ink/50"><?= $o['days'] ?></dd>
-              </div>
-            <?php endforeach; ?>
-          </dl>
-        </div>
-      </article>
-
-      <!-- Card 03 — the call to action, on navy -->
-      <article class="relative col-span-1 flex min-h-[22rem] flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-ink p-8 text-paper-lighter shadow-soft md:col-span-2 md:min-h-[20rem] md:flex-row md:justify-between">
-
-        <header class="relative z-20 flex items-center justify-between gap-4 text-sm md:flex-col md:items-start md:justify-start">
-          <span class="flex items-center gap-2 font-semibold tracking-tight">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5 text-gold" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/></svg>
-            <?= htmlspecialchars($site['clinician']) ?>, <?= $site['credential'] ?>
-          </span>
-          <span class="text-[10px] uppercase tracking-[0.2em] text-paper-lighter/45">Licensed</span>
-        </header>
-
-        <div class="relative z-20 mt-auto w-full max-w-md md:mt-0 md:self-end md:text-right">
-          <h2 data-reveal-words class="font-display text-3xl font-semibold uppercase leading-[1.08] tracking-tight md:text-4xl">
-            Start with<br>a conversation.
-          </h2>
-          <p class="mt-4 text-sm leading-relaxed text-paper-lighter/70 md:ml-auto md:max-w-[16rem]">
-            A complimentary 15-minute call — no pressure, no commitment.
-          </p>
-          <div class="mt-7 flex flex-col gap-3 sm:flex-row md:justify-end">
-            <a href="<?= $site['phone_href'] ?>" data-motion="magnetic"
-               class="rounded-full bg-gold px-7 py-3.5 text-center text-sm font-semibold text-ink transition hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold-300">
-              Book a free consult
-            </a>
-            <a href="<?= $site['headway'] ?>" rel="noopener"
-               class="rounded-full border-2 border-white/20 px-7 py-3.5 text-center text-sm font-semibold transition hover:border-gold hover:text-gold">
-              Check insurance
-            </a>
-          </div>
-        </div>
-      </article>
-
+    <!-- Hero Background Video (No Overlay) -->
+    <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <video autoplay loop muted playsinline class="h-full w-full object-cover" style="object-position: center top;">
+        <source src="/assets/video-bg/web-video.mp4" type="video/mp4">
+      </video>
     </div>
 
-    <p class="mx-auto mt-8 max-w-6xl text-center text-xs font-semibold uppercase tracking-[0.18em] text-sand-700">
-      Insurance accepted via Headway · <?= implode(' · ', $site['insurers']) ?>
-    </p>
-  </section>
-
-  <!-- ═══ THREE-BEAT BAND ═══ -->
-  <section class="bg-paper px-5 py-20 lg:px-8 lg:py-24">
-    <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3" data-motion="reveal">
-      <?php
-      $beats = [
-        ['Grounded in Science.', 'gold', 'A B.A. in Neuroscience from Smith College and a Master\'s in Clinical Mental Health Counseling inform how we understand the brain, emotion and change.', 'M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2Z M9 22h6'],
-        ['Guided by Compassion.', 'olive', 'A therapeutic relationship that is warm, collaborative and grounded in genuine curiosity — never a template applied to your life.', 'M12 20s-7-4.5-7-9.5A4 4 0 0 1 12 8a4 4 0 0 1 7 2.5C19 15.5 12 20 12 20Z'],
-        ['Inspired by Wisdom.', 'ink', 'Twenty years of meditation and contemplative study, including traditional Buddhist retreat — offered only when it is meaningful to you.', 'M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5'],
-      ];
-      foreach ($beats as [$h, $accent, $body, $d]): ?>
-        <article data-motion="item" class="group rounded-4xl border border-sand-200 bg-white p-8 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lift">
-          <span class="grid h-12 w-12 place-items-center rounded-2xl bg-<?= $accent ?>-50 text-<?= $accent ?>-600">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="<?= $d ?>"/></svg>
-          </span>
-          <h2 class="mt-6 font-display text-xl font-semibold md:text-2xl"><?= $h ?></h2>
-          <p class="mt-3 leading-relaxed text-sand-700"><?= $body ?></p>
-        </article>
-      <?php endforeach; ?>
-    </div>
-  </section>
-
-  <!-- ═══ MEET ZIJI ═══ -->
-  <section class="px-5 py-24 lg:px-8 lg:py-32">
-    <div class="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-2 lg:gap-20" data-motion="reveal">
-      <div data-motion="item" class="relative mx-auto w-full max-w-sm lg:mx-0">
-        <div aria-hidden="true" class="absolute -bottom-5 -right-5 -z-10 h-full w-full rounded-4xl bg-citron"></div>
-        <div class="aspect-[4/5] overflow-hidden rounded-4xl border border-sand-200 bg-paper shadow-lift">
-          <img src="/assets/img/ziji-portrait.jpg" width="640" height="800" loading="lazy" decoding="async"
-               alt="Maureen 'Ziji' Drake, Licensed Mental Health Counselor"
-               class="h-full w-full object-cover"
-               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'grid h-full w-full place-items-center font-display text-6xl text-ink/15',textContent:'ZD'}))">
-        </div>
+    <!-- Hero Content -->
+    <div class="relative z-10 mx-auto max-w-4xl text-paper-lighter">
+      <div class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-ink/30 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-4 w-4 text-gold" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/></svg>
+        Dakini Therapy · Tampa &amp; St. Pete
       </div>
 
-      <div data-motion="item">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-olive-600">Meet Ziji</p>
-        <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
+      <h1 data-reveal-words class="mt-8 font-display text-4xl font-semibold leading-[1.08] tracking-tight drop-shadow-md sm:text-5xl md:text-6xl lg:text-7xl">
+        Cutting through confusion,<br>revealing <span class="text-gold">wisdom</span><br>and <span class="text-gold">compassion</span>.
+      </h1>
+
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-paper-lighter/90 drop-shadow sm:text-lg">
+        Evidence-based psychotherapy woven with mindfulness practice, for adults navigating anxiety, grief, relationships and change.
+      </p>
+
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a href="<?= $site['phone_href'] ?>" data-motion="magnetic"
+           class="w-full rounded-full bg-gold px-8 py-4 text-center text-sm font-semibold text-ink shadow-lift transition hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold sm:w-auto">
+          Book a free consult
+        </a>
+        <a href="<?= $site['headway'] ?>" rel="noopener"
+           class="w-full rounded-full border-2 border-white/40 bg-ink/20 px-8 py-4 text-center text-sm font-semibold text-paper-lighter backdrop-blur-sm transition hover:border-gold hover:text-gold sm:w-auto">
+          Check insurance
+        </a>
+      </div>
+
+      <p class="mt-8 text-xs font-semibold uppercase tracking-[0.18em] text-paper-lighter/80 drop-shadow">
+        Insurance accepted via Headway · <?= implode(' · ', $site['insurers']) ?>
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ═══ HOW DAKINI THERAPY WORKS (Talkspace-inspired exact aesthetic) ═══ -->
+  <section class="bg-white px-5 py-24 lg:px-8 lg:py-32">
+    <div class="mx-auto max-w-7xl">
+
+      <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+        
+        <!-- Left Column: Headline & 4 Numbered Step Cards -->
+        <div class="lg:col-span-7" data-motion="reveal">
+          
+          <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight text-[#103b35] sm:text-4xl lg:text-5xl">
+            How Dakini Therapy works
+          </h2>
+
+          <div class="mt-8 space-y-4 sm:mt-10 sm:space-y-4.5">
+            
+            <!-- Step 1 Card -->
+            <div data-motion="item" class="flex items-start rounded-xl border border-[#103b35]/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#103b35]/40 hover:shadow-soft sm:p-6">
+              <span class="mr-6 shrink-0 font-display text-4xl font-normal text-[#103b35] sm:mr-8 sm:text-5xl">
+                1
+              </span>
+              <div>
+                <h3 class="font-display text-lg font-medium text-[#103b35] sm:text-xl">
+                  Check eligibility
+                </h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
+                  We're in-network with major insurance plans via Headway (Aetna, UnitedHealthcare, Oscar, Oxford), and you can check your coverage in minutes. You can also pay out-of-pocket.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 Card -->
+            <div data-motion="item" class="flex items-start rounded-xl border border-[#103b35]/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#103b35]/40 hover:shadow-soft sm:p-6">
+              <span class="mr-6 shrink-0 font-display text-4xl font-normal text-[#103b35] sm:mr-8 sm:text-5xl">
+                2
+              </span>
+              <div>
+                <h3 class="font-display text-lg font-medium text-[#103b35] sm:text-xl">
+                  Connect in a free consultation
+                </h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
+                  Schedule a complimentary 15-minute call to share what you're experiencing, ask questions, and ensure our clinical approach is the right mutual fit.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 Card -->
+            <div data-motion="item" class="flex items-start rounded-xl border border-[#103b35]/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#103b35]/40 hover:shadow-soft sm:p-6">
+              <span class="mr-6 shrink-0 font-display text-4xl font-normal text-[#103b35] sm:mr-8 sm:text-5xl">
+                3
+              </span>
+              <div>
+                <h3 class="font-display text-lg font-medium text-[#103b35] sm:text-xl">
+                  Start therapy
+                </h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
+                  Meet in person at our peaceful private offices in Hyde Park (Tampa) or Crescent Heights (St. Pete), or connect through secure virtual sessions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 Card -->
+            <div data-motion="item" class="flex items-start rounded-xl border border-[#103b35]/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#103b35]/40 hover:shadow-soft sm:p-6">
+              <span class="mr-6 shrink-0 font-display text-4xl font-normal text-[#103b35] sm:mr-8 sm:text-5xl">
+                4
+              </span>
+              <div>
+                <h3 class="font-display text-lg font-medium text-[#103b35] sm:text-xl">
+                  Build sustainable tools
+                </h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
+                  Integrate neuroscience-backed nervous system regulation, relational repair frameworks, and actionable mindfulness practices you carry into everyday life.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right Column: Stylized Smartphone Provider Interface Mockup -->
+        <div class="relative flex items-center justify-center lg:col-span-5" data-motion="reveal">
+          
+          <!-- Abstract Pastel Mint Background Shape -->
+          <div aria-hidden="true" class="absolute -right-2 top-4 -z-10 h-72 w-64 rounded-3xl bg-[#e3efe9] sm:h-96 sm:w-80 sm:rounded-[2.5rem]"></div>
+          
+          <!-- Thin Outline Smartphone Frame -->
+          <div data-motion="item" class="w-full max-w-[295px] sm:max-w-[315px] rounded-[2.8rem] border-[2.5px] border-[#103b35] bg-white p-4 shadow-xl">
+            
+            <!-- Phone Status Bar -->
+            <div class="flex items-center justify-between px-2 text-[10px] font-semibold text-[#103b35]">
+              <span>9:41</span>
+              <div class="flex items-center gap-1.5">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-2.5 w-2.5"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
+                <div class="h-1.5 w-3.5 rounded-xs border border-[#103b35]"></div>
+              </div>
+            </div>
+
+            <!-- Brand Header -->
+            <div class="mt-3 text-center">
+              <span class="font-display text-sm font-semibold tracking-tight text-[#103b35]">Dakini Therapy</span>
+              <h4 class="mt-1 text-sm font-bold text-ink">Meet your provider</h4>
+            </div>
+
+            <!-- Clinician Profile Card -->
+            <div class="mt-3.5 rounded-xl border border-sand-200/90 bg-white p-3.5 text-center shadow-xs">
+              
+              <!-- Circular Avatar with Play Icon Button -->
+              <div class="relative mx-auto h-20 w-20">
+                <img src="/assets/img/ziji-portrait.jpg" alt="Maureen 'Ziji' Drake, LMHC"
+                     class="h-full w-full rounded-full object-cover shadow-soft"
+                     onerror="this.src='/assets/logo/dakini-logo.webp'">
+                <button type="button" aria-label="Intro video" class="absolute bottom-0 right-0 grid h-6 w-6 place-items-center rounded-full bg-[#103b35] text-white shadow-xs transition hover:scale-110">
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="ml-0.5 h-3 w-3"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+
+              <h5 class="mt-2.5 font-display text-base font-bold text-ink">
+                Maureen 'Ziji' Drake
+              </h5>
+              <p class="text-[10.5px] text-sand-600">
+                LMHC, FL · <span class="font-medium text-emerald-700">● Online now</span>
+              </p>
+
+              <!-- Profile & Availability Tabs -->
+              <div class="mt-3 flex gap-2 text-[10.5px]">
+                <span class="flex-1 rounded-full border border-sand-300 bg-sand-50 py-1 font-semibold text-[#103b35]">Profile</span>
+                <span class="flex-1 rounded-full py-1 text-sand-600">Availability</span>
+              </div>
+
+              <!-- Brief Bio with Read More -->
+              <p class="mt-2.5 text-[10px] leading-relaxed text-sand-700 text-left">
+                It is no secret that life can present us with challenges, making it hard to get by at times. Sometimes all it takes is a safe space to be seen... <span class="font-bold text-[#103b35]">Read more</span>
+              </p>
+
+              <!-- Verified Badges List -->
+              <div class="mt-3 space-y-1 text-left text-[10px] text-sand-700 border-t border-sand-100 pt-2.5">
+                <p class="flex items-center gap-1.5"><span class="text-[#103b35] font-bold">☑</span> 13+ years in practice</p>
+                <p class="flex items-center gap-1.5"><span class="text-[#103b35] font-bold">💼</span> In-network with Headway</p>
+                <p class="flex items-start gap-1.5 leading-tight"><span class="text-[#103b35] font-bold">♡</span> <span>Specialties: Anxiety, Relationships, Grief &amp; Transitions</span></p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ MEET ZIJI — Full Background Image with Wave ═══ -->
+  <section class="relative isolate flex min-h-[90vh] flex-col justify-center overflow-hidden py-36 sm:py-44 lg:min-h-[105vh] lg:py-52">
+    
+    <!-- Full Background Image with Readability Gradient -->
+    <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <img src="/assets/dakini_banner_color.png" alt="Dakini Therapy — Maureen 'Ziji' Drake, LMHC"
+           class="h-full w-full object-cover object-[right_top] translate-y-6 sm:translate-y-12 lg:translate-y-20 scale-105">
+      <div class="absolute inset-0 bg-gradient-to-r from-paper-lighter/95 via-paper-lighter/80 to-paper-lighter/20 lg:via-paper-lighter/75 lg:to-transparent"></div>
+    </div>
+
+    <!-- Content firmly aligned to the Left -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex justify-start">
+      <div class="max-w-xl lg:max-w-2xl text-left" data-motion="reveal">
+        <p data-motion="item" class="text-xs font-semibold uppercase tracking-[0.2em] text-olive-700">Meet Ziji</p>
+        <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.12]">
           Healing begins in relationship
         </h2>
-        <p class="mt-6 text-lg leading-relaxed text-sand-700">
+        <p data-motion="item" class="mt-6 text-lg leading-relaxed text-sand-800">
           &ldquo;I believe that healing begins in relationship — with ourselves, with others, and with the
           deeper wisdom that often emerges when we feel truly seen and understood.&rdquo;
         </p>
-        <p class="mt-5 leading-relaxed text-sand-700">
+        <p data-motion="item" class="mt-5 leading-relaxed text-sand-800">
           Before opening my private practice I spent thirteen years at the Omega Institute, working
           alongside internationally recognised psychologists, physicians and spiritual teachers. Clients
           often describe me as calm, grounded, resourceful, practical, and gently challenging.
         </p>
 
-        <ul class="mt-8 flex flex-wrap gap-2">
+        <ul data-motion="item" class="mt-8 flex flex-wrap gap-2">
           <?php foreach ([
             ['B.A. Neuroscience, Smith College','gold'],
             ['M.A. Clinical Mental Health Counseling','ink'],
             ['13 years, Omega Institute','olive'],
             ['20+ years contemplative practice','olive'],
           ] as [$c,$a]): ?>
-            <li class="rounded-full bg-<?= $a ?>-50 px-3.5 py-1.5 text-xs font-semibold text-<?= $a ?>-700"><?= $c ?></li>
+            <li class="rounded-full border border-sand-200/80 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-<?= $a ?>-800 shadow-xs backdrop-blur-xs"><?= $c ?></li>
           <?php endforeach; ?>
         </ul>
 
-        <a href="/about" class="group mt-9 inline-flex items-center gap-2 font-semibold text-ink-700 transition hover:text-ink-600">
-          Read Ziji's full story
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
-        </a>
+        <div data-motion="item" class="mt-9">
+          <a href="/about" class="group inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3.5 text-xs font-semibold uppercase tracking-wider text-paper-lighter shadow-lift transition hover:bg-ink-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ink/30">
+            Read Ziji's full story
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+          </a>
+        </div>
       </div>
+    </div>
+
+    <!-- Organic Wave Divider at the Section Bottom -->
+    <div class="pointer-events-none absolute bottom-0 left-0 right-0 overflow-hidden leading-none z-10">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative block w-full h-10 sm:h-14 md:h-16 lg:h-20 text-paper" preserveAspectRatio="none">
+        <path d="M0,32 C360,75 720,10 1080,48 C1260,65 1380,40 1440,32 L1440,80 L0,80 Z" fill="currentColor"></path>
+      </svg>
     </div>
   </section>
 
   <!-- ═══ SERVICES ═══ -->
-  <section class="bg-paper px-5 py-24 lg:px-8 lg:py-32">
-    <div class="mx-auto max-w-6xl">
-      <div class="max-w-2xl" data-motion="reveal">
-        <p data-motion="item" class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-600">How we can work together</p>
-        <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">Therapy shaped around what matters to you</h2>
+  <section id="services" class="relative overflow-hidden bg-paper px-5 py-24 lg:px-8 lg:py-32">
+    <div class="mx-auto max-w-7xl">
+
+      <!-- Section Header & Category Pills -->
+      <div class="mx-auto max-w-3xl text-center" data-motion="reveal">
+        <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl md:text-5xl">
+          Reimagining what's possible in <span class="italic font-normal font-display text-gold-700">mental health</span>
+        </h2>
+        <p data-motion="item" class="mt-4 text-base leading-relaxed text-sand-700 sm:text-lg">
+          Dakini Therapy is leading the way in:
+        </p>
+
+        <!-- Interactive Category Pills -->
+        <div data-motion="item" class="mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3" id="service-pills">
+          <?php foreach ($site['services'] as $i => $s): ?>
+            <button type="button" data-service-tab="<?= $i ?>"
+                    class="service-pill rounded-full border px-5 py-2 text-xs font-semibold transition <?= $i === 0 ? 'border-ink bg-ink text-paper-lighter shadow-soft' : 'border-sand-300/80 bg-paper-lighter text-sand-700 hover:border-ink/40 hover:bg-white hover:text-ink' ?>">
+              <?= $s['title'] ?>
+            </button>
+          <?php endforeach; ?>
+        </div>
       </div>
 
-      <div class="mt-14 grid gap-6 md:grid-cols-3" data-motion="reveal">
-        <?php foreach ($site['services'] as $s): $a = $s['accent']; ?>
-          <article data-motion="item" class="group flex flex-col overflow-hidden rounded-4xl border border-sand-200 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lift">
-            <div class="h-1.5 w-full bg-<?= $a ?>-500"></div>
-            <div class="flex flex-1 flex-col p-8">
-              <span class="w-fit rounded-full bg-<?= $a ?>-50 px-3 py-1 text-xs font-semibold text-<?= $a ?>-700"><?= $s['meta'] ?></span>
-              <h3 class="mt-5 font-display text-2xl font-semibold"><?= $s['title'] ?></h3>
-              <p class="mt-3 leading-relaxed text-sand-700"><?= $s['blurb'] ?></p>
-              <ul class="mt-6 space-y-2.5 text-sm">
+      <!-- Services Peeking Stage Carousel Wrapper -->
+      <div class="relative mx-auto mt-12 w-full max-w-4xl min-h-[30rem] md:min-h-[34rem] lg:min-h-[36rem]" data-motion="reveal" id="services-slider-container">
+
+        <!-- All 3 Slides in Seamless 3D Peeking Stack -->
+        <?php foreach ($site['services'] as $i => $s): $a = $s['accent']; ?>
+          <article data-service-slide="<?= $i ?>"
+                   class="service-card absolute inset-0 flex flex-col justify-between overflow-hidden rounded-[2.5rem] border border-sand-200 p-8 text-paper-lighter shadow-soft transition-all duration-500 ease-out md:p-12">
+
+            <!-- Card Background Image & Subtle Gradient -->
+            <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-ink">
+              <img src="<?= $s['image'] ?>" alt="<?= htmlspecialchars($s['title']) ?>"
+                   loading="eager" decoding="async"
+                   class="h-full w-full object-cover object-center">
+              <!-- Gentle Gradient ensuring crystal clear text while photo stays bright -->
+              <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent md:bg-gradient-to-r md:from-ink/85 md:via-ink/30 md:to-transparent"></div>
+            </div>
+
+            <!-- Top Pill Badge -->
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold backdrop-blur-md">
+                <?= $s['meta'] ?>
+              </span>
+              <span class="grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/10 text-paper-lighter backdrop-blur-md transition group-hover:bg-gold group-hover:text-ink">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M5 15 15 5M7 5h8v8"/></svg>
+              </span>
+            </div>
+
+            <!-- Bottom / Left Content Box -->
+            <div class="relative z-10 mt-auto max-w-xl pt-24">
+              <h3 class="font-display text-3xl font-semibold tracking-tight text-paper-lighter sm:text-4xl md:text-5xl">
+                <?= $s['title'] ?>
+              </h3>
+
+              <p class="mt-4 text-base leading-relaxed text-paper-lighter/85 sm:text-lg">
+                <?= $s['blurb'] ?>
+              </p>
+
+              <!-- Service Point Highlights -->
+              <ul class="mt-6 grid gap-2.5 sm:grid-cols-2 text-sm text-paper-lighter/80">
                 <?php foreach ($s['points'] as $pt): ?>
-                  <li class="flex gap-2.5">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 shrink-0 text-<?= $a ?>-500"><path d="m4 10 4 4 8-8"/></svg>
-                    <span class="text-ink/75"><?= $pt ?></span>
+                  <li class="flex items-center gap-2">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 text-gold"><path d="m4 10 4 4 8-8"/></svg>
+                    <span><?= $pt ?></span>
                   </li>
                 <?php endforeach; ?>
               </ul>
-              <a href="<?= $s['url'] ?>" class="mt-8 inline-flex items-center gap-2 pt-2 font-semibold text-<?= $a ?>-700 transition group-hover:gap-3">
-                Learn more
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
-              </a>
+
+              <div class="mt-8 flex flex-wrap items-center gap-4 pt-5 border-t border-white/15">
+                <a href="<?= $s['url'] ?>" class="rounded-full bg-gold px-7 py-3 text-xs font-semibold uppercase tracking-wider text-ink transition hover:bg-gold-400">
+                  Explore Service
+                </a>
+                <a href="<?= $site['phone_href'] ?>" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-paper-lighter transition hover:text-gold">
+                  Book a Consultation
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-3.5 w-3.5 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+                </a>
+              </div>
             </div>
+
           </article>
         <?php endforeach; ?>
+
       </div>
+
+      <!-- Slider Controls: Prev / Next Buttons & Indicators -->
+      <div class="mx-auto mt-6 flex max-w-4xl items-center justify-between px-2">
+        <!-- Dots -->
+        <div class="flex items-center gap-2">
+          <?php foreach ($site['services'] as $i => $s): ?>
+            <button type="button" data-slider-dot="<?= $i ?>" aria-label="Go to slide <?= $i + 1 ?>"
+                    class="service-dot h-2.5 rounded-full transition-all duration-300 <?= $i === 0 ? 'w-8 bg-ink' : 'w-2.5 bg-sand-400 hover:bg-ink/50' ?>"></button>
+          <?php endforeach; ?>
+        </div>
+
+        <!-- Arrows -->
+        <div class="flex items-center gap-2">
+          <button type="button" data-slider-prev aria-label="Previous slide"
+                  class="grid h-11 w-11 place-items-center rounded-full border border-ink/20 bg-white text-ink shadow-soft transition hover:border-ink hover:bg-ink hover:text-paper-lighter focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M12.5 15l-5-5 5-5"/></svg>
+          </button>
+          <button type="button" data-slider-next aria-label="Next slide"
+                  class="grid h-11 w-11 place-items-center rounded-full border border-ink/20 bg-white text-ink shadow-soft transition hover:border-ink hover:bg-ink hover:text-paper-lighter focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M7.5 5l5 5-5 5"/></svg>
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -243,9 +413,14 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
                 <?php
                 // Trim to keep the four cards to an even rhythm.
                 $q = $t['quote'];
-                if (mb_strlen($q) > 200) {
-                  $q = mb_substr($q, 0, 200);
-                  $q = mb_substr($q, 0, mb_strrpos($q, ' ')) . '…';
+                $len = function_exists('mb_strlen') ? mb_strlen($q) : strlen($q);
+                if ($len > 200) {
+                  $q = function_exists('mb_substr') ? mb_substr($q, 0, 200) : substr($q, 0, 200);
+                  $lastSpace = function_exists('mb_strrpos') ? mb_strrpos($q, ' ') : strrpos($q, ' ');
+                  if ($lastSpace !== false) {
+                    $q = function_exists('mb_substr') ? mb_substr($q, 0, $lastSpace) : substr($q, 0, $lastSpace);
+                  }
+                  $q .= '…';
                 }
                 ?>
                 &ldquo;<?= htmlspecialchars($q) ?>&rdquo;
@@ -308,58 +483,6 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
     </div>
   </section>
 
-  <!-- ═══ RATES TEASER ═══ -->
-  <section class="px-5 py-24 lg:px-8 lg:py-32">
-    <div class="mx-auto max-w-6xl">
-      <div class="max-w-2xl" data-motion="reveal">
-        <p data-motion="item" class="text-xs font-semibold uppercase tracking-[0.2em] text-gold-600">Straightforward pricing</p>
-        <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">No surprises, ever</h2>
-      </div>
-
-      <div class="mt-14 grid gap-6 md:grid-cols-3" data-motion="reveal">
-        <?php foreach ($site['rates'] as $i => $r): $a = ['ink','olive','gold'][$i]; ?>
-          <article data-motion="item" class="rounded-4xl border border-sand-200 bg-white p-8 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lift">
-            <h3 class="font-display text-lg font-semibold text-sand-700"><?= $r['label'] ?></h3>
-            <p class="mt-3 font-display text-5xl font-semibold text-<?= $a ?>-700">
-              $<span data-count-to="<?= $r['price'] ?>"><?= $r['price'] ?></span>
-            </p>
-            <p class="mt-3 text-sm leading-relaxed text-sand-700"><?= $r['note'] ?></p>
-          </article>
-        <?php endforeach; ?>
-      </div>
-
-      <div class="mt-10 flex flex-col items-start gap-4 rounded-4xl border border-ink-100 bg-ink-50 p-7 sm:flex-row sm:items-center sm:justify-between" data-motion="reveal">
-        <p data-motion="item" class="leading-relaxed text-ink-700">
-          <strong class="font-semibold">Insurance accepted for individual therapy</strong> —
-          <?= implode(', ', $site['insurers']) ?>, via Headway. Couples therapy is self-pay only.
-        </p>
-        <a data-motion="item" href="/rates-and-insurance" class="shrink-0 rounded-full bg-ink-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-ink-700">Rates &amp; insurance</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ CLOSING CTA ═══ -->
-  <section class="bg-ink px-5 py-24 lg:px-8 lg:py-32">
-
-    <div class="mx-auto max-w-3xl text-center" data-motion="reveal">
-      <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight text-paper-lighter md:text-4xl lg:text-5xl">
-        Start with a conversation
-      </h2>
-      <p data-motion="item" class="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter/70">
-        A complimentary 15-minute call — no pressure, no commitment. Just a chance to see whether
-        this feels like the right fit.
-      </p>
-      <a data-motion="item" href="<?= $site['phone_href'] ?>"
-         class="mt-10 inline-block font-display text-4xl font-semibold text-paper-lighter transition hover:text-gold-300 sm:text-5xl lg:text-6xl">
-        <?= $site['phone'] ?>
-      </a>
-      <div data-motion="item" class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <a href="<?= $site['phone_href'] ?>" data-motion="magnetic" class="w-full rounded-full bg-gold px-8 py-4 font-semibold text-ink shadow-glow transition hover:bg-gold-400 sm:w-auto">Call to book</a>
-        <a href="<?= $site['headway'] ?>" rel="noopener" class="w-full rounded-full border-2 border-white/20 px-8 py-4 font-semibold text-paper-lighter transition hover:border-gold-300 hover:text-gold-300 sm:w-auto">Check insurance</a>
-      </div>
-      <p data-motion="item" class="mt-12 font-display text-sm italic text-paper-lighter/45"><?= implode(' ', $site['ethos']) ?></p>
-    </div>
-  </section>
 
 </main>
 
