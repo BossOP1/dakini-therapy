@@ -217,9 +217,14 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
         <!-- Solid ground: shows through until a photograph is set -->
         <div aria-hidden="true" class="absolute inset-0 z-0 bg-citron"></div>
 
-        <img src="/assets/img/testimonial.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"
-             class="absolute inset-0 z-[1] h-full w-full object-cover"
-             onerror="this.remove()">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/testimonial-1600.webp">
+          <source type="image/webp" srcset="/assets/img/testimonial-900.webp">
+          <img src="/assets/img/testimonial.jpg" width="1200" height="903" alt="" aria-hidden="true"
+               loading="lazy" decoding="async"
+               class="absolute inset-0 z-[1] h-full w-full object-cover object-[68%_center]"
+               onerror="this.closest('picture').remove()">
+        </picture>
 
         <h2 data-reveal-words class="relative z-10 max-w-[10em] p-8 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-5xl lg:p-12 lg:text-6xl">
           What clients<br>are saying
