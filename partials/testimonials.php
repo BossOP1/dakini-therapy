@@ -42,9 +42,11 @@ $renderSet = function () use ($tQuotes, $skins, $tilts, $testimonials) { ?>
   </a>
 <?php }; ?>
 
-<section class="overflow-hidden bg-paper-lighter py-16 lg:py-16">
-  <div class="mx-auto max-w-6xl px-5 lg:px-8">
-    <h2 class="font-display text-4xl font-semibold tracking-tight md:text-5xl"><?= htmlspecialchars($tHeading) ?></h2>
+<section class="overflow-hidden bg-paper-lighter py-16 lg:py-20">
+  <div class="px-5 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <h2 class="font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl"><?= htmlspecialchars($tHeading) ?></h2>
+    </div>
   </div>
 
   <!-- Pauses on hover; falls back to a plain scrollable row under reduced motion -->

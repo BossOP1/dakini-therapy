@@ -51,7 +51,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
     <div aria-hidden="true" class="absolute inset-0 -z-10 bg-ink/25"></div>
 
     <div class="mx-auto w-full max-w-6xl" data-motion="reveal">
-      <nav aria-label="Breadcrumb" data-motion="item" class="text-[11px] font-semibold uppercase tracking-[0.18em] text-paper-lighter/70">
+      <nav aria-label="Breadcrumb" data-motion="item" class="text-[11px] font-semibold uppercase tracking-[0.2em] text-paper-lighter/70">
         <a href="/" class="transition hover:text-gold">Home</a>
         <span class="px-2 text-paper-lighter/40">/</span>
         <a href="/services/" class="transition hover:text-gold">Services</a>
@@ -80,12 +80,12 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
   </section>
 
   <!-- ═══ AT A GLANCE ═══ -->
-  <section class="bg-paper px-5 py-14 lg:px-8 lg:py-16">
+  <section class="bg-paper px-5 py-16 lg:px-8 lg:py-20">
     <div class="mx-auto grid max-w-6xl gap-10 rounded-[1.75rem] border border-sand-200 bg-paper-lighter p-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-12 lg:p-10">
 
       <!-- Insurance -->
       <div>
-        <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">In network via Headway</p>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-sand-700">In network via Headway</p>
         <ul class="mt-4 flex flex-wrap gap-2">
           <?php foreach ($site['insurers'] as $ins): ?>
             <li class="rounded-full border border-sand-300 px-3.5 py-1.5 text-sm font-medium text-ink"><?= $ins ?></li>
@@ -102,7 +102,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 
       <!-- Where -->
       <div>
-        <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Seen in person at</p>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-sand-700">Seen in person at</p>
         <ul class="mt-4 space-y-3.5">
           <?php foreach ($site['offices'] as $o): ?>
             <li class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
@@ -118,11 +118,11 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 
   <!-- ═══ OUTCOMES ═══ -->
   <section class="px-5 py-16 lg:px-8 lg:py-20">
-    <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+    <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
 
       <!-- Photograph, held alongside the list as it scrolls -->
       <div class="lg:sticky lg:top-32 lg:self-start">
-        <div class="overflow-hidden rounded-[2rem]">
+        <div class="overflow-hidden rounded-[1.75rem]">
           <picture>
             <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/outcomes-1200.webp">
             <source type="image/webp" srcset="/assets/img/outcomes-700.webp">
@@ -169,7 +169,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
     <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
 
       <div data-motion="reveal">
-        <div data-motion="item" class="overflow-hidden rounded-[2rem]">
+        <div data-motion="item" class="overflow-hidden rounded-[1.75rem]">
           <picture>
             <source type="image/webp" srcset="/assets/img/approach-737.webp">
             <img src="/assets/img/approach.jpg" width="737" height="737" loading="lazy" decoding="async"
