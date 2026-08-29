@@ -165,7 +165,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
   </section>
 
   <!-- ═══ APPROACH ═══ -->
-  <section class="bg-citron px-5 py-16 lg:px-8 lg:py-20">
+  <section class="relative bg-citron px-5 pb-28 pt-16 lg:px-8 lg:pb-32 lg:pt-20">
     <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
 
       <div data-motion="reveal">
@@ -207,6 +207,16 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
           </picture>
         </div>
       </div>
+    </div>
+
+    <!-- Organic wave divider, the same shape the homepage uses. Filled with the
+         next section's colour, so the citron reads as cut away rather than
+         ending on a straight edge. -->
+    <div class="pointer-events-none absolute bottom-0 left-0 right-0 z-10 overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true"
+           class="relative block h-10 w-full text-paper-lighter sm:h-14 md:h-16 lg:h-20">
+        <path d="M0,32 C360,75 720,10 1080,48 C1260,65 1380,40 1440,32 L1440,80 L0,80 Z" fill="currentColor"></path>
+      </svg>
     </div>
   </section>
 
