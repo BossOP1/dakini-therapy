@@ -124,15 +124,16 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
       <div class="lg:sticky lg:top-32 lg:self-start">
         <div class="overflow-hidden rounded-[1.75rem]">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/office-st-pete-1200.webp">
-            <source type="image/webp" srcset="/assets/img/office-st-pete-700.webp">
-            <img src="/assets/img/office-st-pete.jpg" width="1200" height="891" loading="lazy" decoding="async"
-                 alt="The Crescent Heights consulting room"
+            <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/couple-field-1400.webp">
+            <source type="image/webp" srcset="/assets/img/couple-field-800.webp">
+            <img src="/assets/img/couple-field.jpg" width="1400" height="931" loading="lazy" decoding="async"
+                 alt="" aria-hidden="true"
                  class="h-full w-full object-cover lg:aspect-[4/5]">
           </picture>
         </div>
         <p class="mt-5 max-w-xs text-sm leading-relaxed text-sand-700">
-          Two private rooms, in St. Petersburg and Tampa. Intensives run at Hyde Park Village.
+          Sessions run in two private rooms, in St. Petersburg and Tampa. Intensives are held at
+          Hyde Park Village.
         </p>
       </div>
 
@@ -162,6 +163,26 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
             </li>
           <?php endforeach; ?>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BAND ═══ -->
+  <section class="px-4 pb-10 md:px-8 lg:px-12 lg:pb-14">
+    <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem]">
+      <picture>
+        <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/couple-blossom-1400.webp">
+        <source type="image/webp" srcset="/assets/img/couple-blossom-800.webp">
+        <img src="/assets/img/couple-blossom.jpg" width="1400" height="933" loading="lazy" decoding="async"
+             alt="" aria-hidden="true"
+             class="h-[18rem] w-full object-cover object-[50%_35%] md:h-[24rem]">
+      </picture>
+      <div aria-hidden="true" class="absolute inset-0 bg-ink/45"></div>
+      <div class="absolute inset-0 flex items-end p-8 lg:p-12">
+        <p class="max-w-xl font-display text-2xl font-semibold leading-snug text-paper-lighter md:text-3xl">
+          Whether you are repairing, deepening, or thoughtfully parting — you can move forward with
+          greater clarity, compassion, and intention.
+        </p>
       </div>
     </div>
   </section>
