@@ -40,7 +40,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 <main id="main" class="relative z-20 bg-paper-lighter shadow-curtain">
 
   <!-- ═══ HERO ═══ -->
-  <section class="relative isolate flex min-h-[46vh] items-end overflow-hidden px-5 pb-14 pt-36 md:min-h-[56vh] md:pb-16 lg:px-8">
+  <section class="relative isolate flex min-h-[46vh] items-end overflow-hidden px-5 pb-28 pt-36 md:min-h-[56vh] md:pb-32 lg:px-8">
     <picture>
       <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/hero-individual-1800.webp">
       <source type="image/webp" srcset="/assets/img/hero-individual-1000.webp">
@@ -80,12 +80,12 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
   </section>
 
   <!-- ═══ AT A GLANCE ═══ -->
-  <section class="bg-paper px-5 py-16 lg:px-8 lg:py-20">
-    <div class="mx-auto grid max-w-6xl gap-10 rounded-[1.75rem] border border-sand-200 bg-paper-lighter p-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-12 lg:p-10">
+  <section class="relative z-10 -mt-14 bg-transparent px-5 pb-16 lg:-mt-16 lg:px-8 lg:pb-20">
+    <div class="mx-auto grid max-w-6xl gap-10 rounded-[1.75rem] border border-sand-200 bg-paper-lighter p-8 shadow-lift lg:grid-cols-[1fr_auto_1fr] lg:gap-12 lg:p-10">
 
       <!-- Insurance -->
       <div>
-        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-sand-700">In network via Headway</p>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">In network via Headway</p>
         <ul class="mt-4 flex flex-wrap gap-2">
           <?php foreach ($site['insurers'] as $ins): ?>
             <li class="rounded-full border border-sand-300 px-3.5 py-1.5 text-sm font-medium text-ink"><?= $ins ?></li>
@@ -102,7 +102,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 
       <!-- Where -->
       <div>
-        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-sand-700">Seen in person at</p>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Seen in person at</p>
         <ul class="mt-4 space-y-3.5">
           <?php foreach ($site['offices'] as $o): ?>
             <li class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
@@ -166,18 +166,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 
   <!-- ═══ APPROACH ═══ -->
   <section class="bg-citron px-5 py-16 lg:px-8 lg:py-20">
-    <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-
-      <div data-motion="reveal">
-        <div data-motion="item" class="overflow-hidden rounded-[1.75rem]">
-          <picture>
-            <source type="image/webp" srcset="/assets/img/approach-737.webp">
-            <img src="/assets/img/approach.jpg" width="737" height="737" loading="lazy" decoding="async"
-                 alt="Maureen 'Ziji' Drake at the Omega Institute"
-                 class="aspect-square w-full object-cover">
-          </picture>
-        </div>
-      </div>
+    <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
 
       <div data-motion="reveal">
         <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/60">How I work</p>
@@ -207,6 +196,16 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
           </a>
         </p>
+      </div>
+      <div data-motion="reveal">
+        <div data-motion="item" class="overflow-hidden rounded-[1.75rem]">
+          <picture>
+            <source type="image/webp" srcset="/assets/img/approach-737.webp">
+            <img src="/assets/img/approach.jpg" width="737" height="737" loading="lazy" decoding="async"
+                 alt="Maureen 'Ziji' Drake at the Omega Institute"
+                 class="aspect-square w-full object-cover">
+          </picture>
+        </div>
       </div>
     </div>
   </section>

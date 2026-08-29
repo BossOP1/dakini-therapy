@@ -14,6 +14,7 @@ $site         = $site         ?? require __DIR__ . '/../data/site.php';
 $testimonials = $testimonials ?? require __DIR__ . '/../data/testimonials.php';
 $tQuotes      = $tQuotes      ?? array_slice($testimonials, 0, 6);
 $tHeading     = $tHeading     ?? 'Testimonials';
+$tEyebrow     = $tEyebrow     ?? 'What clients say';
 
 $skins = ['bg-paper-light', 'bg-citron', 'bg-gold-200', 'bg-ink-200', 'bg-olive-200'];
 $tilts = ['-rotate-2', 'rotate-1', '-rotate-1', 'rotate-2', '-rotate-1', 'rotate-1'];
@@ -45,7 +46,8 @@ $renderSet = function () use ($tQuotes, $skins, $tilts, $testimonials) { ?>
 <section class="overflow-hidden bg-paper-lighter py-16 lg:py-20">
   <div class="px-5 lg:px-8">
     <div class="mx-auto max-w-6xl">
-      <h2 class="font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl"><?= htmlspecialchars($tHeading) ?></h2>
+      <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600"><?= htmlspecialchars($tEyebrow ?? 'What clients say') ?></p>
+      <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl"><?= htmlspecialchars($tHeading) ?></h2>
     </div>
   </div>
 

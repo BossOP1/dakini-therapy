@@ -19,7 +19,8 @@ $faqNote    = $faqNote    ?? null;
   <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
 
     <div class="lg:sticky lg:top-32 lg:self-start">
-      <h2 class="font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl"><?= htmlspecialchars($faqHeading) ?></h2>
+      <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Before you book</p>
+      <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl"><?= htmlspecialchars($faqHeading) ?></h2>
       <?php if ($faqNote): ?>
         <p class="mt-5 max-w-sm text-lg leading-relaxed text-sand-700"><?= $faqNote ?></p>
       <?php endif; ?>
