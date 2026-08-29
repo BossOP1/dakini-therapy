@@ -30,9 +30,9 @@ $outcomes = [
 ];
 
 $types = [
-  ['Relationship counseling', 'For partners at any stage who want to communicate better, repair more quickly, and understand the patterns they keep returning to.'],
-  ['Marriage counseling',     'For married couples working through conflict, disconnection or a breach of trust — or wanting to deepen a partnership that is already strong.'],
-  ['Premarital counseling',   'For couples preparing to marry: expectations, money, family, parenting and the conversations worth having before the wedding.'],
+  ['Relationship counseling', 'For partners at any stage who want to communicate better, repair more quickly, and understand the patterns they keep returning to.', 'type-relationship'],
+  ['Marriage counseling',     'For married couples working through conflict, disconnection or a breach of trust — or wanting to deepen a partnership that is already strong.', 'type-marriage'],
+  ['Premarital counseling',   'For couples preparing to marry: expectations, money, family, parenting and the conversations worth having before the wedding.', 'type-premarital'],
 ];
 
 $faqs = [
@@ -177,11 +177,21 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
       </div>
 
       <div class="mt-12 grid gap-6 md:grid-cols-3">
-        <?php foreach ($types as $i => [$name, $body]): ?>
-          <article class="flex flex-col rounded-[1.75rem] bg-paper-lighter p-8">
-            <span class="font-display text-lg font-semibold text-gold-700"><?= sprintf('%02d', $i + 1) ?></span>
-            <h3 class="mt-4 font-display text-xl font-semibold text-ink"><?= $name ?></h3>
-            <p class="mt-3 text-sm leading-relaxed text-sand-700"><?= $body ?></p>
+        <?php foreach ($types as $i => [$name, $body, $img]): ?>
+          <article class="flex flex-col overflow-hidden rounded-[1.75rem] bg-paper-lighter">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="/assets/img/<?= $img ?>-900.webp">
+                <source type="image/webp" srcset="/assets/img/<?= $img ?>-560.webp">
+                <img src="/assets/img/<?= $img ?>.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async"
+                     class="absolute inset-0 h-full w-full object-cover">
+              </picture>
+              <span class="absolute left-5 top-5 grid h-9 w-9 place-items-center rounded-full bg-ink font-display text-sm font-semibold text-citron"><?= sprintf('%02d', $i + 1) ?></span>
+            </div>
+            <div class="flex flex-1 flex-col p-8">
+              <h3 class="font-display text-xl font-semibold text-ink"><?= $name ?></h3>
+              <p class="mt-3 text-sm leading-relaxed text-sand-700"><?= $body ?></p>
+            </div>
           </article>
         <?php endforeach; ?>
       </div>
