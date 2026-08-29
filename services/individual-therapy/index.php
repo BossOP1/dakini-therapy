@@ -13,17 +13,18 @@ require __DIR__ . '/../../partials/header.php';
 
 $rate = $site['rates'][0];
 
-// Page copy, migrated from the existing site.
+// Page copy, verbatim from the existing site. Each pair concatenates back to
+// her original sentence — the split exists only to emphasise the opening.
 $outcomes = [
-  ['Reduce anxiety and regulate emotion', 'Learn effective strategies to reduce anxiety, manage stress, and regulate overwhelming emotions.'],
-  ['Heal from grief, loss and trauma',    'Work through painful life experiences that may still be shaping your present.'],
-  ['Build healthier boundaries',          'Improve communication in personal, family and professional relationships.'],
-  ['Understand your attachment style',    'See how early experiences continue to shape the way you relate today.'],
-  ['Change self-defeating patterns',      'Reduce or eliminate unhealthy coping strategies and addictive behaviours.'],
-  ['Deepen mindfulness',                  'Cultivate a stronger connection between your mind, body and emotions.'],
-  ['Clarify values and direction',        'Find your footing in important life transitions and difficult decisions.'],
-  ['Build on your strengths',             'Work from what is already strong in you, not only from symptoms and problems.'],
-  ['Live more authentically',             'Grow more confident in expressing your needs and making your own decisions.'],
+  ['Learn effective strategies',                 ' to reduce anxiety, manage stress, and regulate overwhelming emotions.'],
+  ['Heal from grief, loss, trauma,',             ' or painful life experiences that may continue to impact your present.'],
+  ['Build healthier boundaries',                 ' and improve communication in personal, family, and professional relationships.'],
+  ['Better understand your attachment style',    ' and how early experiences continue to shape your relationships today.'],
+  ['Reduce or eliminate unhealthy coping strategies,', ' addictive behaviors, or self-defeating patterns.'],
+  ['Increase mindfulness',                       ' and cultivate a stronger connection between your mind, body, and emotions.'],
+  ['Clarify your values, purpose, and direction', ' when navigating important life transitions or difficult decisions.'],
+  ['Discover and build upon your natural strengths', ' rather than focusing solely on symptoms or problems.'],
+  ['Experience greater confidence',              ' in expressing your needs, making decisions, and living more authentically.'],
 ];
 
 $faqs = [
@@ -61,8 +62,8 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
       </h1>
 
       <p data-motion="item" class="mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter">
-        A dedicated space to understand yourself, navigate what is hard, and create meaningful,
-        lasting change.
+        A dedicated space to better understand yourself, navigate life's challenges, and create
+        meaningful, lasting change.
       </p>
 
       <div data-motion="item" class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -125,13 +126,15 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 
       <div>
         <div data-motion="reveal">
-          <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">What the work can do</p>
+          <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Benefits of individual therapy</p>
           <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-            Through our work together
+            Through our work together you may
           </h2>
           <p data-motion="item" class="mt-5 text-lg leading-relaxed text-sand-700">
-            Therapy strengthens your emotional wellbeing while building tools that support a more
-            fulfilling and authentic life. Depending on what you need, we may explore any of the following.
+            Individual therapy offers a dedicated space to better understand yourself, navigate life's
+            challenges, and create meaningful, lasting change. Together, we will work to strengthen your
+            emotional well-being while helping you develop practical tools that support a more fulfilling
+            and authentic life.
           </p>
         </div>
 
@@ -139,10 +142,9 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
           <?php foreach ($outcomes as $i => [$heading, $body]): ?>
             <li data-motion="item" class="grid grid-cols-[2.25rem_1fr] gap-x-5 border-b border-sand-200 py-6 sm:grid-cols-[3rem_1fr]">
               <span class="pt-0.5 font-display text-lg font-semibold text-gold-700"><?= sprintf('%02d', $i + 1) ?></span>
-              <div>
-                <h3 class="font-display text-lg font-semibold leading-snug text-ink"><?= $heading ?></h3>
-                <p class="mt-1.5 text-sm leading-relaxed text-sand-700"><?= $body ?></p>
-              </div>
+              <p class="text-base leading-relaxed text-sand-700">
+                <span class="font-semibold text-ink"><?= $heading ?></span><?= $body ?>
+              </p>
             </li>
           <?php endforeach; ?>
         </ul>
