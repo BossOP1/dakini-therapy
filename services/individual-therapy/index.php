@@ -80,7 +80,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
   </section>
 
   <!-- ═══ AT A GLANCE ═══ -->
-  <section class="bg-paper px-5 py-12 lg:px-8 lg:py-14">
+  <section class="bg-paper px-5 py-12 lg:px-8 lg:py-12">
     <dl class="mx-auto grid max-w-6xl gap-px overflow-hidden rounded-[1.75rem] border border-sand-200 bg-sand-200 md:grid-cols-3">
       <div class="bg-paper-lighter px-7 py-6">
         <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Session fee</dt>
@@ -105,7 +105,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
   </section>
 
   <!-- ═══ OUTCOMES ═══ -->
-  <section class="px-5 py-24 lg:px-8 lg:py-32">
+  <section class="px-5 py-16 lg:px-8 lg:py-20">
     <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
 
       <!-- Photograph, held alongside the list as it scrolls -->
@@ -153,7 +153,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
   </section>
 
   <!-- ═══ APPROACH ═══ -->
-  <section class="bg-citron px-5 py-24 lg:px-8 lg:py-32">
+  <section class="bg-citron px-5 py-16 lg:px-8 lg:py-20">
     <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
 
       <div data-motion="reveal">

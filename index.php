@@ -61,7 +61,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
   </section>
 
   <!-- ═══ HOW DAKINI THERAPY WORKS (Talkspace-inspired exact aesthetic) ═══ -->
-  <section class="bg-white px-5 py-24 lg:px-8 lg:py-32">
+  <section class="bg-white px-5 py-16 lg:px-8 lg:py-20">
     <div class="mx-auto max-w-7xl">
 
       <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
@@ -213,7 +213,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
   </section>
 
   <!-- ═══ MEET ZIJI — Full Background Image with Wave ═══ -->
-  <section class="relative isolate flex min-h-[90vh] flex-col justify-center overflow-hidden py-36 sm:py-44 lg:min-h-[105vh] lg:py-52">
+  <section class="relative isolate flex min-h-[58vh] flex-col justify-center overflow-hidden py-16 sm:py-16 lg:min-h-[68vh] lg:py-20">
     
     <!-- Full Background Image with Readability Gradient -->
     <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -267,7 +267,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
   </section>
 
   <!-- ═══ SERVICES ═══ -->
-  <section id="services" class="relative overflow-hidden bg-paper px-5 py-24 lg:px-8 lg:py-32">
+  <section id="services" class="relative overflow-hidden bg-paper px-5 py-16 lg:px-8 lg:py-20">
     <div class="mx-auto max-w-7xl">
 
       <!-- Section Header & Category Pills -->
@@ -291,7 +291,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
       </div>
 
       <!-- Services Peeking Stage Carousel Wrapper -->
-      <div class="relative mx-auto mt-12 w-full max-w-4xl min-h-[30rem] md:min-h-[34rem] lg:min-h-[36rem]" data-motion="reveal" id="services-slider-container">
+      <div class="relative mx-auto mt-10 w-full max-w-4xl min-h-[26rem] md:min-h-[29rem] lg:min-h-[31rem]" data-motion="reveal" id="services-slider-container">
 
         <!-- All 3 Slides in Seamless 3D Peeking Stack -->
         <?php foreach ($site['services'] as $i => $s): $a = $s['accent']; ?>
@@ -384,7 +384,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
 
 
   <!-- ═══ OFFICES ═══ -->
-  <section class="bg-paper px-5 py-24 lg:px-8 lg:py-32">
+  <section class="bg-paper px-5 py-16 lg:px-8 lg:py-20">
     <div class="mx-auto max-w-6xl">
 
       <div class="max-w-2xl" data-motion="reveal">
@@ -396,13 +396,13 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
         </p>
       </div>
 
-      <div class="mt-16 space-y-6 lg:space-y-8">
+      <div class="mt-12 space-y-5 lg:space-y-6">
         <?php foreach (array_values($site['offices']) as $i => $o): ?>
           <article data-motion="reveal"
                    class="grid overflow-hidden rounded-[2rem] border border-sand-200 bg-paper-lighter shadow-soft lg:grid-cols-2">
 
             <!-- Photograph — sides alternate down the page -->
-            <div data-motion="item" class="relative min-h-[16rem] lg:min-h-[26rem] <?= $i % 2 ? 'lg:order-2' : '' ?>">
+            <div data-motion="item" class="relative min-h-[14rem] lg:min-h-[20rem] <?= $i % 2 ? 'lg:order-2' : '' ?>">
               <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/<?= $o['photo'] ?>-1200.webp">
                 <source type="image/webp" srcset="/assets/img/<?= $o['photo'] ?>-700.webp">
@@ -416,7 +416,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
             </div>
 
             <!-- Details -->
-            <div data-motion="item" class="flex flex-col justify-center p-8 lg:p-12">
+            <div data-motion="item" class="flex flex-col justify-center p-8 lg:p-10">
               <h3 class="font-display text-2xl font-semibold tracking-tight md:text-3xl"><?= $o['area'] ?></h3>
 
               <address class="mt-4 not-italic text-lg leading-relaxed text-sand-700">

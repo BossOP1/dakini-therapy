@@ -15,7 +15,7 @@ $faqHeading = $faqHeading ?? 'Questions';
 $faqNote    = $faqNote    ?? null;
 
 ?>
-<section class="bg-paper px-5 py-24 lg:px-8 lg:py-32">
+<section class="bg-paper px-5 py-16 lg:px-8 lg:py-20">
   <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
 
     <div class="lg:sticky lg:top-32 lg:self-start">
