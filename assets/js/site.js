@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // A solid header must stay solid, or its white nav becomes unreadable.
       if (header.hasAttribute('data-header-overlay')) {
         header.classList.toggle('bg-ink/95', isScrolled)
-        header.classList.toggle('bg-ink/20', !isScrolled)
+        header.classList.toggle('bg-transparent', !isScrolled)
         if (logo) {
           logo.classList.toggle('brightness-0', !isScrolled)
           logo.classList.toggle('invert', !isScrolled)
