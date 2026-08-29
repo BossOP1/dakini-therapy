@@ -14,7 +14,7 @@ require __DIR__ . '/../../partials/header.php';
 $rate = $site['rates'][0];
 
 // Page copy, verbatim from the existing site. Each pair concatenates back to
-// her original sentence — the split exists only to emphasise the opening.
+// her original sentence — the split exists only to emphasize the opening.
 $outcomes = [
   ['Learn effective strategies',                 ' to reduce anxiety, manage stress, and regulate overwhelming emotions.'],
   ['Heal from grief, loss, trauma,',             ' or painful life experiences that may continue to impact your present.'],
@@ -31,7 +31,7 @@ $faqs = [
   ['Who do you work with?', 'I offer in-person individual therapy for adults at two locations, in St. Petersburg and Tampa. Telehealth is available mainly as a backup for existing clients.'],
   ['Do you take insurance?', 'Yes, for individual therapy. I am in network with ' . implode(', ', $site['insurers']) . ' through the Headway platform. I recommend a complimentary 15-minute consultation first so I can help you book your first appointment.'],
   ['What does a session cost?', '$' . $rate['price'] . ' per session — ' . $rate['note'] . '. If you are using insurance, Headway will give you a co-pay estimate in minutes.'],
-  ['What are the advantages of self-pay?', 'Self-pay offers greater flexibility, privacy and control. Treatment is guided by your goals rather than by a diagnosis, session limits or authorisation requirements, and your therapy stays between you and me.'],
+  ['What are the advantages of self-pay?', 'Self-pay offers greater flexibility, privacy and control. Treatment is guided by your goals rather than by a diagnosis, session limits or authorization requirements, and your therapy stays between you and me.'],
 ];
 
 $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'couples'));
@@ -208,23 +208,13 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 
 
   <!-- ═══ FAQ ═══ -->
-  <section class="bg-paper px-5 py-24 lg:px-8 lg:py-32">
-    <div class="mx-auto max-w-3xl">
-      <h2 class="font-display text-3xl font-semibold tracking-tight md:text-4xl" data-motion="reveal"><span data-motion="item">Common questions</span></h2>
+  <?php
+  $faqItems   = $faqs;
+  $faqHeading = 'Questions';
+  $faqNote    = 'The practical details — who I work with, what it costs, and how insurance fits in.';
+  require __DIR__ . '/../../partials/faqs.php';
+  ?>
 
-      <div class="mt-10 space-y-3">
-        <?php foreach ($faqs as $i => [$q, $a]): ?>
-          <details class="group rounded-2xl border border-sand-200 bg-paper-lighter px-6 py-5" <?= $i === 0 ? 'open' : '' ?>>
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-semibold text-ink marker:content-none">
-              <?= $q ?>
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 shrink-0 text-sand-700 transition group-open:rotate-180"><path d="m5 7.5 5 5 5-5"/></svg>
-            </summary>
-            <p class="mt-4 text-base leading-relaxed text-sand-700"><?= $a ?></p>
-          </details>
-        <?php endforeach; ?>
-      </div>
-    </div>
-  </section>
 
 </main>
 

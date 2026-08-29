@@ -234,7 +234,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
         </p>
         <p data-motion="item" class="mt-5 leading-relaxed text-sand-800">
           Before opening my private practice I spent thirteen years at the Omega Institute, working
-          alongside internationally recognised psychologists, physicians and spiritual teachers. Clients
+          alongside internationally recognized psychologists, physicians and spiritual teachers. Clients
           often describe me as calm, grounded, resourceful, practical, and gently challenging.
         </p>
 
