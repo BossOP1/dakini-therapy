@@ -69,19 +69,35 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = `opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) ${index * 0.05}s, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) ${index * 0.05}s`
       })
 
+      const show = () => items.forEach(el => {
+        el.style.opacity = '1'
+        el.style.transform = 'translateY(0px)'
+      })
+
+      // Already on screen? Show it now. The observer is an enhancement — it must
+      // never be the only route to visible, or a missed callback hides the
+      // content for good.
+      const box = container.getBoundingClientRect()
+      if (box.top < window.innerHeight && box.bottom > 0 && box.height > 0) {
+        show()
+        return
+      }
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            items.forEach(el => {
-              el.style.opacity = '1'
-              el.style.transform = 'translateY(0px)'
-            })
+            show()
             observer.unobserve(entry.target)
           }
         })
       }, { threshold: 0.05 })
 
       observer.observe(container)
+
+      // Last-resort safety net: if nothing has revealed it within 3s, reveal it.
+      setTimeout(() => {
+        if (items[0] && items[0].style.opacity === '0') show()
+      }, 3000)
     })
   }
 
