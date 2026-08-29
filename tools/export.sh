@@ -48,10 +48,12 @@ for r in $ROUTES; do
 done
 
 echo "→ copying assets"
+# Copy the whole tree rather than a whitelist of subdirectories. A whitelist
+# silently drops anything new — it is how assets/logo/ and the two top-level
+# banner PNGs went missing from the first deploy. video-bg is excluded here and
+# handled by reference below; uploads is runtime state, not source.
 mkdir -p "$OUT/assets"
-for d in img fonts css js; do
-  [ -d "assets/$d" ] && cp -R "assets/$d" "$OUT/assets/"
-done
+tar -cf - --exclude='video-bg' --exclude='uploads' -C assets . | tar -xf - -C "$OUT/assets"
 
 # Video is copied by reference only. The directory holds unused cuts that would
 # otherwise add tens of megabytes to every clone and deploy.
@@ -68,5 +70,19 @@ rm -f "$OUT/assets/css/main.css"
 # Netlify serves 404.html for unknown paths; the route itself is redundant.
 mv "$OUT/404/index.html" "$OUT/404.html"
 rmdir "$OUT/404"
+
+echo "→ verifying asset references"
+MISSING=0
+grep -rhoE '(src|href)="/assets/[^"]+"' "$OUT" --include='*.html' \
+  | sed 's/.*="//; s/"$//' | sort -u | while read -r u; do
+      [ -f "$OUT$u" ] || { echo "  ✗ referenced but not copied: $u"; exit 1; }
+    done || MISSING=1
+grep -rhoE 'srcset="[^"]+"' "$OUT" --include='*.html' \
+  | sed 's/srcset="//; s/"$//' | tr ',' '\n' | awk '{print $1}' \
+  | grep '^/assets/' | sort -u | while read -r u; do
+      [ -f "$OUT$u" ] || { echo "  ✗ referenced but not copied: $u"; exit 1; }
+    done || MISSING=1
+[ "$MISSING" = "0" ] || { echo "  export incomplete"; exit 1; }
+echo "  all asset references resolve"
 
 echo "→ $COUNT routes written to $OUT/"
