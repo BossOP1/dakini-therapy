@@ -6,6 +6,8 @@ $title = "Dakini Therapy — Therapist in Tampa & St. Petersburg, FL | {$site['c
 $desc  = 'Evidence-based, mindfulness-informed therapy for adults in Hyde Park Village, Tampa and Crescent Heights, St. Petersburg. Book a complimentary 15-minute consultation.';
 $path  = '/';
 
+$heroOverlay = true;   // full-bleed video hero sits under the header
+
 require __DIR__ . '/partials/head.php';
 require __DIR__ . '/partials/header.php';
 

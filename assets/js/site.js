@@ -14,11 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const syncHeader = () => {
       const isScrolled = window.scrollY > 20
       header.classList.toggle('shadow-lift', isScrolled)
-      header.classList.toggle('bg-ink/95', isScrolled)
-      header.classList.toggle('bg-ink/20', !isScrolled)
-      if (logo) {
-        logo.classList.toggle('brightness-0', !isScrolled)
-        logo.classList.toggle('invert', !isScrolled)
+
+      // Only pages that opted into the overlay treatment fade between states.
+      // A solid header must stay solid, or its white nav becomes unreadable.
+      if (header.hasAttribute('data-header-overlay')) {
+        header.classList.toggle('bg-ink/95', isScrolled)
+        header.classList.toggle('bg-ink/20', !isScrolled)
+        if (logo) {
+          logo.classList.toggle('brightness-0', !isScrolled)
+          logo.classList.toggle('invert', !isScrolled)
+        }
       }
       ticking = false
     }
