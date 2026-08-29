@@ -300,6 +300,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true })
   }
 
+  // ── 6. Gallery Lightbox ────────────────────────────────────
+  const lightbox = document.querySelector('[data-lightbox]')
+  if (lightbox) {
+    const img = lightbox.querySelector('img')
+    const cap = lightbox.querySelector('[data-lightbox-caption]')
+
+    document.querySelectorAll('[data-lightbox-open]').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        img.src = trigger.dataset.full
+        img.alt = trigger.dataset.caption || ''
+        if (cap) cap.textContent = trigger.dataset.caption || ''
+        lightbox.showModal()
+      })
+    })
+
+    // Clicking the backdrop closes it. The dialog fills the whole viewport, so
+    // compare against the figure's box rather than the event target.
+    lightbox.addEventListener('click', e => {
+      const box = lightbox.querySelector('figure').getBoundingClientRect()
+      const outside = e.clientX < box.left || e.clientX > box.right ||
+                      e.clientY < box.top  || e.clientY > box.bottom
+      if (outside) lightbox.close()
+    })
+    lightbox.querySelector('[data-lightbox-close]')
+      ?.addEventListener('click', () => lightbox.close())
+
+    // Release the image once closed, so a long gallery does not hold every
+    // full-size file in memory.
+    lightbox.addEventListener('close', () => { img.removeAttribute('src') })
+  }
+
   // ── 6. Green Section Curtain Reveal ────────────────────────
   const greenPanel = document.querySelector('[data-green-reveal]')
   const mainFooter = document.querySelector('[data-main-footer]')
