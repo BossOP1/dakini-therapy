@@ -217,12 +217,11 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
     <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       <img src="/assets/dakini_banner_color.png" alt="Dakini Therapy — Maureen 'Ziji' Drake, LMHC"
            class="h-full w-full object-cover object-[right_top] translate-y-6 sm:translate-y-12 lg:translate-y-20 scale-105">
-      <div class="absolute inset-0 bg-gradient-to-r from-paper-lighter/95 via-paper-lighter/80 to-paper-lighter/20 lg:via-paper-lighter/75 lg:to-transparent"></div>
     </div>
 
     <!-- Content firmly aligned to the Left -->
     <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex justify-start">
-      <div class="max-w-xl lg:max-w-2xl text-left" data-motion="reveal">
+      <div class="max-w-xl lg:max-w-2xl text-left rounded-[2rem] bg-paper-lighter p-8 shadow-lift sm:p-10 lg:p-12" data-motion="reveal">
         <p data-motion="item" class="text-xs font-semibold uppercase tracking-[0.2em] text-olive-700">Meet Ziji</p>
         <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.12]">
           Healing begins in relationship
@@ -302,8 +301,8 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
               <img src="<?= $s['image'] ?>" alt="<?= htmlspecialchars($s['title']) ?>"
                    loading="eager" decoding="async"
                    class="h-full w-full object-cover object-center">
-              <!-- Gentle Gradient ensuring crystal clear text while photo stays bright -->
-              <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent md:bg-gradient-to-r md:from-ink/85 md:via-ink/30 md:to-transparent"></div>
+              <!-- Flat tint: one solid colour at a uniform opacity, no fade -->
+              <div class="absolute inset-0 bg-ink/70"></div>
             </div>
 
             <!-- Top Pill Badge -->
