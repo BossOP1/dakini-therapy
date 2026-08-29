@@ -46,8 +46,8 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
       <img src="/assets/img/hero-individual.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async"
            class="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center]">
     </picture>
-    <!-- Flat tint, one colour at a uniform opacity — keeps the copy legible without a fade -->
-    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-ink/65"></div>
+    <!-- Very light flat tint — just enough to hold the copy, photograph stays open -->
+    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-ink/25"></div>
 
     <div class="mx-auto w-full max-w-6xl" data-motion="reveal">
       <nav aria-label="Breadcrumb" data-motion="item" class="text-[11px] font-semibold uppercase tracking-[0.18em] text-paper-lighter/70">
@@ -60,7 +60,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
         Individual therapy
       </h1>
 
-      <p data-motion="item" class="mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter/80">
+      <p data-motion="item" class="mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter">
         A dedicated space to understand yourself, navigate what is hard, and create meaningful,
         lasting change.
       </p>
@@ -71,7 +71,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
           Book a free 15-min consult
         </a>
         <a href="<?= $site['headway'] ?>" rel="noopener"
-           class="rounded-full border-2 border-white/25 px-8 py-4 text-center text-sm font-semibold text-paper-lighter transition hover:border-gold hover:text-gold">
+           class="rounded-full border-2 border-white/60 px-8 py-4 text-center text-sm font-semibold text-paper-lighter transition hover:border-gold hover:text-gold">
           Check your insurance
         </a>
       </div>
@@ -204,25 +204,6 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
             <p class="mt-4 text-base leading-relaxed text-sand-700"><?= $a ?></p>
           </details>
         <?php endforeach; ?>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ CLOSING CTA ═══ -->
-  <section class="bg-ink px-5 py-24 text-paper-lighter lg:px-8 lg:py-32">
-    <div class="mx-auto max-w-3xl text-center" data-motion="reveal">
-      <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">Start with a conversation</h2>
-      <p data-motion="item" class="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter/70">
-        A complimentary 15-minute call — no pressure, no commitment. Just a chance to see whether
-        this feels like the right fit.
-      </p>
-      <a data-motion="item" href="<?= $site['phone_href'] ?>"
-         class="mt-9 inline-block font-display text-4xl font-semibold transition hover:text-gold sm:text-5xl">
-        <?= $site['phone'] ?>
-      </a>
-      <div data-motion="item" class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-        <a href="<?= $site['phone_href'] ?>" class="rounded-full bg-gold px-8 py-4 text-sm font-semibold text-ink transition hover:bg-gold-400">Call to book</a>
-        <a href="<?= $site['headway'] ?>" rel="noopener" class="rounded-full border-2 border-white/20 px-8 py-4 text-sm font-semibold transition hover:border-gold hover:text-gold">Check insurance</a>
       </div>
     </div>
   </section>
