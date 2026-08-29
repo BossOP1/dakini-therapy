@@ -124,15 +124,15 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
       <div class="lg:sticky lg:top-32 lg:self-start">
         <div class="overflow-hidden rounded-[1.75rem]">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/outcomes-1200.webp">
-            <source type="image/webp" srcset="/assets/img/outcomes-700.webp">
-            <img src="/assets/img/outcomes.jpg" width="1200" height="873" loading="lazy" decoding="async"
-                 alt="Books and brass bookends on a shelf in the therapy room"
+            <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/solo-window-1400.webp">
+            <source type="image/webp" srcset="/assets/img/solo-window-800.webp">
+            <img src="/assets/img/solo-window.jpg" width="1400" height="930" loading="lazy" decoding="async"
+                 alt="" aria-hidden="true"
                  class="h-full w-full object-cover lg:aspect-[4/5]">
           </picture>
         </div>
         <p class="mt-5 max-w-xs text-sm leading-relaxed text-sand-700">
-          Evidence-based practice alongside two decades of contemplative study — both inform the work.
+          Sessions are held in person, in two private rooms — Crescent Heights in St. Petersburg and Hyde Park Village in Tampa.
         </p>
       </div>
 
@@ -160,6 +160,27 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
             </li>
           <?php endforeach; ?>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BAND ═══ -->
+  <!-- Photograph is Unsplash, free under the Unsplash Licence: Marie G. -->
+  <section class="px-4 pb-10 md:px-8 lg:px-12 lg:pb-14">
+    <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem]">
+      <picture>
+        <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/solo-cup-1400.webp">
+        <source type="image/webp" srcset="/assets/img/solo-cup-800.webp">
+        <img src="/assets/img/solo-cup.jpg" width="1400" height="933" loading="lazy" decoding="async"
+             alt="" aria-hidden="true"
+             class="h-[18rem] w-full object-cover object-[50%_45%] md:h-[24rem]">
+      </picture>
+      <div aria-hidden="true" class="absolute inset-0 bg-ink/50"></div>
+      <div class="absolute inset-0 flex items-end p-8 lg:p-12">
+        <p class="max-w-xl font-display text-2xl font-semibold leading-snug text-paper-lighter md:text-3xl">
+          Together, we will work to strengthen your emotional well-being while helping you develop
+          practical tools that support a more fulfilling and authentic life.
+        </p>
       </div>
     </div>
   </section>
