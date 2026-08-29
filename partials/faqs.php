@@ -14,8 +14,6 @@ $faqItems   = $faqItems   ?? [];
 $faqHeading = $faqHeading ?? 'Questions';
 $faqNote    = $faqNote    ?? null;
 
-// Same solid colours as the testimonial rail, each checked against ink for AA.
-$faqSkins = ['bg-citron', 'bg-paper-light', 'bg-gold-200', 'bg-ink-200', 'bg-olive-200'];
 ?>
 <section class="bg-paper px-5 py-24 lg:px-8 lg:py-32">
   <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -33,7 +31,7 @@ $faqSkins = ['bg-citron', 'bg-paper-light', 'bg-gold-200', 'bg-ink-200', 'bg-oli
 
     <div class="space-y-4">
       <?php foreach ($faqItems as $i => [$q, $a]): ?>
-        <details class="group rounded-sm <?= $faqSkins[$i % count($faqSkins)] ?>" <?= $i === 0 ? 'open' : '' ?>>
+        <details class="group rounded-sm border border-sand-200 bg-paper-lighter transition-colors duration-200 hover:border-sand-300 open:border-sand-300" <?= $i === 0 ? 'open' : '' ?>>
           <summary class="flex cursor-pointer list-none items-start justify-between gap-6 p-7 font-display text-xl font-semibold leading-snug text-ink marker:content-none lg:p-8 lg:text-2xl">
             <?= $q ?>
             <span aria-hidden="true" class="mt-1 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-ink text-citron transition-transform duration-300 group-open:rotate-45">
