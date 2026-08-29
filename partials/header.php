@@ -22,11 +22,12 @@ $heroOverlay = $heroOverlay ?? false;
       </button>
 
       <nav aria-label="Primary" class="hidden min-w-0 items-center gap-6 px-6 xl:flex xl:gap-7 xl:px-8">
-        <?php foreach (array_slice($site['nav'], 0, 3) as $item): ?>
+        <?php foreach (array_slice($site['nav'], 0, 4) as $i => $item): ?>
+          <?php $hideNarrow = $i === 3 ? 'hidden 2xl:flex' : ''; ?>
           <?php if (empty($item['children'])): ?>
-            <a href="<?= $item['url'] ?>" class="whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.16em] text-paper-lighter/75 transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"><?= $item['label'] ?></a>
+            <a href="<?= $item['url'] ?>" class="<?= $hideNarrow ?> whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.16em] text-paper-lighter/75 transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"><?= $item['label'] ?></a>
           <?php else: ?>
-            <div class="group relative">
+            <div class="group relative <?= $hideNarrow ?>">
               <a href="<?= $item['url'] ?>" class="flex items-center gap-1.5 whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.16em] text-paper-lighter/75 transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
                 <?= $item['label'] ?>
                 <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="h-3 w-3 transition group-hover:rotate-180"><path d="M5.5 7.5 10 12l4.5-4.5"/></svg>

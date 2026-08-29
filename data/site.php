@@ -100,12 +100,12 @@ return [
       ['label' => 'St. Petersburg',      'url' => '/locations/st-petersburg'],
       ['label' => 'Hyde Park Village',   'url' => '/locations/tampa-hyde-park-village'],
     ]],
+    ['label' => 'The Journey', 'url' => '/the-journey'],
     ['label' => 'Rates',     'url' => '/rates-and-insurance'],
     ['label' => 'Resources', 'url' => '/resources/', 'children' => [
       ['label' => 'Working with Anger',   'url' => '/resources/working-with-anger'],
       ['label' => 'Working with Sadness', 'url' => '/resources/working-with-sadness'],
       ['label' => 'Recommended Books',    'url' => '/resources/recommended-books'],
-      ['label' => 'The Journey',          'url' => '/the-journey'],
     ]],
   ],
 ];
