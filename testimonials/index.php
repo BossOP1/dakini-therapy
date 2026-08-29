@@ -10,6 +10,8 @@ require __DIR__ . '/../partials/head.php';
 require __DIR__ . '/../partials/header.php';
 
 $individual = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'individual'));
+$couplesSkins = ['bg-paper-lighter', 'bg-gold-200', 'bg-ink-200'];   // on citron
+$skins        = ['bg-paper-light', 'bg-citron', 'bg-gold-200', 'bg-ink-200'];
 $couples    = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'couples'));
 ?>
 
@@ -43,14 +45,14 @@ $couples    = array_values(array_filter($testimonials, fn($t) => $t['type'] === 
       <!-- Two columns of quote cards; long and short reviews sit together
            without the stretched, half-empty rows a fixed grid would give. -->
       <div class="mt-12 gap-6 lg:gap-8 md:columns-2 [column-fill:balance]">
-        <?php foreach ($individual as $t): ?>
-          <figure class="mb-6 flex break-inside-avoid flex-col rounded-[1.75rem] border border-sand-200 bg-white p-8 shadow-soft lg:mb-8 lg:p-10">
+        <?php foreach ($individual as $i => $t): ?>
+          <figure class="mb-6 flex break-inside-avoid flex-col rounded-[1.75rem] p-8 shadow-soft lg:mb-8 lg:p-10 <?= $skins[$i % count($skins)] ?>">
             <blockquote class="font-display text-lg italic leading-relaxed text-ink">
               &ldquo;<?= htmlspecialchars($t['quote']) ?>&rdquo;
             </blockquote>
-            <figcaption class="mt-7 flex items-center gap-3 border-t border-sand-200 pt-6">
+            <figcaption class="mt-7 flex items-center gap-3 border-t border-ink/15 pt-6">
               <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ink text-[11px] font-bold text-citron"><?= htmlspecialchars($t['id']) ?></span>
-              <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-sand-700">Former client</span>
+              <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/55">Former client</span>
             </figcaption>
           </figure>
         <?php endforeach; ?>
@@ -67,14 +69,14 @@ $couples    = array_values(array_filter($testimonials, fn($t) => $t['type'] === 
       </div>
 
       <div class="mt-12 grid gap-6 md:grid-cols-3">
-        <?php foreach ($couples as $t): ?>
-          <figure class="flex flex-col rounded-[1.75rem] bg-paper-lighter p-8">
+        <?php foreach ($couples as $i => $t): ?>
+          <figure class="flex flex-col rounded-[1.75rem] p-8 shadow-soft <?= $couplesSkins[$i % count($couplesSkins)] ?>">
             <blockquote class="font-display text-base italic leading-relaxed text-ink">
               &ldquo;<?= htmlspecialchars($t['quote']) ?>&rdquo;
             </blockquote>
-            <figcaption class="mt-auto flex items-center gap-3 border-t border-sand-200 pt-6">
+            <figcaption class="mt-auto flex items-center gap-3 border-t border-ink/15 pt-6">
               <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ink text-[11px] font-bold text-citron"><?= htmlspecialchars($t['id']) ?></span>
-              <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-sand-700">Couples client</span>
+              <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/55">Couples client</span>
             </figcaption>
           </figure>
         <?php endforeach; ?>
