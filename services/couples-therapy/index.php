@@ -29,6 +29,9 @@ $outcomes = [
   ['Develop greater self-awareness, emotional regulation, and presence', '—skills that strengthen not only your relationship, but your individual well-being.'],
 ];
 
+// Card photographs are Unsplash, free under the Unsplash Licence:
+//   relationship — Hanna Lazar          marriage — Roman Kraft
+//   premarital   — The HK Photo Company
 $types = [
   ['Relationship counseling', 'For partners at any stage who want to communicate better, repair more quickly, and understand the patterns they keep returning to.', 'type-relationship'],
   ['Marriage counseling',     'For married couples working through conflict, disconnection or a breach of trust — or wanting to deepen a partnership that is already strong.', 'type-marriage'],
