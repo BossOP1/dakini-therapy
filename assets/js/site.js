@@ -300,6 +300,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true })
   }
 
+  // ── 6. Testimonial "Read more" ────────────────────────────
+  document.querySelectorAll('[data-clamp]').forEach(quote => {
+    const toggle = quote.parentElement.querySelector('[data-clamp-toggle]')
+    if (!toggle) return
+
+    // Only offer it where the text is genuinely cut off. Short reviews get no
+    // button at all, rather than a control that does nothing.
+    const clipped = () => quote.scrollHeight > quote.clientHeight + 2
+    if (!clipped()) return
+    toggle.hidden = false
+
+    toggle.addEventListener('click', () => {
+      const open = quote.classList.toggle('line-clamp-none')
+      toggle.textContent = open ? 'Read less' : 'Read more'
+    })
+  })
+
   // ── 6. Gallery Lightbox ────────────────────────────────────
   const lightbox = document.querySelector('[data-lightbox]')
   if (lightbox) {

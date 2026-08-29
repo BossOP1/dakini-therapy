@@ -22,9 +22,13 @@ $tilts = ['-rotate-2', 'rotate-1', '-rotate-1', 'rotate-2', '-rotate-1', 'rotate
 $renderSet = function () use ($tQuotes, $skins, $tilts, $testimonials) { ?>
   <?php foreach ($tQuotes as $i => $t): ?>
     <figure class="mr-6 flex w-[19rem] shrink-0 flex-col rounded-sm p-8 shadow-lift transition-transform duration-300 hover:rotate-0 sm:w-[23rem] lg:mr-8 lg:w-[25rem] lg:p-10 <?= $skins[$i % count($skins)] ?> <?= $tilts[$i % count($tilts)] ?>">
-      <blockquote class="text-lg leading-snug text-ink lg:text-xl">
+      <blockquote data-clamp class="line-clamp-[10] text-lg leading-snug text-ink lg:text-xl">
         &ldquo;<?= htmlspecialchars($t['quote']) ?>&rdquo;
       </blockquote>
+      <button type="button" data-clamp-toggle hidden
+              class="mt-3 self-start text-sm font-semibold text-ink/70 underline underline-offset-4 transition hover:text-ink">
+        Read more
+      </button>
       <figcaption class="mt-auto pt-10">
         <p class="font-display text-xl font-semibold text-ink lg:text-2xl"><?= $t['id'] ?></p>
         <p class="mt-1 text-sm font-medium text-ink/60">
@@ -55,7 +59,7 @@ $renderSet = function () use ($tQuotes, $skins, $tilts, $testimonials) { ?>
   <div class="group mt-10 overflow-hidden pb-8 pt-4 motion-reduce:overflow-x-auto motion-reduce:[scrollbar-width:none]">
     <div class="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
       <?php $renderSet(); ?>
-      <div class="flex" aria-hidden="true"><?php $renderSet(); ?></div>
+      <div class="flex" aria-hidden="true" inert><?php $renderSet(); ?></div>
     </div>
   </div>
 </section>
