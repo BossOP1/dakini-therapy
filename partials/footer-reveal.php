@@ -8,9 +8,11 @@
   <div class="mx-auto flex max-w-4xl flex-col items-center text-center" data-motion="reveal">
 
     <a href="/" aria-label="<?= htmlspecialchars($site['legal']) ?> — home" data-motion="item">
-      <img src="/assets/logo/dakini-logo.webp" width="460" height="216" loading="lazy" decoding="async"
-           alt="<?= htmlspecialchars($site['legal']) ?>"
-           class="w-48 sm:w-56">
+      <span class="inline-block rounded-[1.25rem] bg-ink px-8 py-6 shadow-lift sm:px-10 sm:py-7">
+        <img src="/assets/logo/dakini-logo.webp" width="460" height="216" loading="lazy" decoding="async"
+             alt="<?= htmlspecialchars($site['legal']) ?>"
+             class="w-40 sm:w-48">
+      </span>
     </a>
 
     <h2 id="reveal-heading" data-motion="item" class="mt-8 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl">

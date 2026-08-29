@@ -3,3 +3,12 @@ assets/js/dist/
 assets/css/build.css
 .DS_Store
 assets/uploads/
+
+# The Netlify deploy is the committed static export, so build.css must be
+# tracked inside dist/ even though the source copy above is ignored.
+!dist/**
+
+# Unused hero cuts. Only the one referenced by index.php ships, and the export
+# copies it into dist/ by reference; keeping the rest out saves ~13MB a clone.
+assets/video-bg/*
+!assets/video-bg/5174172-uhd_2560_1440_25fps.mp4

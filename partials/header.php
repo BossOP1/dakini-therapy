@@ -13,8 +13,8 @@ $heroOverlay = $heroOverlay ?? false;
     <div class="flex h-full min-w-0 items-center">
       <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav"
               class="grid h-full w-[64px] shrink-0 place-items-center border-r border-white/10 transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold md:w-[88px]">
-        <span class="sr-only">Open menu</span>
-        <span aria-hidden="true" class="flex w-5 flex-col gap-[5px]">
+        <span class="sr-only" data-nav-label>Open menu</span>
+        <span aria-hidden="true" class="nav-burger flex w-5 flex-col gap-[5px]">
           <span class="h-px w-full bg-current"></span>
           <span class="h-px w-full bg-current"></span>
           <span class="h-px w-3/5 bg-current"></span>
@@ -28,14 +28,41 @@ $heroOverlay = $heroOverlay ?? false;
             <a href="<?= $item['url'] ?>" class="<?= $hideNarrow ?> whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.16em] text-paper-lighter/75 transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"><?= $item['label'] ?></a>
           <?php else: ?>
             <div class="group relative <?= $hideNarrow ?>">
-              <a href="<?= $item['url'] ?>" class="flex items-center gap-1.5 whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.16em] text-paper-lighter/75 transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+              <?php
+                // Services / Locations / Resources have no index page of their own —
+                // they are grouping labels. The trigger is a button rather than a dead
+                // link, and stays focusable so Tab still opens the panel via
+                // group-focus-within.
+                $hasUrl  = !empty($item['url']);
+                $trigCls = 'flex items-center gap-1.5 whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.16em] text-paper-lighter/75 transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold';
+              ?>
+              <?php if ($hasUrl): ?>
+                <a href="<?= $item['url'] ?>" class="<?= $trigCls ?>">
+              <?php else: ?>
+                <button type="button" aria-haspopup="true" class="<?= $trigCls ?> cursor-default">
+              <?php endif; ?>
                 <?= $item['label'] ?>
                 <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="h-3 w-3 transition group-hover:rotate-180"><path d="M5.5 7.5 10 12l4.5-4.5"/></svg>
-              </a>
-              <div class="invisible absolute left-0 top-full w-64 translate-y-1 pt-4 opacity-0 transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                <div class="overflow-hidden rounded-xl border border-white/10 bg-ink-800 p-2 shadow-lift">
+              <?= $hasUrl ? '</a>' : '</button>' ?>
+              <!-- pt-4 keeps a hoverable bridge between trigger and panel,
+                   so the menu does not close as the pointer travels down -->
+              <div class="invisible absolute left-0 top-full z-50 w-[21rem] translate-y-1 pt-4 opacity-0 transition duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <div class="relative rounded-2xl border border-white/10 bg-ink-800 p-2 shadow-lift">
+                  <span aria-hidden="true" class="absolute -top-[7px] left-8 h-3 w-3 rotate-45 rounded-[3px] border-l border-t border-white/10 bg-ink-800"></span>
                   <?php foreach ($item['children'] as $c): ?>
-                    <a href="<?= $c['url'] ?>" class="block rounded-lg px-4 py-2.5 text-[11px] uppercase tracking-[0.14em] text-paper-lighter/75 transition hover:bg-white/5 hover:text-gold"><?= $c['label'] ?></a>
+                    <a href="<?= $c['url'] ?>"
+                       class="group/item flex items-start gap-3 rounded-xl px-4 py-3 transition hover:bg-white/5 focus-visible:bg-white/5 focus-visible:outline-none">
+                      <span class="min-w-0 flex-1">
+                        <span class="block text-sm font-semibold text-paper-lighter transition group-hover/item:text-gold"><?= $c['label'] ?></span>
+                        <?php if (!empty($c['desc'])): ?>
+                          <span class="mt-0.5 block text-xs leading-relaxed text-paper-lighter/55"><?= $c['desc'] ?></span>
+                        <?php endif; ?>
+                      </span>
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           class="mt-1 h-3.5 w-3.5 shrink-0 text-paper-lighter/30 transition group-hover/item:translate-x-0.5 group-hover/item:text-gold">
+                        <path d="M4 10h12M11 5l5 5-5 5"/>
+                      </svg>
+                    </a>
                   <?php endforeach; ?>
                 </div>
               </div>
@@ -57,7 +84,7 @@ $heroOverlay = $heroOverlay ?? false;
 
     <!-- ── RIGHT: divider + booking CTA ── -->
     <div class="flex h-full items-center justify-end">
-      <a href="<?= $site['phone_href'] ?>"
+      <a href="/contact"
          class="hidden h-full items-center whitespace-nowrap border-l border-white/10 px-6 text-[11px] font-medium uppercase tracking-[0.18em] text-paper-lighter transition hover:bg-gold hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold sm:flex md:px-10">
         Book an Appointment
       </a>
@@ -68,31 +95,82 @@ $heroOverlay = $heroOverlay ?? false;
     </div>
   </div>
 
-  <!-- ── Slide-down menu panel ── -->
-  <div id="mobile-nav" data-nav-panel hidden class="border-t border-white/10 bg-ink-800">
-    <nav aria-label="Menu" class="mx-auto max-w-[1800px] px-6 py-6 md:px-[88px]">
-      <div class="grid gap-x-12 gap-y-1 sm:grid-cols-2 lg:grid-cols-3">
-        <?php foreach ($site['nav'] as $item): ?>
-          <div class="py-2">
-            <a data-nav-link href="<?= $item['url'] ?>" class="block font-display text-lg font-semibold text-paper-lighter transition hover:text-gold"><?= $item['label'] ?></a>
-            <?php if (!empty($item['children'])): ?>
-              <div class="mt-1.5 space-y-1">
-                <?php foreach ($item['children'] as $c): ?>
-                  <a data-nav-link href="<?= $c['url'] ?>" class="block text-[11px] uppercase tracking-[0.14em] text-paper-lighter/60 transition hover:text-gold"><?= $c['label'] ?></a>
-                <?php endforeach; ?>
-              </div>
-            <?php endif; ?>
-          </div>
-        <?php endforeach; ?>
-        <div class="py-2">
-          <a data-nav-link href="/testimonials" class="block font-display text-lg font-semibold text-paper-lighter transition hover:text-gold">Testimonials</a>
-          <div class="mt-1.5 space-y-1">
-            <a data-nav-link href="/faq" class="block text-[11px] uppercase tracking-[0.14em] text-paper-lighter/60 transition hover:text-gold">FAQ</a>
-            <a data-nav-link href="/contact" class="block text-[11px] uppercase tracking-[0.14em] text-paper-lighter/60 transition hover:text-gold">Contact</a>
-          </div>
+  <!-- ── Full-height menu overlay ──────────────────────────────
+       Sits below the fixed bar and fills the rest of the viewport at every
+       width, so the page can never show through under a short menu. The old
+       grid went ragged because rows shared a height; multi-column with
+       break-inside-avoid balances the groups instead. -->
+  <div id="mobile-nav" data-nav-panel hidden
+       class="fixed inset-x-0 bottom-0 top-[76px] z-40 overflow-y-auto overscroll-contain border-t border-white/10 bg-ink md:top-[88px]">
+    <div class="mx-auto grid min-h-full w-full max-w-[1800px] content-start gap-y-12 px-6 py-10 md:px-[88px] md:py-14 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start lg:gap-x-16 xl:gap-x-24">
+
+      <nav aria-label="Menu">
+        <div class="columns-1 gap-x-10 sm:columns-2 xl:columns-3 xl:gap-x-14">
+          <?php
+            $i = 0;
+            $groups = $site['nav'];
+            $groups[] = ['label' => 'Testimonials', 'url' => '/testimonials', 'children' => [
+              ['label' => 'FAQ', 'url' => '/faq'], ['label' => 'Contact', 'url' => '/contact'],
+            ]];
+          ?>
+          <?php foreach ($groups as $item): ?>
+            <div data-nav-item style="--i:<?= $i ?>" class="mb-9 break-inside-avoid">
+              <?php if (!empty($item['url'])): ?>
+                <a data-nav-link href="<?= $item['url'] ?>"
+                   class="group inline-flex items-center gap-2 font-display text-2xl font-semibold tracking-tight text-paper-lighter transition hover:text-gold focus-visible:outline-none focus-visible:text-gold md:text-[28px]">
+                  <?= $item['label'] ?>
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                       class="h-4 w-4 -translate-x-1 opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100">
+                    <path d="M4 10h12M11 5l5 5-5 5"/>
+                  </svg>
+                </a>
+              <?php else: ?>
+                <span class="block font-display text-2xl font-semibold tracking-tight text-paper-lighter/45 md:text-[28px]"><?= $item['label'] ?></span>
+              <?php endif; ?>
+
+              <?php if (!empty($item['children'])): ?>
+                <ul class="mt-4 space-y-3 border-l border-white/10 pl-5">
+                  <?php foreach ($item['children'] as $c): ?>
+                    <li>
+                      <a data-nav-link href="<?= $c['url'] ?>"
+                         class="group block text-sm font-medium text-paper-lighter/65 transition hover:text-gold focus-visible:outline-none focus-visible:text-gold">
+                        <?= $c['label'] ?>
+                        <?php if (!empty($c['desc'])): ?>
+                          <span class="mt-0.5 block text-xs font-normal leading-relaxed text-paper-lighter/35"><?= $c['desc'] ?></span>
+                        <?php endif; ?>
+                      </a>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+            </div>
+            <?php $i++; ?>
+          <?php endforeach; ?>
         </div>
-      </div>
-      <a data-nav-link href="<?= $site['phone_href'] ?>" class="mt-6 block rounded-full bg-gold px-6 py-3.5 text-center text-sm font-semibold text-ink sm:hidden">Call <?= $site['phone'] ?></a>
-    </nav>
+      </nav>
+
+      <!-- Practical detail, so the menu answers "how do I reach her?" too -->
+      <aside data-nav-item style="--i:<?= $i ?>" class="rounded-2xl bg-ink-800 p-7 ring-1 ring-white/10">
+        <h2 class="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">Get in touch</h2>
+        <a data-nav-link href="<?= $site['phone_href'] ?>" class="mt-4 block font-display text-2xl font-semibold text-paper-lighter transition hover:text-gold">
+          <?= $site['phone'] ?>
+        </a>
+        <p class="mt-1.5 text-sm leading-relaxed text-paper-lighter/50">Complimentary 15-minute consultation</p>
+        <a data-nav-link href="/contact"
+           class="mt-6 block rounded-full bg-gold px-6 py-3.5 text-center text-sm font-semibold text-ink transition hover:bg-gold-400">
+          Book an appointment
+        </a>
+        <div class="mt-8 space-y-6 border-t border-white/10 pt-6">
+          <?php foreach ($site['offices'] as $o): ?>
+            <div>
+              <p class="text-sm font-semibold text-paper-lighter"><?= $o['name'] ?></p>
+              <p class="mt-1 text-sm leading-relaxed text-paper-lighter/50"><?= $o['city'] ?>, <?= $o['region'] ?></p>
+              <p class="mt-1 text-xs text-paper-lighter/35"><?= $o['days'] ?> &middot; <?= $o['hours'] ?></p>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </aside>
+
+    </div>
   </div>
 </header>

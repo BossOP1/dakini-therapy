@@ -40,11 +40,13 @@ module.exports = {
           50:'#F6F5F4', 100:'#EBE8E5', 200:'#D8D2CB', 300:'#BFB4A6', 400:'#A2917B',
           500:'#8A7761', 600:'#6C5D4C', 700:'#54493B', 800:'#42392E', 900:'#302922',
         },
-        // --- the green: #DADA72, the live site's own --accent-hsl ----------
+        // --- the green: #E6DA75, matched to the green baked into
+        //     dakini_banner_color.png so the two do not seam. The site's own
+        //     --accent-hsl was #DADA72, a shade darker. ------------------------
         citron: {
-          DEFAULT:'#DADA72',
+          DEFAULT:'#E6DA75',
           50:'#FBFBEF', 100:'#F6F6DA', 200:'#EEEEB5', 300:'#E5E58A', 400:'#E1E16B',
-          500:'#DADA72', 600:'#C1C133', 700:'#919127', 800:'#6F6F1F', 900:'#4F4F17',
+          500:'#E6DA75', 600:'#C1C133', 700:'#919127', 800:'#6F6F1F', 900:'#4F4F17',
         },
         paper: { DEFAULT:'#E9DFDD', light:'#F7F1F0', lighter:'#FBF7F6' },
       },

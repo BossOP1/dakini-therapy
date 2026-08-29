@@ -21,7 +21,19 @@
         <h2 class="text-xs font-semibold uppercase tracking-[0.18em] text-paper-lighter/50">Explore</h2>
         <ul class="mt-4 space-y-2.5 text-sm">
           <?php foreach ($site['nav'] as $item): ?>
-            <li><a href="<?= $item['url'] ?>" class="transition hover:text-paper-lighter"><?= $item['label'] ?></a></li>
+            <?php if (!empty($item['url'])): ?>
+              <li><a href="<?= $item['url'] ?>" class="transition hover:text-paper-lighter"><?= $item['label'] ?></a></li>
+            <?php else: ?>
+              <?php // No index page for this group — list the pages themselves. ?>
+              <li>
+                <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-paper-lighter/40"><?= $item['label'] ?></span>
+                <ul class="mt-2 space-y-2 border-l border-white/10 pl-3">
+                  <?php foreach ($item['children'] as $c): ?>
+                    <li><a href="<?= $c['url'] ?>" class="transition hover:text-paper-lighter"><?= $c['label'] ?></a></li>
+                  <?php endforeach; ?>
+                </ul>
+              </li>
+            <?php endif; ?>
           <?php endforeach; ?>
           <li><a href="/testimonials" class="transition hover:text-paper-lighter">Testimonials</a></li>
           <li><a href="/faq" class="transition hover:text-paper-lighter">FAQ</a></li>

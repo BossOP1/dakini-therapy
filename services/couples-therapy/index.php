@@ -64,7 +64,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
       <nav aria-label="Breadcrumb" data-motion="item" class="text-[11px] font-semibold uppercase tracking-[0.2em] text-paper-lighter/70">
         <a href="/" class="transition hover:text-gold">Home</a>
         <span class="px-2 text-paper-lighter/40">/</span>
-        <a href="/services/" class="transition hover:text-gold">Services</a>
+        <span class="text-paper-lighter/70">Services</span>
       </nav>
       <h1 data-motion="item" class="mt-5 max-w-3xl font-display text-4xl font-semibold leading-[1.06] tracking-tight text-paper-lighter md:text-5xl lg:text-6xl">
         Couples therapy

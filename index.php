@@ -23,16 +23,16 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
     <!-- Hero Background Video (No Overlay) -->
     <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       <video autoplay loop muted playsinline class="h-full w-full object-cover" style="object-position: center top;">
-        <source src="/assets/video-bg/web-video.mp4" type="video/mp4">
+        <source src="/assets/video-bg/5174172-uhd_2560_1440_25fps.mp4" type="video/mp4">
       </video>
     </div>
 
     <!-- Hero Content -->
     <div class="relative z-10 mx-auto max-w-4xl text-paper-lighter">
-      <div class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-ink/30 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-sm">
+      <!-- <div class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-ink/30 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-sm">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-4 w-4 text-gold" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/></svg>
         Dakini Therapy · Tampa &amp; St. Pete
-      </div>
+      </div> -->
 
       <h1 data-reveal-words class="mt-8 font-display text-4xl font-semibold leading-[1.08] tracking-tight drop-shadow-md sm:text-5xl md:text-6xl lg:text-7xl">
         Cutting through confusion,<br>revealing <span class="text-gold">wisdom</span><br>and <span class="text-gold">compassion</span>.
@@ -60,161 +60,8 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
 
   </section>
 
-  <!-- ═══ HOW DAKINI THERAPY WORKS (Talkspace-inspired exact aesthetic) ═══ -->
-  <section class="bg-white px-5 py-16 lg:px-8 lg:py-20">
-    <div class="mx-auto max-w-6xl">
-
-      <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-        
-        <!-- Left Column: Headline & 4 Numbered Step Cards -->
-        <div class="lg:col-span-7" data-motion="reveal">
-          
-          <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Getting started</p>
-          <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight text-[#103b35] sm:text-4xl lg:text-5xl">
-            How Dakini Therapy works
-          </h2>
-
-          <div class="mt-8 space-y-4 sm:mt-10 sm:space-y-4.5">
-            
-            <!-- Step 1 Card -->
-            <div data-motion="item" class="flex items-start rounded-xl border border-[#103b35]/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#103b35]/40 hover:shadow-soft sm:p-6">
-              <span class="mr-6 shrink-0 font-display text-4xl font-normal text-[#103b35] sm:mr-8 sm:text-5xl">
-                1
-              </span>
-              <div>
-                <h3 class="font-display text-lg font-medium text-[#103b35] sm:text-xl">
-                  Check eligibility
-                </h3>
-                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
-                  We're in-network with major insurance plans via Headway (Aetna, UnitedHealthcare, Oscar, Oxford), and you can check your coverage in minutes. You can also pay out-of-pocket.
-                </p>
-              </div>
-            </div>
-
-            <!-- Step 2 Card -->
-            <div data-motion="item" class="flex items-start rounded-xl border border-[#103b35]/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#103b35]/40 hover:shadow-soft sm:p-6">
-              <span class="mr-6 shrink-0 font-display text-4xl font-normal text-[#103b35] sm:mr-8 sm:text-5xl">
-                2
-              </span>
-              <div>
-                <h3 class="font-display text-lg font-medium text-[#103b35] sm:text-xl">
-                  Connect in a free consultation
-                </h3>
-                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
-                  Schedule a complimentary 15-minute call to share what you're experiencing, ask questions, and ensure our clinical approach is the right mutual fit.
-                </p>
-              </div>
-            </div>
-
-            <!-- Step 3 Card -->
-            <div data-motion="item" class="flex items-start rounded-xl border border-[#103b35]/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#103b35]/40 hover:shadow-soft sm:p-6">
-              <span class="mr-6 shrink-0 font-display text-4xl font-normal text-[#103b35] sm:mr-8 sm:text-5xl">
-                3
-              </span>
-              <div>
-                <h3 class="font-display text-lg font-medium text-[#103b35] sm:text-xl">
-                  Start therapy
-                </h3>
-                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
-                  Meet in person at our peaceful private offices in Hyde Park (Tampa) or Crescent Heights (St. Pete), or connect through secure virtual sessions.
-                </p>
-              </div>
-            </div>
-
-            <!-- Step 4 Card -->
-            <div data-motion="item" class="flex items-start rounded-xl border border-[#103b35]/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#103b35]/40 hover:shadow-soft sm:p-6">
-              <span class="mr-6 shrink-0 font-display text-4xl font-normal text-[#103b35] sm:mr-8 sm:text-5xl">
-                4
-              </span>
-              <div>
-                <h3 class="font-display text-lg font-medium text-[#103b35] sm:text-xl">
-                  Build sustainable tools
-                </h3>
-                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
-                  Integrate neuroscience-backed nervous system regulation, relational repair frameworks, and actionable mindfulness practices you carry into everyday life.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Right Column: Stylized Smartphone Provider Interface Mockup -->
-        <div class="relative flex items-center justify-center lg:col-span-5" data-motion="reveal">
-          
-          <!-- Abstract Pastel Mint Background Shape -->
-          <div aria-hidden="true" class="absolute -right-2 top-4 -z-10 h-72 w-64 rounded-3xl bg-[#e3efe9] sm:h-96 sm:w-80 sm:rounded-[2.5rem]"></div>
-          
-          <!-- Thin Outline Smartphone Frame -->
-          <div data-motion="item" class="w-full max-w-[295px] sm:max-w-[315px] rounded-[2.8rem] border-[2.5px] border-[#103b35] bg-white p-4 shadow-xl">
-            
-            <!-- Phone Status Bar -->
-            <div class="flex items-center justify-between px-2 text-[10px] font-semibold text-[#103b35]">
-              <span>9:41</span>
-              <div class="flex items-center gap-1.5">
-                <svg viewBox="0 0 24 24" fill="currentColor" class="h-2.5 w-2.5"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
-                <div class="h-1.5 w-3.5 rounded-xs border border-[#103b35]"></div>
-              </div>
-            </div>
-
-            <!-- Brand Header -->
-            <div class="mt-3 text-center">
-              <span class="font-display text-sm font-semibold tracking-tight text-[#103b35]">Dakini Therapy</span>
-              <h4 class="mt-1 text-sm font-bold text-ink">Meet your provider</h4>
-            </div>
-
-            <!-- Clinician Profile Card -->
-            <div class="mt-3.5 rounded-xl border border-sand-200/90 bg-white p-3.5 text-center shadow-xs">
-              
-              <!-- Circular Avatar with Play Icon Button -->
-              <div class="relative mx-auto h-20 w-20">
-                <img src="/assets/img/ziji-portrait.jpg" alt="Maureen 'Ziji' Drake, LMHC"
-                     class="h-full w-full rounded-full object-cover shadow-soft"
-                     onerror="this.src='/assets/logo/dakini-logo.webp'">
-                <button type="button" aria-label="Intro video" class="absolute bottom-0 right-0 grid h-6 w-6 place-items-center rounded-full bg-[#103b35] text-white shadow-xs transition hover:scale-110">
-                  <svg viewBox="0 0 24 24" fill="currentColor" class="ml-0.5 h-3 w-3"><path d="M8 5v14l11-7z"/></svg>
-                </button>
-              </div>
-
-              <h5 class="mt-2.5 font-display text-base font-bold text-ink">
-                Maureen 'Ziji' Drake
-              </h5>
-              <p class="text-[10.5px] text-sand-600">
-                LMHC, FL · <span class="font-medium text-emerald-700">● Online now</span>
-              </p>
-
-              <!-- Profile & Availability Tabs -->
-              <div class="mt-3 flex gap-2 text-[10.5px]">
-                <span class="flex-1 rounded-full border border-sand-300 bg-sand-50 py-1 font-semibold text-[#103b35]">Profile</span>
-                <span class="flex-1 rounded-full py-1 text-sand-600">Availability</span>
-              </div>
-
-              <!-- Brief Bio with Read More -->
-              <p class="mt-2.5 text-[10px] leading-relaxed text-sand-700 text-left">
-                It is no secret that life can present us with challenges, making it hard to get by at times. Sometimes all it takes is a safe space to be seen... <span class="font-bold text-[#103b35]">Read more</span>
-              </p>
-
-              <!-- Verified Badges List -->
-              <div class="mt-3 space-y-1 text-left text-[10px] text-sand-700 border-t border-sand-100 pt-2.5">
-                <p class="flex items-center gap-1.5"><span class="text-[#103b35] font-bold">☑</span> 13+ years in practice</p>
-                <p class="flex items-center gap-1.5"><span class="text-[#103b35] font-bold">💼</span> In-network with Headway</p>
-                <p class="flex items-start gap-1.5 leading-tight"><span class="text-[#103b35] font-bold">♡</span> <span>Specialties: Anxiety, Relationships, Grief &amp; Transitions</span></p>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
   <!-- ═══ MEET ZIJI — Full Background Image with Wave ═══ -->
-  <section class="relative isolate flex min-h-[58vh] flex-col justify-center overflow-hidden py-16 sm:py-16 lg:min-h-[68vh] lg:py-20">
+  <section class="relative isolate flex min-h-[58vh] flex-col justify-center overflow-hidden bg-citron py-16 sm:py-16 lg:min-h-[68vh] lg:py-20">
     
     <!-- Full Background Image with Readability Gradient -->
     <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -261,9 +108,162 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
 
     <!-- Organic Wave Divider at the Section Bottom -->
     <div class="pointer-events-none absolute bottom-0 left-0 right-0 overflow-hidden leading-none z-10">
-      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative block w-full h-10 sm:h-14 md:h-16 lg:h-20 text-paper" preserveAspectRatio="none">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative block w-full h-10 sm:h-14 md:h-16 lg:h-20 text-paper-lighter" preserveAspectRatio="none">
         <path d="M0,32 C360,75 720,10 1080,48 C1260,65 1380,40 1440,32 L1440,80 L0,80 Z" fill="currentColor"></path>
       </svg>
+    </div>
+  </section>
+
+  <!-- ═══ HOW DAKINI THERAPY WORKS (Talkspace-inspired exact aesthetic) ═══ -->
+  <section class="bg-paper-lighter px-5 py-16 lg:px-8 lg:py-20">
+    <div class="mx-auto max-w-6xl">
+
+      <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+        
+        <!-- Left Column: Headline & 4 Numbered Step Cards -->
+        <div class="lg:col-span-7" data-motion="reveal">
+          
+          <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Getting started</p>
+          <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl">
+            How Dakini Therapy works
+          </h2>
+
+          <div class="mt-8 space-y-4 sm:mt-10 sm:space-y-4.5">
+            
+            <!-- Step 1 Card -->
+            <div data-motion="item" class="flex items-start rounded-xl border border-ink/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-ink/40 hover:shadow-soft sm:p-6">
+              <span class="mr-6 shrink-0 font-display text-4xl font-semibold text-gold-700 sm:mr-8 sm:text-5xl">
+                1
+              </span>
+              <div>
+                <h3 class="font-display text-lg font-medium text-ink sm:text-xl">
+                  Check eligibility
+                </h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
+                  We're in-network with major insurance plans via Headway (Aetna, UnitedHealthcare, Oscar, Oxford), and you can check your coverage in minutes. You can also pay out-of-pocket.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 Card -->
+            <div data-motion="item" class="flex items-start rounded-xl border border-ink/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-ink/40 hover:shadow-soft sm:p-6">
+              <span class="mr-6 shrink-0 font-display text-4xl font-semibold text-gold-700 sm:mr-8 sm:text-5xl">
+                2
+              </span>
+              <div>
+                <h3 class="font-display text-lg font-medium text-ink sm:text-xl">
+                  Connect in a free consultation
+                </h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
+                  Schedule a complimentary 15-minute call to share what you're experiencing, ask questions, and ensure our clinical approach is the right mutual fit.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 Card -->
+            <div data-motion="item" class="flex items-start rounded-xl border border-ink/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-ink/40 hover:shadow-soft sm:p-6">
+              <span class="mr-6 shrink-0 font-display text-4xl font-semibold text-gold-700 sm:mr-8 sm:text-5xl">
+                3
+              </span>
+              <div>
+                <h3 class="font-display text-lg font-medium text-ink sm:text-xl">
+                  Start therapy
+                </h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
+                  Meet in person at our peaceful private offices in Hyde Park (Tampa) or Crescent Heights (St. Pete), or connect through secure virtual sessions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 Card -->
+            <div data-motion="item" class="flex items-start rounded-xl border border-ink/15 bg-white p-5 shadow-xs transition-all duration-300 hover:border-ink/40 hover:shadow-soft sm:p-6">
+              <span class="mr-6 shrink-0 font-display text-4xl font-semibold text-gold-700 sm:mr-8 sm:text-5xl">
+                4
+              </span>
+              <div>
+                <h3 class="font-display text-lg font-medium text-ink sm:text-xl">
+                  Build sustainable tools
+                </h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
+                  Integrate neuroscience-backed nervous system regulation, relational repair frameworks, and actionable mindfulness practices you carry into everyday life.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right Column: Stylized Smartphone Provider Interface Mockup -->
+        <div class="relative flex items-center justify-center lg:col-span-5" data-motion="reveal">
+          
+          <!-- Abstract Pastel Mint Background Shape -->
+          <div aria-hidden="true" class="absolute -right-2 top-4 -z-10 h-72 w-64 rounded-3xl bg-citron-100 sm:h-96 sm:w-80 sm:rounded-[2.5rem]"></div>
+          
+          <!-- Thin Outline Smartphone Frame -->
+          <div data-motion="item" class="w-full max-w-[295px] sm:max-w-[315px] rounded-[2.8rem] border-[2.5px] border-ink bg-white p-4 shadow-xl">
+            
+            <!-- Phone Status Bar -->
+            <div class="flex items-center justify-between px-2 text-[10px] font-semibold text-ink">
+              <span>9:41</span>
+              <div class="flex items-center gap-1.5">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-2.5 w-2.5"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
+                <div class="h-1.5 w-3.5 rounded-xs border border-ink"></div>
+              </div>
+            </div>
+
+            <!-- Brand Header -->
+            <div class="mt-3 text-center">
+              <span class="font-display text-sm font-semibold tracking-tight text-ink">Dakini Therapy</span>
+              <h4 class="mt-1 text-sm font-bold text-ink">Meet your provider</h4>
+            </div>
+
+            <!-- Clinician Profile Card -->
+            <div class="mt-3.5 rounded-xl border border-sand-200/90 bg-white p-3.5 text-center shadow-xs">
+              
+              <!-- Circular Avatar with Play Icon Button -->
+              <div class="relative mx-auto h-20 w-20">
+                <img src="/assets/img/ziji-portrait.jpg" alt="Maureen 'Ziji' Drake, LMHC"
+                     class="h-full w-full rounded-full object-cover shadow-soft"
+                     onerror="this.src='/assets/logo/dakini-logo.webp'">
+                <button type="button" aria-label="Intro video" class="absolute bottom-0 right-0 grid h-6 w-6 place-items-center rounded-full bg-ink text-white shadow-xs transition hover:scale-110">
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="ml-0.5 h-3 w-3"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+
+              <h5 class="mt-2.5 font-display text-base font-bold text-ink">
+                Maureen 'Ziji' Drake
+              </h5>
+              <p class="text-[10.5px] text-sand-600">
+                LMHC, FL · <span class="font-medium text-emerald-700">● Online now</span>
+              </p>
+
+              <!-- Profile & Availability Tabs -->
+              <div class="mt-3 flex gap-2 text-[10.5px]">
+                <span class="flex-1 rounded-full border border-sand-300 bg-sand-50 py-1 font-semibold text-ink">Profile</span>
+                <span class="flex-1 rounded-full py-1 text-sand-600">Availability</span>
+              </div>
+
+              <!-- Brief Bio with Read More -->
+              <p class="mt-2.5 text-[10px] leading-relaxed text-sand-700 text-left">
+                It is no secret that life can present us with challenges, making it hard to get by at times. Sometimes all it takes is a safe space to be seen... <span class="font-bold text-ink">Read more</span>
+              </p>
+
+              <!-- Verified Badges List -->
+              <div class="mt-3 space-y-1 text-left text-[10px] text-sand-700 border-t border-sand-100 pt-2.5">
+                <p class="flex items-center gap-1.5"><span class="text-ink font-bold">☑</span> 13+ years in practice</p>
+                <p class="flex items-center gap-1.5"><span class="text-ink font-bold">💼</span> In-network with Headway</p>
+                <p class="flex items-start gap-1.5 leading-tight"><span class="text-ink font-bold">♡</span> <span>Specialties: Anxiety, Relationships, Grief &amp; Transitions</span></p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -277,7 +277,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
         <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl lg:text-5xl">
           Reimagining what's possible in <span class="italic font-normal font-display text-gold-700">mental health</span>
         </h2>
-        <p data-motion="item" class="mt-4 text-base leading-relaxed text-sand-700 sm:text-lg">
+        <p data-motion="item" class="mt-4 text-base leading-relaxed text-ink/70 sm:text-lg">
           Dakini Therapy is leading the way in:
         </p>
 
@@ -384,6 +384,26 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
   <!-- ═══ TESTIMONIALS ═══ -->
   <?php $tQuotes = $featured; require __DIR__ . '/partials/testimonials.php'; ?>
 
+
+  <!-- ═══ BAND ═══ -->
+  <section class="px-4 pb-10 md:px-8 lg:px-12 lg:pb-14">
+    <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem]">
+      <picture>
+        <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/testimonial-1600.webp">
+        <source type="image/webp" srcset="/assets/img/testimonial-900.webp">
+        <img src="/assets/img/testimonial.jpg" width="1600" height="1204" loading="lazy" decoding="async"
+             alt="" aria-hidden="true"
+             class="h-[18rem] w-full object-cover object-[50%_60%] md:h-[24rem]">
+      </picture>
+      <div aria-hidden="true" class="absolute inset-0 bg-ink/50"></div>
+      <div class="absolute inset-0 flex items-end p-8 lg:p-12">
+        <p class="max-w-2xl font-display text-2xl font-semibold leading-snug text-paper-lighter md:text-3xl">
+          Experience the difference that in-person therapy can make in a calm, thoughtfully designed
+          environment.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- ═══ OFFICES ═══ -->
   <section class="bg-paper px-5 py-16 lg:px-8 lg:py-20">

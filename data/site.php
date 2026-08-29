@@ -91,18 +91,18 @@ return [
 
   'nav' => [
     ['label' => 'About',     'url' => '/about'],
-    ['label' => 'Services',  'url' => '/services/',  'children' => [
-      ['label' => 'Individual Therapy', 'url' => '/services/individual-therapy'],
-      ['label' => 'Couples Therapy',    'url' => '/services/couples-therapy'],
-      ['label' => 'Workshops',          'url' => '/services/workshops'],
+    ['label' => 'Services',  'children' => [
+      ['label' => 'Individual Therapy', 'url' => '/services/individual-therapy', 'desc' => 'Anxiety, grief, boundaries and life transitions'],
+      ['label' => 'Couples Therapy',    'url' => '/services/couples-therapy',   'desc' => 'Communication, conflict and 2HR Intensives'],
+      ['label' => 'Workshops',          'url' => '/services/workshops',         'desc' => 'Group sessions and seasonal gatherings'],
     ]],
-    ['label' => 'Locations', 'url' => '/locations/', 'children' => [
-      ['label' => 'St. Petersburg',      'url' => '/locations/st-petersburg'],
-      ['label' => 'Hyde Park Village',   'url' => '/locations/tampa-hyde-park-village'],
+    ['label' => 'Locations', 'children' => [
+      ['label' => 'St. Petersburg',      'url' => '/locations/st-petersburg',        'desc' => 'Crescent Heights · Wed, Fri, Sat'],
+      ['label' => 'Hyde Park Village',   'url' => '/locations/tampa-hyde-park-village', 'desc' => 'Tampa · Mon, Tue'],
     ]],
     ['label' => 'The Journey', 'url' => '/the-journey'],
     ['label' => 'Rates',     'url' => '/rates-and-insurance'],
-    ['label' => 'Resources', 'url' => '/resources/', 'children' => [
+    ['label' => 'Resources', 'children' => [
       ['label' => 'Working with Anger',   'url' => '/resources/working-with-anger'],
       ['label' => 'Working with Sadness', 'url' => '/resources/working-with-sadness'],
       ['label' => 'Recommended Books',    'url' => '/resources/recommended-books'],

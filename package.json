@@ -2,11 +2,12 @@
   "name": "dakini-therapy",
   "version": "1.0.0",
   "private": true,
-  "description": "Dakini Therapy, LLC — Maureen 'Ziji' Drake, LMHC",
+  "description": "Dakini Therapy, LLC \u2014 Maureen 'Ziji' Drake, LMHC",
   "scripts": {
     "dev": "tailwindcss -i ./assets/css/main.css -o ./assets/css/build.css --watch",
     "build": "tailwindcss -i ./assets/css/main.css -o ./assets/css/build.css --minify",
-    "serve": "php -S localhost:8000"
+    "serve": "php -S localhost:8000",
+    "export": "bash tools/export.sh"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.9",
