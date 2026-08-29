@@ -226,6 +226,59 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
     </div>
   </section>
 
+  <!-- ═══ HOW I WORK ═══ -->
+  <section class="px-5 py-16 lg:px-8 lg:py-20">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+
+      <!-- Image left here; the Individual Therapy page puts it right, so the
+           two pages do not repeat the same skeleton. -->
+      <div data-motion="reveal">
+        <div data-motion="item" class="overflow-hidden rounded-[1.75rem]">
+          <picture>
+            <source type="image/webp" srcset="/assets/img/approach-couples.webp">
+            <img src="/assets/img/approach-couples.jpg" width="500" height="500" loading="lazy" decoding="async"
+                 alt="Maureen &lsquo;Ziji&rsquo; Drake, LMHC"
+                 class="aspect-square w-full object-cover">
+          </picture>
+        </div>
+      </div>
+
+      <div data-motion="reveal">
+        <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">How I work</p>
+        <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
+          Both a science and an art
+        </h2>
+
+        <div class="mt-7 space-y-5 text-lg leading-relaxed text-sand-700">
+          <p data-motion="item">
+            My approach integrates evidence-based psychotherapy with mindfulness-informed practices that
+            help clients develop greater awareness, emotional resilience, and lasting change. Depending
+            on your needs and preferences, our work may explore the connections between thoughts,
+            emotions, relationships, the nervous system, and&mdash;when meaningful to you&mdash;questions
+            of purpose, identity, and personal growth.
+          </p>
+          <p data-motion="item">
+            I strive to create a therapeutic relationship that is warm, collaborative, and grounded in
+            genuine curiosity. Together, we work to understand long-standing patterns, strengthen your
+            inner resources, and develop practical tools that support meaningful change in everyday life.
+          </p>
+          <p data-motion="item">
+            Clients often describe me as calm, grounded, resourceful, practical, and gently challenging.
+            I believe growth happens when compassion is balanced with honesty, and when insight is
+            translated into action.
+          </p>
+        </div>
+
+        <p data-motion="item" class="mt-9">
+          <a href="/about" class="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
+            Read Ziji&rsquo;s full story
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ TESTIMONIALS ═══ -->
   <?php
   $tQuotes  = $quotes;
