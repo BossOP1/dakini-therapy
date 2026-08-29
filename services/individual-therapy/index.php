@@ -6,6 +6,8 @@ $title = "Individual Therapy in Tampa & St. Petersburg, FL | {$site['legal']}";
 $desc  = 'Individual therapy for adults with Maureen ‘Ziji’ Drake, LMHC. Anxiety, grief, trauma, boundaries and life transitions. In-network via Headway. $185 per session.';
 $path  = '/services/individual-therapy';
 
+$heroOverlay = true;   // short image hero sits under the header
+
 require __DIR__ . '/../../partials/head.php';
 require __DIR__ . '/../../partials/header.php';
 
@@ -37,60 +39,68 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 <main id="main" class="relative z-20 bg-paper-lighter shadow-curtain">
 
   <!-- ═══ HERO ═══ -->
-  <section class="bg-paper px-5 pb-20 pt-36 lg:px-8 lg:pb-24 lg:pt-44">
-    <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-16">
+  <section class="relative isolate flex min-h-[46vh] items-end overflow-hidden px-5 pb-14 pt-36 md:min-h-[56vh] md:pb-16 lg:px-8">
+    <picture>
+      <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/hero-individual-1800.webp">
+      <source type="image/webp" srcset="/assets/img/hero-individual-1000.webp">
+      <img src="/assets/img/hero-individual.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async"
+           class="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center]">
+    </picture>
+    <!-- Flat tint, one colour at a uniform opacity — keeps the copy legible without a fade -->
+    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-ink/65"></div>
 
-      <div data-motion="reveal">
-        <nav aria-label="Breadcrumb" data-motion="item" class="text-[11px] font-semibold uppercase tracking-[0.18em] text-sand-700">
-          <a href="/" class="transition hover:text-ink">Home</a>
-          <span class="px-2 text-sand-400">/</span>
-          <a href="/services/" class="transition hover:text-ink">Services</a>
-        </nav>
+    <div class="mx-auto w-full max-w-6xl" data-motion="reveal">
+      <nav aria-label="Breadcrumb" data-motion="item" class="text-[11px] font-semibold uppercase tracking-[0.18em] text-paper-lighter/70">
+        <a href="/" class="transition hover:text-gold">Home</a>
+        <span class="px-2 text-paper-lighter/40">/</span>
+        <a href="/services/" class="transition hover:text-gold">Services</a>
+      </nav>
 
-        <h1 data-motion="item" class="mt-5 font-display text-4xl font-semibold leading-[1.06] tracking-tight md:text-5xl lg:text-6xl">
-          Individual therapy
-        </h1>
+      <h1 data-motion="item" class="mt-5 max-w-3xl font-display text-4xl font-semibold leading-[1.06] tracking-tight text-paper-lighter md:text-5xl lg:text-6xl">
+        Individual therapy
+      </h1>
 
-        <p data-motion="item" class="mt-6 max-w-xl text-lg leading-relaxed text-sand-700">
-          A dedicated space to understand yourself, navigate what is hard, and create meaningful,
-          lasting change — with practical tools you can carry into everyday life.
-        </p>
+      <p data-motion="item" class="mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter/80">
+        A dedicated space to understand yourself, navigate what is hard, and create meaningful,
+        lasting change.
+      </p>
 
-        <div data-motion="item" class="mt-9 flex flex-col gap-3 sm:flex-row">
-          <a href="<?= $site['phone_href'] ?>"
-             class="rounded-full bg-gold px-8 py-4 text-center text-sm font-semibold text-ink transition hover:bg-gold-400">
-            Book a free 15-min consult
-          </a>
-          <a href="<?= $site['headway'] ?>" rel="noopener"
-             class="rounded-full border-2 border-ink/15 px-8 py-4 text-center text-sm font-semibold text-ink transition hover:border-ink">
-            Check your insurance
-          </a>
-        </div>
+      <div data-motion="item" class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="<?= $site['phone_href'] ?>"
+           class="rounded-full bg-gold px-8 py-4 text-center text-sm font-semibold text-ink transition hover:bg-gold-400">
+          Book a free 15-min consult
+        </a>
+        <a href="<?= $site['headway'] ?>" rel="noopener"
+           class="rounded-full border-2 border-white/25 px-8 py-4 text-center text-sm font-semibold text-paper-lighter transition hover:border-gold hover:text-gold">
+          Check your insurance
+        </a>
       </div>
-
-      <!-- At-a-glance -->
-      <dl data-motion="reveal" class="grid gap-px overflow-hidden rounded-[2rem] border border-sand-200 bg-sand-200 sm:grid-cols-2 lg:grid-cols-1">
-        <div data-motion="item" class="bg-paper-lighter px-7 py-6">
-          <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Session fee</dt>
-          <dd class="mt-1 font-display text-3xl font-semibold text-ink">$<?= $rate['price'] ?></dd>
-          <dd class="mt-1 text-sm text-sand-700"><?= $rate['note'] ?></dd>
-        </div>
-        <div data-motion="item" class="bg-paper-lighter px-7 py-6">
-          <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Insurance</dt>
-          <dd class="mt-1.5 text-sm leading-relaxed text-ink"><?= implode(' · ', $site['insurers']) ?></dd>
-          <dd class="mt-1 text-sm text-sand-700">In network via Headway</dd>
-        </div>
-        <div data-motion="item" class="bg-paper-lighter px-7 py-6">
-          <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Where</dt>
-          <?php foreach ($site['offices'] as $o): ?>
-            <dd class="mt-1.5 text-sm leading-relaxed text-ink">
-              <span class="font-semibold"><?= $o['area'] ?></span> · <?= $o['city'] ?>
-              <span class="block text-sand-700"><?= $o['days'] ?> · <?= $o['hours'] ?></span>
-            </dd>
-          <?php endforeach; ?>
-        </div>
-      </dl>
     </div>
+  </section>
+
+  <!-- ═══ AT A GLANCE ═══ -->
+  <section class="bg-paper px-5 py-12 lg:px-8 lg:py-14">
+    <dl class="mx-auto grid max-w-6xl gap-px overflow-hidden rounded-[1.75rem] border border-sand-200 bg-sand-200 md:grid-cols-3">
+      <div class="bg-paper-lighter px-7 py-6">
+        <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Session fee</dt>
+        <dd class="mt-1 font-display text-3xl font-semibold text-ink">$<?= $rate['price'] ?></dd>
+        <dd class="mt-1 text-sm text-sand-700"><?= $rate['note'] ?></dd>
+      </div>
+      <div class="bg-paper-lighter px-7 py-6">
+        <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Insurance</dt>
+        <dd class="mt-1.5 text-sm leading-relaxed text-ink"><?= implode(' · ', $site['insurers']) ?></dd>
+        <dd class="mt-1 text-sm text-sand-700">In network via Headway</dd>
+      </div>
+      <div class="bg-paper-lighter px-7 py-6">
+        <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Where</dt>
+        <?php foreach ($site['offices'] as $o): ?>
+          <dd class="mt-1.5 text-sm leading-relaxed text-ink">
+            <span class="font-semibold"><?= $o['area'] ?></span>
+            <span class="block text-sand-700"><?= $o['days'] ?> · <?= $o['hours'] ?></span>
+          </dd>
+        <?php endforeach; ?>
+      </div>
+    </dl>
   </section>
 
   <!-- ═══ OUTCOMES ═══ -->
