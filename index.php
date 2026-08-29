@@ -62,13 +62,14 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
 
   <!-- ═══ HOW DAKINI THERAPY WORKS (Talkspace-inspired exact aesthetic) ═══ -->
   <section class="bg-white px-5 py-16 lg:px-8 lg:py-20">
-    <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-6xl">
 
       <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
         
         <!-- Left Column: Headline & 4 Numbered Step Cards -->
         <div class="lg:col-span-7" data-motion="reveal">
           
+          <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Getting started</p>
           <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight text-[#103b35] sm:text-4xl lg:text-5xl">
             How Dakini Therapy works
           </h2>
@@ -222,10 +223,10 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
     </div>
 
     <!-- Content firmly aligned to the Left -->
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex justify-start">
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 flex justify-start">
       <div class="max-w-xl lg:max-w-2xl text-left" data-motion="reveal">
         <p data-motion="item" class="text-xs font-semibold uppercase tracking-[0.2em] text-olive-700">Meet Ziji</p>
-        <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.12]">
+        <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl lg:text-5xl leading-[1.12]">
           Healing begins in relationship
         </h2>
         <p data-motion="item" class="mt-6 text-lg leading-relaxed text-sand-800">
@@ -268,11 +269,12 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
 
   <!-- ═══ SERVICES ═══ -->
   <section id="services" class="relative overflow-hidden bg-paper px-5 py-16 lg:px-8 lg:py-20">
-    <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-6xl">
 
       <!-- Section Header & Category Pills -->
       <div class="mx-auto max-w-3xl text-center" data-motion="reveal">
-        <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl md:text-5xl">
+        <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">How we can work together</p>
+        <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl lg:text-5xl">
           Reimagining what's possible in <span class="italic font-normal font-display text-gold-700">mental health</span>
         </h2>
         <p data-motion="item" class="mt-4 text-base leading-relaxed text-sand-700 sm:text-lg">

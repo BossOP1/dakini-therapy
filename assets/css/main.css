@@ -26,6 +26,19 @@
 @layer base {
   :root { color-scheme: light; }
 
+  /* The header is fixed at 76px, 88px from md up. Without this, every anchor
+     link scrolls its target underneath the header instead of below it. */
+  html {
+    scroll-padding-top: 5.5rem;
+  }
+  @media (min-width: 768px) {
+    html { scroll-padding-top: 6.5rem; }
+  }
+
+  /* Long transform animations stay on their own compositor layer, so they do
+     not repaint the sections around them while the page scrolls. */
+  .animate-marquee { will-change: transform; }
+
   body { text-rendering: optimizeLegibility; }
 
   /* Hide the horizontal scrollbar on the mobile testimonial rail */
