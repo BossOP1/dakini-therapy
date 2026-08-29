@@ -380,68 +380,8 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
   </section>
 
   <!-- ═══ TESTIMONIALS ═══ -->
-  <section class="px-4 py-10 md:px-8 lg:px-12 lg:py-14">
-    <div class="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-citron">
+  <?php $tQuotes = $featured; require __DIR__ . '/partials/testimonials.php'; ?>
 
-      <!-- The photograph the whole panel sits on -->
-      <picture>
-        <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/testimonial-1600.webp">
-        <source type="image/webp" srcset="/assets/img/testimonial-900.webp">
-        <img src="/assets/img/testimonial.jpg" width="1200" height="903" alt="" aria-hidden="true"
-             loading="lazy" decoding="async"
-             class="absolute inset-0 -z-10 h-full w-full object-cover object-[38%_center]"
-             onerror="this.closest('picture').remove()">
-      </picture>
-
-      <div class="grid grid-cols-1 gap-6 p-5 lg:grid-cols-2 lg:items-center lg:gap-10 lg:p-10">
-
-        <!-- Heading on its own solid block: legible over any photograph, and no scrim -->
-        <div class="self-start rounded-2xl bg-ink p-7 shadow-lift lg:p-9">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-citron">In their words</p>
-          <h2 data-reveal-words class="mt-4 max-w-[9em] font-display text-4xl font-semibold leading-[1.05] tracking-tight text-paper-lighter md:text-5xl">
-            What clients<br>are saying
-          </h2>
-          <p class="mt-5 max-w-[22em] text-sm leading-relaxed text-paper-lighter/70">
-            Fifteen reviews from individual and couples clients, in their own words.
-          </p>
-        </div>
-
-        <!-- Cards sit on the photograph -->
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
-          <?php foreach (array_slice($featured, 0, 4) as $t): ?>
-            <figure class="flex flex-col rounded-2xl bg-paper-light p-6 shadow-lift lg:p-7">
-              <blockquote class="font-display text-sm leading-relaxed text-ink lg:text-base">
-                <?php
-                // Trim to keep the four cards to an even rhythm.
-                $q = $t['quote'];
-                $len = function_exists('mb_strlen') ? mb_strlen($q) : strlen($q);
-                if ($len > 200) {
-                  $q = function_exists('mb_substr') ? mb_substr($q, 0, 200) : substr($q, 0, 200);
-                  $lastSpace = function_exists('mb_strrpos') ? mb_strrpos($q, ' ') : strrpos($q, ' ');
-                  if ($lastSpace !== false) {
-                    $q = function_exists('mb_substr') ? mb_substr($q, 0, $lastSpace) : substr($q, 0, $lastSpace);
-                  }
-                  $q .= '…';
-                }
-                ?>
-                &ldquo;<?= htmlspecialchars($q) ?>&rdquo;
-              </blockquote>
-              <figcaption class="mt-auto pt-6 text-xs text-sand-700">
-                <?= $t['id'] ?>, <?= $t['type'] === 'couples' ? 'Couples client' : 'Former client' ?>
-              </figcaption>
-            </figure>
-          <?php endforeach; ?>
-
-          <div class="sm:col-span-2">
-            <a href="/testimonials" class="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
-              Read all <?= count($testimonials) ?> reviews
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══ OFFICES ═══ -->
   <section class="bg-paper px-5 py-24 lg:px-8 lg:py-32">

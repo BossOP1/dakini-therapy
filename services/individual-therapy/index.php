@@ -200,31 +200,12 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
   </section>
 
   <!-- ═══ TESTIMONIALS ═══ -->
-  <section class="px-5 py-24 lg:px-8 lg:py-32">
-    <div class="mx-auto max-w-6xl">
-      <div class="flex flex-wrap items-end justify-between gap-6" data-motion="reveal">
-        <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight md:text-4xl">In their words</h2>
-        <a data-motion="item" href="/testimonials" class="group inline-flex items-center gap-2 text-sm font-semibold text-olive-700 transition hover:text-olive-600">
-          All <?= count($testimonials) ?> reviews
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
-        </a>
-      </div>
+  <?php
+  $tQuotes  = array_slice($quotes, 0, 6);   // individual clients only
+  $tHeading = 'In their words';
+  require __DIR__ . '/../../partials/testimonials.php';
+  ?>
 
-      <div class="mt-10 grid gap-5 md:grid-cols-3" data-motion="reveal">
-        <?php foreach (array_slice($quotes, 0, 3) as $t): ?>
-          <figure data-motion="item" class="flex flex-col rounded-[1.75rem] border border-sand-200 bg-paper-light p-7">
-            <blockquote class="font-display text-base italic leading-relaxed text-ink">
-              &ldquo;<?= htmlspecialchars($t['pull']) ?>&rdquo;
-            </blockquote>
-            <figcaption class="mt-auto flex items-center gap-3 pt-6 text-xs text-sand-700">
-              <span class="grid h-8 w-8 place-items-center rounded-full bg-ink text-[10px] font-bold text-citron"><?= $t['id'] ?></span>
-              Former client
-            </figcaption>
-          </figure>
-        <?php endforeach; ?>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══ FAQ ═══ -->
   <section class="bg-paper px-5 py-24 lg:px-8 lg:py-32">

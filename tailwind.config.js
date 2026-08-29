@@ -60,9 +60,14 @@ module.exports = {
         curtain: '0 24px 48px -24px rgb(0 24 53 / 0.45)',
       },
       keyframes: {
+        // Track holds two identical sets; -50% lands set 2 exactly where set 1
+        // began, so the loop is seamless. Spacing lives in the cards' margin
+        // rather than a flex gap, or the half-width would be off by half a gap.
+        marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
         fadeUp: { '0%': { opacity:'0', transform:'translateY(16px)' }, '100%': { opacity:'1', transform:'translateY(0)' } },
       },
       animation: {
+        marquee: 'marquee 70s linear infinite',
         fadeUp: 'fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both',
       },
     },
