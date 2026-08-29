@@ -6,6 +6,8 @@ $title = "Client Reviews | {$site['legal']} — {$site['clinician']}, {$site['cr
 $desc  = 'What clients say about working with Maureen ‘Ziji’ Drake, LMHC — individual and couples therapy in Tampa and St. Petersburg, Florida.';
 $path  = '/testimonials';
 
+$heroOverlay = true;   // short image hero sits under the header
+
 require __DIR__ . '/../partials/head.php';
 require __DIR__ . '/../partials/header.php';
 
@@ -18,16 +20,28 @@ $couples    = array_values(array_filter($testimonials, fn($t) => $t['type'] === 
 <main id="main" class="relative z-20 bg-paper-lighter shadow-curtain">
 
   <!-- ═══ HERO ═══ -->
-  <section class="bg-paper px-5 pb-16 pt-36 lg:px-8 lg:pb-20 lg:pt-44">
-    <div class="mx-auto max-w-6xl" data-motion="reveal">
-      <nav aria-label="Breadcrumb" data-motion="item" class="text-[11px] font-semibold uppercase tracking-[0.2em] text-sand-700">
-        <a href="/" class="transition hover:text-ink">Home</a>
+  <section class="relative isolate flex min-h-[46vh] items-end overflow-hidden px-5 pb-14 pt-36 md:min-h-[56vh] md:pb-16 lg:px-8">
+    <picture>
+      <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/hero-testimonials-1800.webp">
+      <source type="image/webp" srcset="/assets/img/hero-testimonials-1000.webp">
+      <img src="/assets/img/hero-testimonials.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async"
+           class="absolute inset-0 -z-20 h-full w-full object-cover object-[35%_70%]">
+    </picture>
+    <!-- Flat tint at uniform opacity, no fade. Set at 60% because the office
+         photographs are bright interiors: measured against pure white siding,
+         anything lighter leaves the copy below AA. Drop it once a hero image
+         with a darker lower-left is supplied. -->
+    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-ink/60"></div>
+
+    <div class="mx-auto w-full max-w-6xl" data-motion="reveal">
+      <nav aria-label="Breadcrumb" data-motion="item" class="text-[11px] font-semibold uppercase tracking-[0.2em] text-paper-lighter/70">
+        <a href="/" class="transition hover:text-gold">Home</a>
       </nav>
-      <p data-motion="item" class="mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">In their words</p>
-      <h1 data-motion="item" class="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.06] tracking-tight md:text-5xl lg:text-6xl">
+      <p data-motion="item" class="mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold">In their words</p>
+      <h1 data-motion="item" class="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.06] tracking-tight text-paper-lighter md:text-5xl lg:text-6xl">
         What clients say
       </h1>
-      <p data-motion="item" class="mt-6 max-w-xl text-lg leading-relaxed text-sand-700">
+      <p data-motion="item" class="mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter">
         <?= count($testimonials) ?> reviews from adults who have worked with Ziji, in individual and
         couples therapy. Published as written, with initials in place of names.
       </p>
