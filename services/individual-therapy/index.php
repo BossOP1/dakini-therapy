@@ -80,28 +80,40 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
   </section>
 
   <!-- ═══ AT A GLANCE ═══ -->
-  <section class="bg-paper px-5 py-12 lg:px-8 lg:py-12">
-    <dl class="mx-auto grid max-w-6xl gap-px overflow-hidden rounded-[1.75rem] border border-sand-200 bg-sand-200 md:grid-cols-3">
-      <div class="bg-paper-lighter px-7 py-6">
-        <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Session fee</dt>
-        <dd class="mt-1 font-display text-3xl font-semibold text-ink">$<?= $rate['price'] ?></dd>
-        <dd class="mt-1 text-sm text-sand-700"><?= $rate['note'] ?></dd>
+  <section class="bg-paper px-5 py-14 lg:px-8 lg:py-16">
+    <div class="mx-auto grid max-w-6xl gap-10 rounded-[1.75rem] border border-sand-200 bg-paper-lighter p-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-12 lg:p-10">
+
+      <!-- Insurance -->
+      <div>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">In network via Headway</p>
+        <ul class="mt-4 flex flex-wrap gap-2">
+          <?php foreach ($site['insurers'] as $ins): ?>
+            <li class="rounded-full border border-sand-300 px-3.5 py-1.5 text-sm font-medium text-ink"><?= $ins ?></li>
+          <?php endforeach; ?>
+        </ul>
+        <a href="<?= $site['headway'] ?>" rel="noopener"
+           class="group mt-5 inline-flex items-center gap-2 text-sm font-semibold text-olive-700 transition hover:text-olive-600">
+          Check your coverage in minutes
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 transition group-hover:translate-x-0.5"><path d="M5 15 15 5M7 5h8v8"/></svg>
+        </a>
       </div>
-      <div class="bg-paper-lighter px-7 py-6">
-        <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Insurance</dt>
-        <dd class="mt-1.5 text-sm leading-relaxed text-ink"><?= implode(' · ', $site['insurers']) ?></dd>
-        <dd class="mt-1 text-sm text-sand-700">In network via Headway</dd>
+
+      <div aria-hidden="true" class="hidden w-px bg-sand-200 lg:block"></div>
+
+      <!-- Where -->
+      <div>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Seen in person at</p>
+        <ul class="mt-4 space-y-3.5">
+          <?php foreach ($site['offices'] as $o): ?>
+            <li class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <a href="<?= $o['url'] ?>" class="font-display text-lg font-semibold text-ink transition hover:text-olive-700"><?= $o['area'] ?></a>
+              <span class="text-sm text-sand-700"><?= $o['city'] ?>, <?= $o['region'] ?></span>
+              <span class="ml-auto text-sm font-medium text-ink/70"><?= $o['days'] ?></span>
+            </li>
+          <?php endforeach; ?>
+        </ul>
       </div>
-      <div class="bg-paper-lighter px-7 py-6">
-        <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-700">Where</dt>
-        <?php foreach ($site['offices'] as $o): ?>
-          <dd class="mt-1.5 text-sm leading-relaxed text-ink">
-            <span class="font-semibold"><?= $o['area'] ?></span>
-            <span class="block text-sand-700"><?= $o['days'] ?> · <?= $o['hours'] ?></span>
-          </dd>
-        <?php endforeach; ?>
-      </div>
-    </dl>
+    </div>
   </section>
 
   <!-- ═══ OUTCOMES ═══ -->
