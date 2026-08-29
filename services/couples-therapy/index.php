@@ -167,8 +167,9 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
   </section>
 
   <!-- ═══ TYPES ═══ -->
-  <section class="relative bg-citron px-5 pb-28 pt-16 lg:px-8 lg:pb-32 lg:pt-20">
-    <div class="mx-auto max-w-6xl">
+  <section class="px-4 py-10 md:px-8 lg:px-12 lg:py-14">
+    <div class="mx-auto max-w-7xl rounded-[2rem] bg-citron px-6 py-14 sm:px-10 lg:px-14 lg:py-16">
+      <div class="mx-auto max-w-6xl">
       <div class="max-w-2xl">
         <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/60">Types of couples therapy</p>
         <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl lg:text-5xl">
@@ -197,11 +198,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
       </div>
     </div>
 
-    <div class="pointer-events-none absolute bottom-0 left-0 right-0 z-10 overflow-hidden leading-none">
-      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true"
-           class="relative block h-10 w-full text-paper-lighter sm:h-14 md:h-16 lg:h-20">
-        <path d="M0,32 C360,75 720,10 1080,48 C1260,65 1380,40 1440,32 L1440,80 L0,80 Z" fill="currentColor"></path>
-      </svg>
+      </div>
     </div>
   </section>
 
