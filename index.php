@@ -221,7 +221,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
 
     <!-- Content firmly aligned to the Left -->
     <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex justify-start">
-      <div class="max-w-xl lg:max-w-2xl text-left rounded-[2rem] bg-paper-lighter p-8 shadow-lift sm:p-10 lg:p-12" data-motion="reveal">
+      <div class="max-w-xl lg:max-w-2xl text-left" data-motion="reveal">
         <p data-motion="item" class="text-xs font-semibold uppercase tracking-[0.2em] text-olive-700">Meet Ziji</p>
         <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.12]">
           Healing begins in relationship
@@ -444,6 +444,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
   <!-- ═══ OFFICES ═══ -->
   <section class="bg-paper px-5 py-24 lg:px-8 lg:py-32">
     <div class="mx-auto max-w-6xl">
+
       <div class="max-w-2xl" data-motion="reveal">
         <p data-motion="item" class="text-xs font-semibold uppercase tracking-[0.2em] text-olive-600">Two calm, private offices</p>
         <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">Come sit with it, in person</h2>
@@ -453,27 +454,58 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
         </p>
       </div>
 
-      <div class="mt-14 grid gap-6 md:grid-cols-2" data-motion="reveal">
-        <?php foreach ($site['offices'] as $o): $a = $o['accent']; ?>
-          <article data-motion="item" class="group overflow-hidden rounded-4xl border border-sand-200 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lift">
-            <div class="relative h-48 bg-<?= $a ?>-100">
-              <span class="absolute left-6 top-6 rounded-full bg-white/85 px-3 py-1 text-xs font-semibold text-<?= $a ?>-700"><?= $o['city'] ?>, <?= $o['region'] ?></span>
+      <div class="mt-16 space-y-6 lg:space-y-8">
+        <?php foreach (array_values($site['offices']) as $i => $o): ?>
+          <article data-motion="reveal"
+                   class="grid overflow-hidden rounded-[2rem] border border-sand-200 bg-paper-lighter shadow-soft lg:grid-cols-2">
+
+            <!-- Photograph — sides alternate down the page -->
+            <div data-motion="item" class="relative min-h-[16rem] lg:min-h-[26rem] <?= $i % 2 ? 'lg:order-2' : '' ?>">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/<?= $o['photo'] ?>-1200.webp">
+                <source type="image/webp" srcset="/assets/img/<?= $o['photo'] ?>-700.webp">
+                <img src="/assets/img/<?= $o['photo'] ?>.jpg" alt="The <?= htmlspecialchars($o['area']) ?> therapy room"
+                     loading="lazy" decoding="async"
+                     class="absolute inset-0 h-full w-full object-cover">
+              </picture>
+              <span class="absolute left-5 top-5 rounded-full bg-ink px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-citron">
+                <?= $o['city'] ?>, <?= $o['region'] ?>
+              </span>
             </div>
-            <div class="p-8">
-              <h3 class="font-display text-2xl font-semibold"><?= $o['area'] ?></h3>
-              <address class="mt-3 not-italic leading-relaxed text-sand-700">
+
+            <!-- Details -->
+            <div data-motion="item" class="flex flex-col justify-center p-8 lg:p-12">
+              <h3 class="font-display text-2xl font-semibold tracking-tight md:text-3xl"><?= $o['area'] ?></h3>
+
+              <address class="mt-4 not-italic text-lg leading-relaxed text-sand-700">
                 <?= $o['street'] ?><br><?= $o['city'] ?>, <?= $o['region'] ?> <?= $o['zip'] ?>
               </address>
-              <dl class="mt-5 flex flex-wrap gap-x-8 gap-y-2 text-sm">
-                <div><dt class="text-xs font-semibold uppercase tracking-wider text-sand-700">Days</dt><dd class="mt-0.5 font-medium"><?= $o['days'] ?></dd></div>
-                <div><dt class="text-xs font-semibold uppercase tracking-wider text-sand-700">Hours</dt><dd class="mt-0.5 font-medium"><?= $o['hours'] ?></dd></div>
+
+              <dl class="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-sand-200 bg-sand-200 text-sm">
+                <div class="bg-paper-lighter px-5 py-4">
+                  <dt class="text-[10px] font-semibold uppercase tracking-[0.16em] text-sand-700">Days</dt>
+                  <dd class="mt-1 font-semibold text-ink"><?= $o['days'] ?></dd>
+                </div>
+                <div class="bg-paper-lighter px-5 py-4">
+                  <dt class="text-[10px] font-semibold uppercase tracking-[0.16em] text-sand-700">Hours</dt>
+                  <dd class="mt-1 font-semibold text-ink"><?= $o['hours'] ?></dd>
+                </div>
               </dl>
-              <p class="mt-5 rounded-2xl border border-sand-200 bg-paper-lighter p-4 text-sm leading-relaxed text-sand-700">
-                <strong class="font-semibold text-ink">Parking · </strong><?= $o['parking'] ?>
+
+              <p class="mt-5 border-l-2 border-citron pl-4 text-sm leading-relaxed text-sand-700">
+                <strong class="font-semibold text-ink">Parking</strong><br><?= $o['parking'] ?>
               </p>
-              <div class="mt-6 flex flex-wrap gap-4">
-                <a href="<?= $o['url'] ?>" class="font-semibold text-<?= $a ?>-700 transition hover:text-<?= $a ?>-600">Office details</a>
-                <a href="<?= $o['map'] ?>" rel="noopener" class="font-semibold text-sand-700 transition hover:text-ink">Directions ↗</a>
+
+              <div class="mt-8 flex flex-wrap items-center gap-3">
+                <a href="<?= $o['url'] ?>"
+                   class="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
+                  Office details
+                </a>
+                <a href="<?= $o['map'] ?>" rel="noopener"
+                   class="group inline-flex items-center gap-2 rounded-full border-2 border-ink/15 px-6 py-3 text-sm font-semibold text-ink transition hover:border-ink">
+                  Directions
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 transition group-hover:translate-x-0.5"><path d="M5 15 15 5M7 5h8v8"/></svg>
+                </a>
               </div>
             </div>
           </article>

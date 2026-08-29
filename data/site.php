@@ -39,6 +39,7 @@ return [
       'geo'     => ['lat' => 27.7936, 'lng' => -82.6403],
       'map'     => 'https://maps.google.com/?q=675+30th+Ave+N+Suite+101+St+Petersburg+FL+33704',
       'url'     => '/locations/st-petersburg',
+      'photo'   => 'office-st-pete',
     ],
     'tampa' => [
       'name'    => 'Tampa',
@@ -54,6 +55,7 @@ return [
       'geo'     => ['lat' => 27.9375, 'lng' => -82.4838],
       'map'     => 'https://maps.google.com/?q=1405+W+Swann+Ave+Tampa+FL+33606',
       'url'     => '/locations/tampa-hyde-park-village',
+      'photo'   => 'office-tampa',
     ],
   ],
 
