@@ -105,54 +105,89 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 
   <!-- ═══ OUTCOMES ═══ -->
   <section class="px-5 py-24 lg:px-8 lg:py-32">
-    <div class="mx-auto max-w-6xl">
-      <div class="max-w-2xl" data-motion="reveal">
-        <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">What the work can do</p>
-        <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-          Through our work together
-        </h2>
-        <p data-motion="item" class="mt-5 text-lg leading-relaxed text-sand-700">
-          Therapy strengthens your emotional wellbeing while building tools that support a more
-          fulfilling and authentic life. Depending on what you need, we may explore any of the following.
+    <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+
+      <!-- Photograph, held alongside the list as it scrolls -->
+      <div class="lg:sticky lg:top-32 lg:self-start">
+        <div class="overflow-hidden rounded-[2rem]">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/outcomes-1200.webp">
+            <source type="image/webp" srcset="/assets/img/outcomes-700.webp">
+            <img src="/assets/img/outcomes.jpg" width="1200" height="873" loading="lazy" decoding="async"
+                 alt="Books and brass bookends on a shelf in the therapy room"
+                 class="h-full w-full object-cover lg:aspect-[4/5]">
+          </picture>
+        </div>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed text-sand-700">
+          Evidence-based practice alongside two decades of contemplative study — both inform the work.
         </p>
       </div>
 
-      <ul class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-motion="reveal">
-        <?php foreach ($outcomes as $i => [$heading, $body]): ?>
-          <li data-motion="item" class="rounded-[1.75rem] border border-sand-200 bg-white p-7 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lift">
-            <span class="grid h-9 w-9 place-items-center rounded-full bg-ink text-[11px] font-bold text-citron"><?= $i + 1 ?></span>
-            <h3 class="mt-5 font-display text-lg font-semibold leading-snug"><?= $heading ?></h3>
-            <p class="mt-2.5 text-sm leading-relaxed text-sand-700"><?= $body ?></p>
-          </li>
-        <?php endforeach; ?>
-      </ul>
+      <div>
+        <div data-motion="reveal">
+          <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">What the work can do</p>
+          <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
+            Through our work together
+          </h2>
+          <p data-motion="item" class="mt-5 text-lg leading-relaxed text-sand-700">
+            Therapy strengthens your emotional wellbeing while building tools that support a more
+            fulfilling and authentic life. Depending on what you need, we may explore any of the following.
+          </p>
+        </div>
+
+        <ul class="mt-12 border-t border-sand-200" data-motion="reveal">
+          <?php foreach ($outcomes as $i => [$heading, $body]): ?>
+            <li data-motion="item" class="grid grid-cols-[2.25rem_1fr] gap-x-5 border-b border-sand-200 py-6 sm:grid-cols-[3rem_1fr]">
+              <span class="pt-0.5 font-display text-lg font-semibold text-gold-700"><?= sprintf('%02d', $i + 1) ?></span>
+              <div>
+                <h3 class="font-display text-lg font-semibold leading-snug text-ink"><?= $heading ?></h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-sand-700"><?= $body ?></p>
+              </div>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- ═══ APPROACH ═══ -->
   <section class="bg-citron px-5 py-24 lg:px-8 lg:py-32">
-    <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:gap-16">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+
+      <div data-motion="reveal">
+        <div data-motion="item" class="overflow-hidden rounded-[2rem]">
+          <picture>
+            <source type="image/webp" srcset="/assets/img/approach-737.webp">
+            <img src="/assets/img/approach.jpg" width="737" height="737" loading="lazy" decoding="async"
+                 alt="Maureen 'Ziji' Drake at the Omega Institute"
+                 class="aspect-square w-full object-cover">
+          </picture>
+        </div>
+      </div>
+
       <div data-motion="reveal">
         <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/60">How I work</p>
         <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl lg:text-5xl">
           Both a science and an art
         </h2>
-      </div>
-      <div data-motion="reveal" class="space-y-5 text-lg leading-relaxed text-ink/80">
-        <p data-motion="item">
-          My approach integrates evidence-based psychotherapy with mindfulness-informed practices that
-          help you develop greater awareness, emotional resilience and lasting change.
-        </p>
-        <p data-motion="item">
-          I aim for a therapeutic relationship that is warm, collaborative and grounded in genuine
-          curiosity. Together we work to understand long-standing patterns, strengthen your inner
-          resources, and translate insight into action.
-        </p>
-        <p data-motion="item">
-          Clients often describe me as calm, grounded, resourceful, practical, and gently challenging.
-          My role is not to tell you who to become, but to help you reconnect with your own strengths.
-        </p>
-        <p data-motion="item" class="pt-2">
+
+        <div class="mt-7 space-y-5 text-lg leading-relaxed text-ink/80">
+          <p data-motion="item">
+            My approach integrates evidence-based psychotherapy with mindfulness-informed practices that
+            help you develop greater awareness, emotional resilience and lasting change.
+          </p>
+          <p data-motion="item">
+            I aim for a therapeutic relationship that is warm, collaborative and grounded in genuine
+            curiosity. Together we work to understand long-standing patterns, strengthen your inner
+            resources, and translate insight into action.
+          </p>
+          <p data-motion="item">
+            Clients often describe me as calm, grounded, resourceful, practical, and gently challenging.
+            My role is not to tell you who to become, but to help you reconnect with your own strengths.
+          </p>
+        </div>
+
+        <p data-motion="item" class="mt-9">
           <a href="/about" class="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
             Read Ziji's full story
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
