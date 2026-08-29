@@ -34,7 +34,7 @@ $faqs = [
 $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'couples'));
 ?>
 
-<main id="main" class="bg-paper-lighter">
+<main id="main" class="relative z-20 bg-paper-lighter shadow-curtain">
 
   <!-- ═══ HERO ═══ -->
   <section class="bg-paper px-5 pb-20 pt-36 lg:px-8 lg:pb-24 lg:pt-44">

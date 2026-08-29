@@ -18,7 +18,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
 <main id="main" class="relative z-20 bg-paper-lighter shadow-curtain">
 
   <!-- ═══ HERO — Open Cinematic Video ═══ -->
-  <section class="relative isolate flex min-h-[75vh] flex-col items-center justify-center overflow-hidden px-5 py-24 text-center sm:px-8 md:min-h-[82vh] md:py-32 lg:px-12">
+  <section class="relative isolate flex min-h-[46vh] flex-col items-center justify-center overflow-hidden px-5 py-16 text-center sm:px-8 md:min-h-[56vh] md:py-20 lg:px-12">
 
     <!-- Hero Background Video (No Overlay) -->
     <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">

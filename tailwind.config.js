@@ -57,6 +57,7 @@ module.exports = {
         soft: '0 2px 8px -2px rgb(0 24 53 / 0.07), 0 8px 24px -8px rgb(0 24 53 / 0.12)',
         lift: '0 8px 24px -6px rgb(0 24 53 / 0.14), 0 20px 48px -12px rgb(0 24 53 / 0.16)',
         glow: '0 0 0 1px rgb(140 105 29 / 0.30)',
+        curtain: '0 24px 48px -24px rgb(0 24 53 / 0.45)',
       },
       keyframes: {
         fadeUp: { '0%': { opacity:'0', transform:'translateY(16px)' }, '100%': { opacity:'1', transform:'translateY(0)' } },
