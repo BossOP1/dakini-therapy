@@ -19,8 +19,8 @@ return [
   'insurers'    => ['Aetna', 'Oxford', 'Oscar', 'UnitedHealthcare'],
 
   'rates' => [
-    ['label' => 'Individual session',    'price' => 185, 'note' => '60 min initial · 50 min follow-up'],
-    ['label' => 'Couples session',       'price' => 222, 'note' => '60 min initial · 50 min follow-up'],
+    ['label' => 'Individual Session',    'price' => 185, 'note' => '60 min initial · 50 min follow-up'],
+    ['label' => 'Couples Session',       'price' => 222, 'note' => '60 min initial · 50 min follow-up'],
     ['label' => 'Couples 2-Hour Intensive', 'price' => 400, 'note' => 'Hyde Park Village only'],
   ],
 

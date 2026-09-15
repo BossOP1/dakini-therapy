@@ -58,7 +58,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
       </nav>
 
       <h1 data-motion="item" class="mt-5 max-w-3xl font-display text-4xl font-semibold leading-[1.06] tracking-tight text-paper-lighter md:text-5xl lg:text-6xl">
-        Individual therapy
+        Individual Therapy
       </h1>
 
       <p data-motion="item" class="mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter">

@@ -191,7 +191,7 @@ $peek = array_slice($journey, 0, 4);
           Two calm, private offices
         </h2>
         <p class="mt-5 text-lg leading-relaxed text-sand-700">
-          I welcome adult clients into two beautiful, private offices located in Hyde Park Village and St. Pete, where comfort, confidentiality, and healing come together.
+          I welcome adult clients into two beautiful, private offices located in St. Pete, and Hyde Park Village where comfort, confidentiality, and healing come together.
         </p>
       </div>
 

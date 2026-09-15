@@ -148,7 +148,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
               </span>
               <div>
                 <h3 class="font-display text-lg font-medium text-ink sm:text-xl">
-                  Check eligibility
+                  Check Eligibility
                 </h3>
                 <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
                   We're in-network with major insurance plans via Headway (Aetna, UnitedHealthcare, Oscar, Oxford), and you can check your coverage in minutes. You can also pay out-of-pocket.
@@ -177,7 +177,7 @@ Schedule a Free Consultation                </h3>
               </span>
               <div>
                 <h3 class="font-display text-lg font-medium text-ink sm:text-xl">
-                  Start therapy
+                  Start Therapy
                 </h3>
                 <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
                   Meet in person at our peaceful private offices in Hyde Park (Tampa) or St. Pete, or connect through secure virtual sessions.
@@ -192,7 +192,7 @@ Schedule a Free Consultation                </h3>
               </span>
               <div>
                 <h3 class="font-display text-lg font-medium text-ink sm:text-xl">
-                  Build sustainable tools
+                  Build Sustainable Tools
                 </h3>
                 <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
                   Integrate neuroscience-backed nervous system regulation, relational repair frameworks, and actionable mindfulness practices you carry into everyday life.

@@ -33,9 +33,9 @@ $outcomes = [
 //   relationship — Hanna Lazar          marriage — Roman Kraft
 //   premarital   — The HK Photo Company
 $types = [
-  ['Relationship counseling', 'For partners at any stage who want to communicate better, repair more quickly, and understand the patterns they keep returning to.', 'type-relationship'],
-  ['Marriage counseling',     'For married couples working through conflict, disconnection or a breach of trust — or wanting to deepen a partnership that is already strong.', 'type-marriage'],
-  ['Premarital counseling',   'For couples preparing to marry: expectations, money, family, parenting and the conversations worth having before the wedding.', 'type-premarital'],
+  ['Relationship Counseling', 'For partners at any stage who want to communicate better, repair more quickly, and understand the patterns they keep returning to.', 'type-relationship'],
+  ['Marriage Counseling',     'For married couples working through conflict, disconnection or a breach of trust — or wanting to deepen a partnership that is already strong.', 'type-marriage'],
+  ['Premarital Counseling',   'For couples preparing to marry: expectations, money, family, parenting and the conversations worth having before the wedding.', 'type-premarital'],
 ];
 
 $faqs = [
@@ -67,7 +67,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
         <span class="text-paper-lighter/70">Services</span>
       </nav>
       <h1 data-motion="item" class="mt-5 max-w-3xl font-display text-4xl font-semibold leading-[1.06] tracking-tight text-paper-lighter md:text-5xl lg:text-6xl">
-        Couples therapy
+        Couples Therapy
       </h1>
       <p data-motion="item" class="mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter">
         A supportive, nonjudgmental space to understand one another, strengthen communication, and
