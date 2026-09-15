@@ -139,7 +139,7 @@ and impossible to share verbally:
 
 ### Locations
 
-**St. Petersburg — Crescent Heights**
+**St. Petersburg — St. Pete**
 675 30th Ave. N., Suite 101, St. Petersburg, FL 33704
 Wed, Fri, Sat · 8:00 am – 8:00 pm
 *Use designated parking for Soul Purpose Wellness Guild.*

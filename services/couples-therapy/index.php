@@ -76,7 +76,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
       <div data-motion="item" class="mt-8 flex flex-col gap-3 sm:flex-row">
         <a href="<?= $site['phone_href'] ?>"
            class="rounded-full bg-gold px-8 py-4 text-center text-sm font-semibold text-ink transition hover:bg-gold-400">
-          Book a free 15-min consult
+          Book a Free 15-Min Consult
         </a>
       </div>
     </div>
@@ -113,7 +113,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
           <span class="mt-1 block"><?= $hydePark['days'] ?> · <?= $hydePark['hours'] ?></span>
         </address>
         <a href="<?= $hydePark['url'] ?>" class="group mt-4 inline-flex items-center gap-2 text-sm font-semibold text-olive-700 transition hover:text-olive-600">
-          Office details
+          Office Details
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-3.5 w-3.5 transition group-hover:translate-x-0.5"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
         </a>
       </div>
@@ -271,7 +271,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
 
         <p data-motion="item" class="mt-9">
           <a href="/about" class="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
-            Read Ziji&rsquo;s full story
+            Read Ziji&rsquo;s Full Story
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
           </a>
         </p>

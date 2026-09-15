@@ -96,7 +96,7 @@ require __DIR__ . '/../partials/header.php';
         health counseling. Both inform the work.
       </p>
       <a href="/about" class="mt-8 inline-flex rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-citron transition hover:bg-ink-800">
-        Read Ziji's full story
+        Read Ziji's Full Story
       </a>
     </div>
 

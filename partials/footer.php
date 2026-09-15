@@ -59,7 +59,7 @@
         <a href="<?= $site['phone_href'] ?>" class="mt-4 block font-display text-2xl font-semibold text-paper-lighter transition hover:text-gold-300"><?= $site['phone'] ?></a>
         <p class="mt-2 text-sm">Complimentary 15-minute consultation</p>
         <a href="<?= $site['headway'] ?>" rel="noopener" class="mt-5 inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold text-paper-lighter transition hover:border-gold-300 hover:text-gold-300">
-          Check insurance on Headway
+          Check Insurance on Headway
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" class="h-3.5 w-3.5"><path d="M5 15 15 5M7 5h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>

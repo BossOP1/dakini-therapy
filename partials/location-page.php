@@ -65,7 +65,7 @@ foreach ($site['offices'] as $o) { if ($o['url'] !== $office['url']) $other = $o
         <p class="mt-1 text-sm text-sand-700"><?= $office['hours'] ?></p>
         <a href="<?= $site['phone_href'] ?>"
            class="mt-5 inline-flex rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
-          Call for a free 15-min consult
+          Call for a Free 15-Min Consult
         </a>
       </div>
     </div>

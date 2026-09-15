@@ -70,7 +70,7 @@ $rates = $site['rates'];
           </ul>
           <a href="<?= $site['headway'] ?>" rel="noopener"
              class="group mt-8 inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-citron transition hover:bg-ink-800">
-            Check your co-pay on Headway
+            Check Your Co-Pay on Headway
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 transition group-hover:translate-x-0.5"><path d="M5 15 15 5M7 5h8v8"/></svg>
           </a>
         </div>

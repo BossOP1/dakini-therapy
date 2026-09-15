@@ -27,7 +27,7 @@ return [
   'offices' => [
     'st-petersburg' => [
       'name'    => 'St. Petersburg',
-      'area'    => 'Crescent Heights',
+      'area'    => 'St. Pete',
       'street'  => '675 30th Ave. N., Suite 101',
       'city'    => 'St. Petersburg',
       'region'  => 'FL',
@@ -97,7 +97,7 @@ return [
       ['label' => 'Workshops',          'url' => '/services/workshops',         'desc' => 'Group sessions and seasonal gatherings'],
     ]],
     ['label' => 'Locations', 'children' => [
-      ['label' => 'St. Petersburg',      'url' => '/locations/st-petersburg',        'desc' => 'Crescent Heights · Wed, Fri, Sat'],
+      ['label' => 'St. Petersburg',      'url' => '/locations/st-petersburg',        'desc' => 'St. Pete · Wed, Fri, Sat'],
       ['label' => 'Hyde Park Village',   'url' => '/locations/tampa-hyde-park-village', 'desc' => 'Tampa · Mon, Tue'],
     ]],
     ['label' => 'The Journey', 'url' => '/the-journey'],

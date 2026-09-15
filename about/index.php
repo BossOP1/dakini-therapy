@@ -193,7 +193,7 @@ $peek = array_slice($journey, 0, 4);
         <p class="mt-5 text-lg leading-relaxed text-sand-700">
           Experience the difference that in-person therapy can make in a calm, thoughtfully designed
           environment. I welcome adult clients into two beautiful, private offices located in
-          Tampa's Hyde Park Village and St. Petersburg's Crescent Heights, where comfort,
+          Tampa's Hyde Park Village and St. Petersburg (St. Pete), where comfort,
           confidentiality, and healing come together.
         </p>
       </div>

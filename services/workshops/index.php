@@ -124,7 +124,7 @@ require __DIR__ . '/../../partials/header.php';
 
             <button type="submit"
                     class="mt-6 w-full rounded-full bg-ink px-8 py-4 text-sm font-semibold text-citron transition hover:bg-ink-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ink/30 sm:w-auto">
-              Add me to the list
+              Add Me to the List
             </button>
 
             <p class="mt-4 text-xs leading-relaxed text-ink/60">
@@ -151,7 +151,7 @@ require __DIR__ . '/../../partials/header.php';
             <h3 class="font-display text-xl font-semibold text-ink"><?= $s['title'] ?></h3>
             <p class="mt-3 text-sm leading-relaxed text-sand-700"><?= $s['blurb'] ?></p>
             <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-olive-700 transition group-hover:gap-3">
-              Learn more
+              Learn More
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
             </span>
           </a>

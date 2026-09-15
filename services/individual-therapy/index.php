@@ -69,11 +69,11 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
       <div data-motion="item" class="mt-8 flex flex-col gap-3 sm:flex-row">
         <a href="<?= $site['phone_href'] ?>"
            class="rounded-full bg-gold px-8 py-4 text-center text-sm font-semibold text-ink transition hover:bg-gold-400">
-          Book a free 15-min consult
+          Book a Free 15-Min Consult
         </a>
         <a href="<?= $site['headway'] ?>" rel="noopener"
            class="rounded-full border-2 border-white/60 px-8 py-4 text-center text-sm font-semibold text-paper-lighter transition hover:border-gold hover:text-gold">
-          Check your insurance
+          Check Insurance
         </a>
       </div>
     </div>
@@ -93,7 +93,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
         </ul>
         <a href="<?= $site['headway'] ?>" rel="noopener"
            class="group mt-5 inline-flex items-center gap-2 text-sm font-semibold text-olive-700 transition hover:text-olive-600">
-          Check your coverage in minutes
+          Check Your Coverage in Minutes
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 transition group-hover:translate-x-0.5"><path d="M5 15 15 5M7 5h8v8"/></svg>
         </a>
       </div>
@@ -132,7 +132,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
           </picture>
         </div>
         <p class="mt-5 max-w-xs text-sm leading-relaxed text-sand-700">
-          Sessions are held in person, in two private rooms — Crescent Heights in St. Petersburg and Hyde Park Village in Tampa.
+          Sessions are held in person, in two private rooms — St. Pete in St. Petersburg and Hyde Park Village in Tampa.
         </p>
       </div>
 
@@ -213,7 +213,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
 
         <p data-motion="item" class="mt-9">
           <a href="/about" class="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
-            Read Ziji's full story
+            Read Ziji's Full Story
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
           </a>
         </p>

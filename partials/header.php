@@ -158,7 +158,7 @@ $heroOverlay = $heroOverlay ?? false;
         <p class="mt-1.5 text-sm leading-relaxed text-paper-lighter/50">Complimentary 15-minute consultation</p>
         <a data-nav-link href="/contact"
            class="mt-6 block rounded-full bg-gold px-6 py-3.5 text-center text-sm font-semibold text-ink transition hover:bg-gold-400">
-          Book an appointment
+          Book an Appointment
         </a>
         <div class="mt-8 space-y-6 border-t border-white/10 pt-6">
           <?php foreach ($site['offices'] as $o): ?>

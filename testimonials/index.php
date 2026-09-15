@@ -114,7 +114,7 @@ $couples    = array_values(array_filter($testimonials, fn($t) => $t['type'] === 
       </p>
       <a href="<?= $site['phone_href'] ?>"
          class="mt-8 inline-flex rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-citron transition hover:bg-ink-800">
-        Book a free 15-min consult
+        Book a Free 15-Min Consult
       </a>
     </div>
   </section>

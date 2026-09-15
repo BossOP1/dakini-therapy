@@ -87,7 +87,7 @@ require __DIR__ . '/../../partials/header.php';
       <div class="mt-12 flex flex-wrap gap-3">
         <a href="/services/individual-therapy"
            class="rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-citron transition hover:bg-ink-800">
-          Individual therapy
+          Individual Therapy
         </a>
         <a href="<?= $site['phone_href'] ?>"
            class="rounded-full border-2 border-ink/15 px-7 py-3.5 text-sm font-semibold text-ink transition hover:border-ink">

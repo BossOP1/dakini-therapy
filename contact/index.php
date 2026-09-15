@@ -64,7 +64,7 @@ require __DIR__ . '/../partials/header.php';
         </p>
         <a href="<?= $site['headway'] ?>" rel="noopener"
            class="group mt-4 inline-flex items-center gap-2 text-sm font-semibold text-olive-700 transition hover:text-olive-600">
-          Check your coverage on Headway
+          Check Your Coverage on Headway
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 transition group-hover:translate-x-0.5"><path d="M5 15 15 5M7 5h8v8"/></svg>
         </a>
       </div>
@@ -176,7 +176,7 @@ require __DIR__ . '/../partials/header.php';
 
             <button type="submit"
                     class="rounded-full bg-ink px-8 py-4 text-sm font-semibold text-citron transition hover:bg-ink-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-citron">
-              Send message
+              Send Message
             </button>
           </form>
         <?php endif; ?>

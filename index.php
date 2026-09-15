@@ -3,7 +3,7 @@ $site         = require __DIR__ . '/data/site.php';
 $testimonials = require __DIR__ . '/data/testimonials.php';
 
 $title = "Dakini Therapy — Therapist in Tampa & St. Petersburg, FL | {$site['clinician']}, {$site['credential']}";
-$desc  = 'Evidence-based, mindfulness-informed therapy for adults in Hyde Park Village, Tampa and Crescent Heights, St. Petersburg. Book a complimentary 15-minute consultation.';
+$desc  = 'Evidence-based, mindfulness-informed therapy for adults in Hyde Park Village, Tampa and St. Pete, St. Petersburg. Book a complimentary 15-minute consultation.';
 $path  = '/';
 
 $heroOverlay = true;   // full-bleed video hero sits under the header
@@ -45,11 +45,11 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
       <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <a href="<?= $site['phone_href'] ?>" data-motion="magnetic"
            class="w-full rounded-full bg-gold px-8 py-4 text-center text-sm font-semibold text-ink shadow-lift transition hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold sm:w-auto">
-          Book a free consult
+          Book a Free Consult
         </a>
         <a href="<?= $site['headway'] ?>" rel="noopener"
            class="w-full rounded-full border-2 border-white/40 bg-ink/20 px-8 py-4 text-center text-sm font-semibold text-paper-lighter backdrop-blur-sm transition hover:border-gold hover:text-gold sm:w-auto">
-          Check insurance
+          Check Insurance
         </a>
       </div>
 
@@ -112,7 +112,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
 
         <div data-motion="item" class="mt-9">
           <a href="/about" class="group inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3.5 text-xs font-semibold uppercase tracking-wider text-paper-lighter shadow-lift transition hover:bg-ink-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ink/30">
-            Read Ziji's full story
+            Read Ziji's Full Story
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
           </a>
         </div>
@@ -183,7 +183,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
                   Start therapy
                 </h3>
                 <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
-                  Meet in person at our peaceful private offices in Hyde Park (Tampa) or Crescent Heights (St. Pete), or connect through secure virtual sessions.
+                  Meet in person at our peaceful private offices in Hyde Park (Tampa) or St. Pete, or connect through secure virtual sessions.
                 </p>
               </div>
             </div>
@@ -426,8 +426,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
         <p data-motion="item" class="text-xs font-semibold uppercase tracking-[0.2em] text-olive-600">Two calm, private offices</p>
         <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">Come sit with it, in person</h2>
         <p data-motion="item" class="mt-5 text-lg leading-relaxed text-sand-700">
-          Adult clients are welcomed into two thoughtfully designed spaces where comfort, confidentiality
-          and healing come together.
+         Adult clients are welcomed into two thoughtfully designed spaces where comfort, confidentiality, and healing come together.
         </p>
       </div>
 
@@ -476,11 +475,11 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
               <div class="mt-8 flex flex-wrap items-center gap-3">
                 <a href="<?= $o['url'] ?>"
                    class="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
-                  Office details
+                  Office Details
                 </a>
                 <a href="<?= $o['map'] ?>" rel="noopener"
                    class="group inline-flex items-center gap-2 rounded-full border-2 border-ink/15 px-6 py-3 text-sm font-semibold text-ink transition hover:border-ink">
-                  Directions
+                  Get Directions
                   <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 transition group-hover:translate-x-0.5"><path d="M5 15 15 5M7 5h8v8"/></svg>
                 </a>
               </div>
