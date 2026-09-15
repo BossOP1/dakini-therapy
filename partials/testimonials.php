@@ -17,11 +17,10 @@ $tHeading     = $tHeading     ?? 'Testimonials';
 $tEyebrow     = $tEyebrow     ?? 'What clients say';
 
 $skins = ['bg-paper-light', 'bg-citron', 'bg-gold-200', 'bg-ink-200', 'bg-olive-200'];
-$tilts = ['-rotate-2', 'rotate-1', '-rotate-1', 'rotate-2', '-rotate-1', 'rotate-1'];
 
-$renderSet = function () use ($tQuotes, $skins, $tilts, $testimonials) { ?>
+$renderSet = function () use ($tQuotes, $skins, $testimonials) { ?>
   <?php foreach ($tQuotes as $i => $t): ?>
-    <figure class="mr-6 flex w-[19rem] shrink-0 flex-col rounded-sm p-8 shadow-lift transition-transform duration-300 hover:rotate-0 sm:w-[23rem] lg:mr-8 lg:w-[25rem] lg:p-10 <?= $skins[$i % count($skins)] ?> <?= $tilts[$i % count($tilts)] ?>">
+    <figure class="mr-6 flex w-[19rem] shrink-0 flex-col rounded-sm p-8 shadow-lift transition-transform duration-300 sm:w-[23rem] lg:mr-8 lg:w-[25rem] lg:p-10 <?= $skins[$i % count($skins)] ?>">
       <blockquote data-clamp class="line-clamp-[10] text-lg leading-snug text-ink lg:text-xl">
         &ldquo;<?= htmlspecialchars($t['quote']) ?>&rdquo;
       </blockquote>
@@ -38,7 +37,7 @@ $renderSet = function () use ($tQuotes, $skins, $tilts, $testimonials) { ?>
     </figure>
   <?php endforeach; ?>
 
-  <a href="/testimonials" class="mr-6 flex w-[19rem] shrink-0 rotate-1 flex-col justify-end rounded-sm bg-ink p-8 text-paper-lighter shadow-lift transition-transform duration-300 hover:rotate-0 sm:w-[23rem] lg:mr-8 lg:w-[25rem] lg:p-10">
+  <a href="/testimonials" class="mr-6 flex w-[19rem] shrink-0 flex-col justify-end rounded-sm bg-ink p-8 text-paper-lighter shadow-lift transition-transform duration-300 sm:w-[23rem] lg:mr-8 lg:w-[25rem] lg:p-10">
     <p class="font-display text-2xl font-semibold leading-snug lg:text-3xl">Read all <?= count($testimonials) ?> reviews</p>
     <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-citron">
       Testimonials

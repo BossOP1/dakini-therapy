@@ -50,7 +50,7 @@ return [
       'zip'     => '33606',
       'days'    => 'Mon, Tue',
       'hours'   => '8:00 am – 8:00 pm',
-      'parking' => 'No designated client parking. Two free garages in Hyde Park Village off Swann Ave.',
+      'parking' => 'Please note there is no designated parking for clients. There are two free parking garages in Hyde Park Village off of Swann Ave.',
       'accent'  => 'gold',
       'geo'     => ['lat' => 27.9375, 'lng' => -82.4838],
       'map'     => 'https://maps.google.com/?q=1405+W+Swann+Ave+Tampa+FL+33606',

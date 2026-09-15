@@ -394,21 +394,96 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  // ── 6. Testimonial "Read more" ────────────────────────────
-  document.querySelectorAll('[data-clamp]').forEach(quote => {
-    const toggle = quote.parentElement.querySelector('[data-clamp-toggle]')
-    if (!toggle) return
+  // ── 6. Testimonial "Read more" & Smart Whole-Word Clamping ──
+  function initClampedQuotes() {
+    document.querySelectorAll('[data-clamp]').forEach(quote => {
+      const toggle = quote.parentElement.querySelector('[data-clamp-toggle]')
 
-    // Only offer it where the text is genuinely cut off. Short reviews get no
-    // button at all, rather than a control that does nothing.
-    const clipped = () => quote.scrollHeight > quote.clientHeight + 2
-    if (!clipped()) return
-    toggle.hidden = false
+      // Store original quote text if not already stored
+      if (!quote.dataset.fullQuote) {
+        quote.dataset.fullQuote = quote.textContent.trim()
+      }
+      const fullText = quote.dataset.fullQuote
 
-    toggle.addEventListener('click', () => {
-      const open = quote.classList.toggle('line-clamp-none')
-      toggle.textContent = open ? 'Read less' : 'Read more'
+      // Measure max height for 10 lines
+      const style = window.getComputedStyle(quote)
+      const lineHeight = parseFloat(style.lineHeight) || (parseFloat(style.fontSize) * 1.375) || 28
+      const maxLines = 10
+      const maxHeight = lineHeight * maxLines + 4
+
+      // Temporarily remove clamping to check if full text genuinely overflows
+      quote.classList.remove('line-clamp-none', 'line-clamp-[10]')
+      const overflows = quote.scrollHeight > maxHeight
+
+      if (!overflows) {
+        quote.textContent = fullText
+        quote.classList.add('line-clamp-[10]')
+        if (toggle) toggle.hidden = true
+        return
+      }
+
+      // Split into words and binary search for max words that fit without mid-word splits
+      const words = fullText.split(/\s+/)
+      let low = 1
+      let high = words.length
+      let bestText = fullText
+
+      while (low <= high) {
+        const mid = Math.floor((low + high) / 2)
+        const candidateRaw = words.slice(0, mid).join(' ')
+        // Remove trailing punctuation before appending ellipsis
+        const candidateClean = candidateRaw.replace(/[.,;:!?&\u201c\u201d\u2018\u2019\s]+$/, '')
+        const endsWithQuote = fullText.endsWith('”') || fullText.endsWith('"')
+        const candidate = candidateClean + '…' + (endsWithQuote ? '”' : '')
+
+        quote.textContent = candidate
+        if (quote.scrollHeight <= maxHeight) {
+          bestText = candidate
+          low = mid + 1
+        } else {
+          high = mid - 1
+        }
+      }
+
+      quote.dataset.clampedQuote = bestText
+      const isExpanded = quote.classList.contains('is-expanded')
+
+      if (isExpanded) {
+        quote.textContent = fullText
+        quote.classList.add('line-clamp-none')
+      } else {
+        quote.textContent = bestText
+      }
+
+      if (toggle) {
+        toggle.hidden = false
+        toggle.textContent = isExpanded ? 'Read less' : 'Read more'
+
+        if (!toggle.dataset.clampBound) {
+          toggle.dataset.clampBound = 'true'
+          toggle.addEventListener('click', () => {
+            const nowExpanded = quote.classList.toggle('is-expanded')
+            if (nowExpanded) {
+              quote.classList.add('line-clamp-none')
+              quote.textContent = fullText
+              toggle.textContent = 'Read less'
+            } else {
+              quote.classList.remove('line-clamp-none')
+              quote.textContent = quote.dataset.clampedQuote || bestText
+              toggle.textContent = 'Read more'
+            }
+          })
+        }
+      }
     })
+  }
+
+  initClampedQuotes()
+
+  let clampResizeTimer
+  window.addEventListener('resize', () => {
+    clearTimeout(clampResizeTimer)
+    clampResizeTimer = setTimeout(initClampedQuotes, 150)
   })
 
   // ── 6. Gallery Lightbox ────────────────────────────────────

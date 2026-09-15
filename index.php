@@ -94,9 +94,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
           deeper wisdom that often emerges when we feel truly seen and understood.&rdquo;
         </p>
         <p data-motion="item" class="mt-5 leading-relaxed text-sand-800">
-          Before opening my private practice I spent thirteen years at the Omega Institute, working
-          alongside internationally recognized psychologists, physicians and spiritual teachers. Clients
-          often describe me as calm, grounded, resourceful, practical, and gently challenging.
+         Before opening my private practice, I spent thirteen years at the Omega Institute, working alongside internationally recognized psychologists, physicians and spiritual teachers. Clients often describe me as calm, grounded, resourceful, practical, and gently challenging.
         </p>
 
         <ul data-motion="item" class="mt-8 flex flex-wrap gap-2">
@@ -111,7 +109,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
         </ul>
 
         <div data-motion="item" class="mt-9">
-          <a href="/about" class="group inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3.5 text-xs font-semibold uppercase tracking-wider text-paper-lighter shadow-lift transition hover:bg-ink-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ink/30">
+          <a href="/about" class="group inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3.5 text-xs font-semibold tracking-wider text-paper-lighter shadow-lift transition hover:bg-ink-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ink/30">
             Read Ziji's Full Story
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
           </a>
@@ -165,8 +163,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
               </span>
               <div>
                 <h3 class="font-display text-lg font-medium text-ink sm:text-xl">
-                  Connect in a free consultation
-                </h3>
+Schedule a Free Consultation                </h3>
                 <p class="mt-1.5 text-sm leading-relaxed text-sand-700">
                   Schedule a complimentary 15-minute call to share what you're experiencing, ask questions, and ensure our clinical approach is the right mutual fit.
                 </p>
@@ -291,7 +288,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
           Reimagining what's possible in <span class="italic font-normal font-display text-gold-700">mental health</span>
         </h2>
         <p data-motion="item" class="mt-4 text-base leading-relaxed text-ink/70 sm:text-lg">
-          Dakini Therapy is leading the way in:
+          Explore ways we can work together:
         </p>
 
         <!-- Interactive Category Pills -->
