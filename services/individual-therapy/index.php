@@ -20,7 +20,7 @@ $outcomes = [
   ['Heal from grief, loss, trauma,',             ' or painful life experiences that may continue to impact your present.'],
   ['Build healthier boundaries',                 ' and improve communication in personal, family, and professional relationships.'],
   ['Better understand your attachment style',    ' and how early experiences continue to shape your relationships today.'],
-  ['Reduce or eliminate unhealthy coping strategies,', ' addictive behaviors, or self-defeating patterns.'],
+  ['Address unhealthy coping strategies,', ' addictive behaviors, or self-defeating patterns.'],
   ['Increase mindfulness',                       ' and cultivate a stronger connection between your mind, body, and emotions.'],
   ['Clarify your values, purpose, and direction', ' when navigating important life transitions or difficult decisions.'],
   ['Discover and build upon your natural strengths', ' rather than focusing solely on symptoms or problems.'],
@@ -30,8 +30,8 @@ $outcomes = [
 $faqs = [
   ['Who do you work with?', 'I offer in-person individual therapy for adults at two locations, in St. Petersburg and Tampa. Telehealth is available mainly as a backup for existing clients.'],
   ['Do you take insurance?', 'Yes, for individual therapy. I am in network with ' . implode(', ', $site['insurers']) . ' through the Headway platform. I recommend a complimentary 15-minute consultation first so I can help you book your first appointment.'],
-  ['What does a session cost?', '$' . $rate['price'] . ' per session — ' . $rate['note'] . '. If you are using insurance, Headway will give you a co-pay estimate in minutes.'],
-  ['What are the advantages of self-pay?', 'Self-pay offers greater flexibility, privacy and control. Treatment is guided by your goals rather than by a diagnosis, session limits or authorization requirements, and your therapy stays between you and me.'],
+  ['What does a session cost?', '$' . $rate['price'] . ' per session — 60-minute initial session · 50-minute follow-up sessions. If you are using insurance, Headway will give you a co-pay estimate in minutes.'],
+  ['What are the advantages of self-pay?', 'Self-pay offers greater flexibility, privacy, and control. Treatment is guided by your goals rather than by a diagnosis, session limits, or authorization requirements, and your therapy stays between you and me.'],
 ];
 
 $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'couples'));
@@ -140,7 +140,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
         <div data-motion="reveal">
           <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Benefits of individual therapy</p>
           <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-            Through our work together you may
+            Through our work together, you may :
           </h2>
           <p data-motion="item" class="mt-5 text-lg leading-relaxed text-sand-700">
             Individual therapy offers a dedicated space to better understand yourself, navigate life's
@@ -201,9 +201,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
             help you develop greater awareness, emotional resilience and lasting change.
           </p>
           <p data-motion="item">
-            I aim for a therapeutic relationship that is warm, collaborative and grounded in genuine
-            curiosity. Together we work to understand long-standing patterns, strengthen your inner
-            resources, and translate insight into action.
+          I aim for a therapeutic relationship that is warm, collaborative, and grounded in genuine curiosity. Together we work to understand long-standing patterns, strengthen your inner resources, and translate insight into action.
           </p>
           <p data-motion="item">
             Clients often describe me as calm, grounded, resourceful, practical, and gently challenging.

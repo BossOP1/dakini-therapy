@@ -26,8 +26,8 @@ $approach = [
 
 $credentials = [
   ['Smith College',            'B.A. Neuroscience'],
-  ['Clinical Mental Health',   'Master&rsquo;s degree in Counseling'],
-  ['Omega Institute',          'Thirteen years, Rhinebeck NY'],
+  ['Clinical Mental Health Counseling',   'M.A.'],
+  ['Omega Institute',          'Thirteen years, Rhinebeck, NY'],
   ['Shambhala, New York City', 'Meditation community'],
   ['Karme Choling, Vermont',   'Buddhist training and retreat'],
   ['Guru Ram Das Puri',        'Kundalini Yoga, Summer Solstice'],
@@ -111,7 +111,7 @@ $peek = array_slice($journey, 0, 4);
       <div class="mx-auto max-w-6xl">
         <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/60">Training and practice</p>
         <h2 class="mt-4 max-w-2xl font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl lg:text-5xl">
-          Where the work was learned
+          Where My Path Took Shape
         </h2>
 
         <dl class="mt-12 grid gap-x-10 gap-y-px overflow-hidden sm:grid-cols-2 lg:grid-cols-3">
@@ -191,10 +191,7 @@ $peek = array_slice($journey, 0, 4);
           Two calm, private offices
         </h2>
         <p class="mt-5 text-lg leading-relaxed text-sand-700">
-          Experience the difference that in-person therapy can make in a calm, thoughtfully designed
-          environment. I welcome adult clients into two beautiful, private offices located in
-          Tampa's Hyde Park Village and St. Petersburg (St. Pete), where comfort,
-          confidentiality, and healing come together.
+          I welcome adult clients into two beautiful, private offices located in Hyde Park Village and St. Pete, where comfort, confidentiality, and healing come together.
         </p>
       </div>
 

@@ -45,7 +45,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
       <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <a href="<?= $site['phone_href'] ?>" data-motion="magnetic"
            class="w-full rounded-full bg-gold px-8 py-4 text-center text-sm font-semibold text-ink shadow-lift transition hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold sm:w-auto">
-          Book a Free Consult
+          Book a Free Consultation
         </a>
         <a href="<?= $site['headway'] ?>" rel="noopener"
            class="w-full rounded-full border-2 border-white/40 bg-ink/20 px-8 py-4 text-center text-sm font-semibold text-paper-lighter backdrop-blur-sm transition hover:border-gold hover:text-gold sm:w-auto">
@@ -353,8 +353,8 @@ Schedule a Free Consultation                </h3>
                 <a href="<?= $s['url'] ?>" class="rounded-full bg-gold px-7 py-3 text-xs font-semibold uppercase tracking-wider text-ink transition hover:bg-gold-400">
                   Explore Service
                 </a>
-                <a href="<?= $site['phone_href'] ?>" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-paper-lighter transition hover:text-gold">
-                  Book a Consultation
+                <a href="/contact" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-paper-lighter transition hover:text-gold">
+                  Book an Appointment
                   <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-3.5 w-3.5 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
                 </a>
               </div>

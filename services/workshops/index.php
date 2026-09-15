@@ -28,12 +28,12 @@ require __DIR__ . '/../../partials/header.php';
   <!-- ═══ HERO ═══ -->
   <section class="relative isolate flex min-h-[40vh] items-end overflow-hidden px-5 pb-16 pt-36 md:min-h-[46vh] md:pb-20 lg:px-8">
     <picture>
-      <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/journey/j08-1200.webp">
-      <source type="image/webp" srcset="/assets/img/journey/j08-640.webp">
-      <img src="/assets/img/journey/j08.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async"
-           class="absolute inset-0 -z-20 h-full w-full object-cover object-[50%_30%]">
+      <source type="image/webp" media="(min-width: 1024px)" srcset="/assets/img/journey/j07-1200.webp">
+      <source type="image/webp" srcset="/assets/img/journey/j07-640.webp">
+      <img src="/assets/img/journey/j07.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async"
+           class="absolute inset-0 -z-20 h-full w-full object-cover object-center">
     </picture>
-    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-ink/60"></div>
+    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-ink/50"></div>
 
     <div class="mx-auto w-full max-w-6xl" data-motion="reveal">
       <nav aria-label="Breadcrumb" data-motion="item" class="text-[11px] font-semibold uppercase tracking-[0.2em] text-paper-lighter/70">
@@ -54,7 +54,7 @@ require __DIR__ . '/../../partials/header.php';
       <div class="lg:sticky lg:top-32 lg:self-start">
         <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">What to expect</p>
         <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-          Shaped by thirteen years at Omega
+          Shaped by 13 years at Omega
         </h2>
       </div>
 
@@ -80,9 +80,9 @@ require __DIR__ . '/../../partials/header.php';
   <section class="px-4 pb-10 md:px-8 lg:px-12 lg:pb-14">
     <div class="mx-auto max-w-7xl rounded-[2rem] bg-citron px-6 py-14 sm:px-10 lg:px-14 lg:py-16">
       <div class="mx-auto max-w-xl text-center">
-        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/60">Stay in the loop</p>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/60">Be the first to know</p>
         <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
-          Join the mailing list
+          Join the Mailing List
         </h2>
 
         <?php if ($result && ($result['ok'] ?? false)): ?>
@@ -142,7 +142,7 @@ require __DIR__ . '/../../partials/header.php';
     <div class="mx-auto max-w-6xl">
       <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">In the meantime</p>
       <h2 class="mt-4 max-w-2xl font-display text-3xl font-semibold tracking-tight md:text-4xl">
-        One-to-one work is available now
+       Looking for support now?
       </h2>
 
       <div class="mt-10 grid gap-5 md:grid-cols-2 lg:gap-6">

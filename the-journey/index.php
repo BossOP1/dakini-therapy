@@ -33,8 +33,7 @@ require __DIR__ . '/../partials/header.php';
         The Journey
       </h1>
       <p data-motion="item" class="mt-5 max-w-xl text-lg leading-relaxed text-paper-lighter">
-        Thirteen years at the Omega Institute, retreat at Karme Chöling, solstice in the New Mexico
-        desert, and the travels in between — the experiences that shape how I listen.
+       Thirteen years at the Omega Institute, retreats at Karme Chöling, solstice in the New Mexico desert, and the travels in between — the experiences that shaped how I listen.
       </p>
     </div>
   </section>

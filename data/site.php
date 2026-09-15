@@ -21,7 +21,7 @@ return [
   'rates' => [
     ['label' => 'Individual session',    'price' => 185, 'note' => '60 min initial · 50 min follow-up'],
     ['label' => 'Couples session',       'price' => 222, 'note' => '60 min initial · 50 min follow-up'],
-    ['label' => 'Couples 2HR Intensive', 'price' => 400, 'note' => 'Hyde Park Village only'],
+    ['label' => 'Couples 2-Hour Intensive', 'price' => 400, 'note' => 'Hyde Park Village only'],
   ],
 
   'offices' => [
@@ -76,7 +76,7 @@ return [
       'image'  => 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1600&q=80',
       'blurb'  => 'Move through conflict with more clarity and compassion — whether you are repairing, deepening, or thoughtfully parting.',
       'points' => ['Communication & repair', 'Recurring patterns', 'Attachment & intimacy', 'Major life decisions'],
-      'meta'   => '2HR Intensives in Hyde Park',
+      'meta'   => '2-Hour Intensives in Hyde Park',
     ],
     [
       'title'  => 'Workshops',
@@ -93,7 +93,7 @@ return [
     ['label' => 'About',     'url' => '/about'],
     ['label' => 'Services',  'children' => [
       ['label' => 'Individual Therapy', 'url' => '/services/individual-therapy', 'desc' => 'Anxiety, grief, boundaries and life transitions'],
-      ['label' => 'Couples Therapy',    'url' => '/services/couples-therapy',   'desc' => 'Communication, conflict and 2HR Intensives'],
+      ['label' => 'Couples Therapy',    'url' => '/services/couples-therapy',   'desc' => 'Communication, conflict and 2-Hour Intensives'],
       ['label' => 'Workshops',          'url' => '/services/workshops',         'desc' => 'Group sessions and seasonal gatherings'],
     ]],
     ['label' => 'Locations', 'children' => [

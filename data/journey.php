@@ -47,7 +47,7 @@ return [
     'slug'    => 'j06',
     'w'       => 1200,
     'h'       => 2133,
-    'caption' => 'Vegetarian lifestyle for nine years',
+    'caption' => 'Living a vegetarian lifestyle for nine years',
   ],
   [
     'slug'    => 'j07',
@@ -101,31 +101,33 @@ return [
     'slug'    => 'j15',
     'w'       => 1200,
     'h'       => 900,
-    'caption' => 'Lotus on Dal Lake, Kashmir, INDIA',
+    'caption' => 'Lotus on Dal Lake, Kashmir, India',
   ],
   [
     'slug'    => 'j16',
     'w'       => 1200,
     'h'       => 1200,
-    'caption' => 'Charging dowsing rods at Avebury Neolithic hedge and stone circle monument, ENGLAND.',
+    'caption' => 'Charging dowsing rods at Avebury Neolithic hedge and stone circle monument, England.',
   ],
   [
     'slug'    => 'j17',
     'w'       => 1200,
     'h'       => 1200,
-    'caption' => 'Taj Mahal in Agra, INDIA',
+    'caption' => 'Taj Mahal in Agra, India',
   ],
   [
     'slug'    => 'j18',
     'w'       => 1200,
     'h'       => 900,
-    'caption' => 'Dal Lake in Srinagar, the summer capital of Kashmir and Jammu, INDIA.',
+    'caption' => 'Dal Lake in Srinagar, the summer capital of Jammu and Kashmir, India
+
+',
   ],
   [
     'slug'    => 'j19',
     'w'       => 1200,
     'h'       => 900,
-    'caption' => 'Stonehenge, Neolithic henge monument in Amesbury, Wiltshire, ENGLAND.',
+    'caption' => 'Stonehenge, Neolithic henge monument in Amesbury, Wiltshire, England.',
   ],
   [
     'slug'    => 'j20',
@@ -137,6 +139,6 @@ return [
     'slug'    => 'j21',
     'w'       => 1200,
     'h'       => 2008,
-    'caption' => 'Saint-Remy-de-Provence. Fountain dedicated to former resident Nostradamus. FRANCE.',
+    'caption' => 'Saint-Remy-de-Provence. Fountain dedicated to former resident Nostradamus. France.',
   ],
 ];

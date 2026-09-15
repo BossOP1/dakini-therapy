@@ -21,7 +21,7 @@ $skins = ['bg-paper-light', 'bg-citron', 'bg-gold-200', 'bg-ink-200', 'bg-olive-
 $renderSet = function () use ($tQuotes, $skins, $testimonials) { ?>
   <?php foreach ($tQuotes as $i => $t): ?>
     <figure class="mr-6 flex w-[19rem] shrink-0 flex-col rounded-sm p-8 shadow-lift transition-transform duration-300 sm:w-[23rem] lg:mr-8 lg:w-[25rem] lg:p-10 <?= $skins[$i % count($skins)] ?>">
-      <blockquote data-clamp class="line-clamp-[10] text-lg leading-snug text-ink lg:text-xl">
+      <blockquote data-clamp class="line-clamp-6 break-words text-lg leading-snug text-ink lg:text-xl">
         &ldquo;<?= htmlspecialchars($t['quote']) ?>&rdquo;
       </blockquote>
       <button type="button" data-clamp-toggle hidden

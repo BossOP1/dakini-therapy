@@ -36,7 +36,7 @@ foreach ($site['offices'] as $o) { if ($o['url'] !== $office['url']) $other = $o
         <?= $office['city'] ?>, <?= $office['region'] ?>
       </p>
       <h1 data-motion="item" class="mt-4 font-display text-4xl font-semibold leading-[1.06] tracking-tight text-paper-lighter md:text-5xl lg:text-6xl">
-        <?= $office['area'] ?> office
+        <?= $office['area'] ?> Office
       </h1>
     </div>
   </section>
@@ -52,7 +52,7 @@ foreach ($site['offices'] as $o) { if ($o['url'] !== $office['url']) $other = $o
         </address>
         <a href="<?= $office['map'] ?>" rel="noopener"
            class="group mt-4 inline-flex items-center gap-2 text-sm font-semibold text-olive-700 transition hover:text-olive-600">
-          Get directions
+          Get Directions
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 transition group-hover:translate-x-0.5"><path d="M5 15 15 5M7 5h8v8"/></svg>
         </a>
       </div>
@@ -65,7 +65,7 @@ foreach ($site['offices'] as $o) { if ($o['url'] !== $office['url']) $other = $o
         <p class="mt-1 text-sm text-sand-700"><?= $office['hours'] ?></p>
         <a href="<?= $site['phone_href'] ?>"
            class="mt-5 inline-flex rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
-          Call for a Free 15-Min Consult
+          Call for a Free Consultation
         </a>
       </div>
     </div>
@@ -118,7 +118,7 @@ foreach ($site['offices'] as $o) { if ($o['url'] !== $office['url']) $other = $o
           <p class="mt-1 text-sm text-ink/70"><?= $other['city'] ?>, <?= $other['region'] ?> &middot; <?= $other['days'] ?></p>
         </div>
         <a href="<?= $other['url'] ?>" class="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-citron transition hover:bg-ink-800">
-          Visit that office
+          View <?= $other['area'] === 'Hyde Park Village' ? 'Hyde Park' : $other['area'] ?> Office
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-4 w-4 transition group-hover:translate-x-1"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
         </a>
       </div>

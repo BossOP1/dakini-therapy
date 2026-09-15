@@ -21,7 +21,7 @@
 
     <div data-motion="item" class="mt-9">
       <a href="<?= $site['phone_href'] ?>"
-         class="inline-block rounded-full bg-ink px-11 py-4 text-xs font-semibold uppercase tracking-wider text-citron shadow-lift transition hover:bg-ink-800 hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ink/30">
+         class="inline-block rounded-full bg-ink px-11 py-4 text-xs font-semibold tracking-wider text-citron shadow-lift transition hover:bg-ink-800 hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ink/30">
         Book Now
       </a>
     </div>

@@ -41,7 +41,7 @@ $types = [
 $faqs = [
   ['Do you take insurance for couples therapy?', 'No. Couples therapy is self-pay only. Insurance is accepted for individual therapy through Headway, but not for couples work.'],
   ['What does couples therapy cost?', '$' . $session['price'] . ' per session — ' . $session['note'] . '. A 2-hour Couples Intensive is $' . $intensive['price'] . '.'],
-  ['What is a 2HR Couples Intensive?', 'A single two-hour session, offered exclusively at the ' . $hydePark['area'] . ' office in ' . $hydePark['city'] . '. It gives a couple room to work through something substantial without stopping at the fifty-minute mark.'],
+  ['What is a 2-Hour Couples Intensive?', 'A single two-hour session, offered exclusively at the ' . $hydePark['area'] . ' office in ' . $hydePark['city'] . '. It gives a couple room to work through something substantial without stopping at the fifty-minute mark.'],
   ['Can I see you for individual therapy afterwards?', 'Unfortunately not. I work with many couples, and it is common for one or both partners to ask for individual therapy afterwards. I am happy to provide referrals during or after our work together. Some couples return later to refresh what they learned.'],
 ];
 
@@ -76,7 +76,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
       <div data-motion="item" class="mt-8 flex flex-col gap-3 sm:flex-row">
         <a href="<?= $site['phone_href'] ?>"
            class="rounded-full bg-gold px-8 py-4 text-center text-sm font-semibold text-ink transition hover:bg-gold-400">
-          Book a Free 15-Min Consult
+          Book a Free 15-Min Consultation
         </a>
       </div>
     </div>
@@ -106,7 +106,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
       <div aria-hidden="true" class="hidden w-px bg-sand-200 lg:block"></div>
 
       <div>
-        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">2HR Intensives</p>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">2-Hour Intensive</p>
         <p class="mt-4 font-display text-lg font-semibold text-ink">Exclusively in <?= $hydePark['area'] ?></p>
         <address class="mt-2 not-italic text-sm leading-relaxed text-sand-700">
           <?= $hydePark['street'] ?><br><?= $hydePark['city'] ?>, <?= $hydePark['region'] ?> <?= $hydePark['zip'] ?>
@@ -144,7 +144,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] === 'cou
         <div data-motion="reveal">
           <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Benefits</p>
           <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-            Through our work together, your potential is to
+            Through our work together, you may 
           </h2>
           <p data-motion="item" class="mt-5 text-lg leading-relaxed text-sand-700">
             Every relationship encounters challenges, but those challenges can also become opportunities
