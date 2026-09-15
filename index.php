@@ -136,7 +136,7 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
           
           <p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Getting started</p>
           <h2 data-motion="item" class="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl">
-            How Dakini Therapy works
+            How Dakini Therapy Works
           </h2>
 
           <div class="mt-8 space-y-4 sm:mt-10 sm:space-y-4.5">
