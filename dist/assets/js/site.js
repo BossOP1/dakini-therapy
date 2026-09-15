@@ -118,6 +118,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (form) form.hidden = true
   }
 
+  // ── 2c. Tap to pause the testimonial rail ──────────────────
+  document.querySelectorAll('[data-marquee-toggle]').forEach(wrap => {
+    const track = wrap.querySelector('[data-marquee]')
+    if (!track) return
+    wrap.addEventListener('click', (e) => {
+      // Links still navigate; only the surrounding card area toggles.
+      if (e.target.closest('a[href]')) return
+      track.classList.toggle('is-paused')
+    })
+  })
+
   // ── 3. Scroll Reveal Animation ─────────────────────────────
   if (!isReduced && 'IntersectionObserver' in window) {
     const revealElements = document.querySelectorAll('[data-motion="reveal"], [data-motion="hero"]')

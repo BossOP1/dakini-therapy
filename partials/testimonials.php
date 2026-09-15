@@ -55,9 +55,11 @@ $renderSet = function () use ($tQuotes, $skins, $tilts, $testimonials) { ?>
     </div>
   </div>
 
-  <!-- Pauses on hover; falls back to a plain scrollable row under reduced motion -->
-  <div class="group mt-10 overflow-hidden pb-8 pt-4 motion-reduce:overflow-x-auto motion-reduce:[scrollbar-width:none]">
-    <div class="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+  <!-- Pauses on hover, and on tap for touch devices where hover never fires.
+       Falls back to a plain scrollable row under reduced motion. -->
+  <div data-marquee-toggle
+       class="group mt-10 overflow-hidden pb-8 pt-4 motion-reduce:overflow-x-auto motion-reduce:[scrollbar-width:none]">
+    <div data-marquee class="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
       <?php $renderSet(); ?>
       <div class="flex" aria-hidden="true" inert><?php $renderSet(); ?></div>
     </div>

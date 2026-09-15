@@ -670,9 +670,11 @@
     </div>
   </div>
 
-  <!-- Pauses on hover; falls back to a plain scrollable row under reduced motion -->
-  <div class="group mt-10 overflow-hidden pb-8 pt-4 motion-reduce:overflow-x-auto motion-reduce:[scrollbar-width:none]">
-    <div class="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+  <!-- Pauses on hover, and on tap for touch devices where hover never fires.
+       Falls back to a plain scrollable row under reduced motion. -->
+  <div data-marquee-toggle
+       class="group mt-10 overflow-hidden pb-8 pt-4 motion-reduce:overflow-x-auto motion-reduce:[scrollbar-width:none]">
+    <div data-marquee class="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
             <figure class="mr-6 flex w-[19rem] shrink-0 flex-col rounded-sm p-8 shadow-lift transition-transform duration-300 hover:rotate-0 sm:w-[23rem] lg:mr-8 lg:w-[25rem] lg:p-10 bg-paper-light -rotate-2">
       <blockquote data-clamp class="line-clamp-[10] text-lg leading-snug text-ink lg:text-xl">
         &ldquo;Ziji is an incredibly patient and empathetic therapist. Discerning and kind, she’s a great choice for couples as well as individual therapy.&rdquo;

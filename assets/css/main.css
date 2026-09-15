@@ -49,6 +49,12 @@
   [data-vt="mark"]     { view-transition-name: mark; }
 }
 
+/* ── Testimonial rail ────────────────────────────────────────
+   Hover-to-pause never fires on a touchscreen, so the rail is also pausable
+   by tapping it. The class wins over the group-hover utility because a
+   sticky pause should not be undone by the pointer resting on the track. */
+[data-marquee].is-paused { animation-play-state: paused !important; }
+
 /* ── Menu overlay ────────────────────────────────────────────
    The panel is toggled by [hidden] and animated by [data-open], which JS
    sets one frame later so the transition has a start value to move from. */

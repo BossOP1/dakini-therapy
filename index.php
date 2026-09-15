@@ -61,16 +61,29 @@ $accents  = ['gold', 'olive', 'ink', 'olive', 'gold', 'olive'];
   </section>
 
   <!-- ═══ MEET ZIJI — Full Background Image with Wave ═══ -->
-  <section class="relative isolate flex min-h-[58vh] flex-col justify-center overflow-hidden bg-citron py-16 sm:py-16 lg:min-h-[68vh] lg:py-20">
-    
-    <!-- Full Background Image with Readability Gradient -->
-    <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-      <img src="/assets/dakini_banner_color.png" alt="Dakini Therapy — Maureen 'Ziji' Drake, LMHC"
-           class="h-full w-full object-cover object-[right_top] translate-y-6 sm:translate-y-12 lg:translate-y-20 scale-105">
+  <section class="relative isolate flex flex-col overflow-hidden bg-citron lg:min-h-[68vh] lg:justify-center lg:py-20">
+
+    <!-- lg and up: the portrait sits behind the copy as a full-bleed background -->
+    <div class="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden lg:block">
+      <img src="/assets/dakini_banner_color.png" alt="" aria-hidden="true"
+           class="h-full w-full object-cover object-[right_top] translate-y-20 scale-105">
     </div>
 
+    <!-- Below lg the photograph stacks above the copy instead of sitting
+         behind it. On a narrow screen the text landed across her face and the
+         citron had to compete with the image for contrast. This is the plain
+         portrait rather than a crop out of the wide banner, which lost most of
+         its frame at phone widths. -->
+    <picture class="lg:hidden">
+      <source type="image/webp" srcset="/assets/img/ziji-portrait.webp">
+      <img src="/assets/img/ziji-portrait.jpg"
+           alt="Maureen &lsquo;Ziji&rsquo; Drake, LMHC"
+           width="500" height="500" loading="lazy" decoding="async"
+           class="block aspect-[4/3] w-full object-cover object-[center_20%] sm:aspect-[16/9]">
+    </picture>
+
     <!-- Content firmly aligned to the Left -->
-    <div class="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 flex justify-start">
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-5 pb-20 pt-10 sm:px-8 sm:pb-24 sm:pt-12 lg:px-12 lg:py-0 flex justify-start">
       <div class="max-w-xl lg:max-w-2xl text-left" data-motion="reveal">
         <p data-motion="item" class="text-xs font-semibold uppercase tracking-[0.2em] text-olive-700">Meet Ziji</p>
         <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl lg:text-5xl leading-[1.12]">
