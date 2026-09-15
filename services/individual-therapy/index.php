@@ -69,7 +69,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
       <div data-motion="item" class="mt-8 flex flex-col gap-3 sm:flex-row">
         <a href="<?= $site['phone_href'] ?>"
            class="rounded-full bg-gold px-8 py-4 text-center text-sm font-semibold text-ink transition hover:bg-gold-400">
-          Book a Free 15-Min Consult
+          Book a Free 15-Min Consultation
         </a>
         <a href="<?= $site['headway'] ?>" rel="noopener"
            class="rounded-full border-2 border-white/60 px-8 py-4 text-center text-sm font-semibold text-paper-lighter transition hover:border-gold hover:text-gold">
