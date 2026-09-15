@@ -5,7 +5,8 @@
   "description": "Dakini Therapy, LLC \u2014 Maureen 'Ziji' Drake, LMHC",
   "scripts": {
     "dev": "tailwindcss -i ./assets/css/main.css -o ./assets/css/build.css --watch",
-    "build": "tailwindcss -i ./assets/css/main.css -o ./assets/css/build.css --minify",
+    "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/build.css --minify",
+    "build": "bash tools/export.sh",
     "serve": "php -S localhost:8000",
     "export": "bash tools/export.sh"
   },

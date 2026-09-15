@@ -13,7 +13,7 @@ OUT=dist
 command -v php >/dev/null || { echo "php not found"; exit 1; }
 
 echo "→ building css"
-npm run build --silent
+npm run build:css --silent
 
 echo "→ starting php on :$PORT"
 php -S "127.0.0.1:$PORT" > /dev/null 2>&1 &
