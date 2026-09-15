@@ -140,7 +140,7 @@ $quotes = array_values(array_filter($testimonials, fn($t) => $t['type'] !== 'cou
         <div data-motion="reveal">
           <p data-motion="item" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-olive-600">Benefits of individual therapy</p>
           <h2 data-motion="item" class="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-            Through our work together, you may :
+            Through our work together, you may:
           </h2>
           <p data-motion="item" class="mt-5 text-lg leading-relaxed text-sand-700">
             Individual therapy offers a dedicated space to better understand yourself, navigate life's
