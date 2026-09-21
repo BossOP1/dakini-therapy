@@ -262,7 +262,7 @@ export default {
         paper:  { DEFAULT:'#E9DFDD', light:'#F7F1F0', lighter:'#FBF7F6' },
       },
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'serif'],
+        display: ['Newsreader', 'Georgia', 'serif'],
         sans:    ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: { '4xl': '2rem' },
@@ -304,11 +304,11 @@ only ever carries dark text.
 
 | Role | Family | Tailwind |
 |---|---|---|
-| Display / headings | **Fraunces** (variable, soft optical serif) | `font-display` |
+| Display / headings | **Newsreader** (variable editorial serif) | `font-display` |
 | Body / UI | **Inter** (variable) | `font-sans` |
 
-Fraunces replaces Libre Baskerville: same literary warmth, far more contemporary, and its variable
-`SOFT`/`WONK` axes give personality that a static serif cannot.
+Newsreader replaced Fraunces, whose curled F and J read as too quirky in names and initials. It keeps
+the same literary warmth and contrast, with plain capitals.
 
 **Scale**
 
@@ -598,7 +598,7 @@ part of this readership, and the reduced-motion path must be a genuinely complet
 | CSS build | Tailwind CLI | One dependency, no bundler needed |
 | JS build | **esbuild** | Bundles + tree-shakes npm modules for the browser. ~30 ms builds |
 | Plugins | `@tailwindcss/typography`, `@tailwindcss/forms` | Prose pages + form styling |
-| Fonts | `@fontsource-variable/fraunces`, `@fontsource-variable/inter` | Self-hosted, GDPR-clean, no CLS |
+| Fonts | `@fontsource-variable/newsreader`, `@fontsource-variable/inter` | Self-hosted, GDPR-clean, no CLS |
 | Icons | Inline SVG (Lucide set, hand-copied) | Zero runtime cost |
 | Forms | PHP handler + PHPMailer, honeypot + rate-limit | No third-party service holding client data |
 | Images | `.webp` with `.jpg` fallback, explicit `width`/`height` | Prevents layout shift |
@@ -704,7 +704,7 @@ cd "/Users/boss/Desktop/Dakini Therapy"
 # Dependencies
 npm install -D tailwindcss @tailwindcss/typography @tailwindcss/forms esbuild
 npm install motion
-npm install @fontsource-variable/fraunces @fontsource-variable/inter
+npm install @fontsource-variable/newsreader @fontsource-variable/inter
 
 # Development — three watchers
 npm run dev        # runs css + js watchers concurrently

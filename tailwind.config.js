@@ -51,7 +51,7 @@ module.exports = {
         paper: { DEFAULT:'#E9DFDD', light:'#F7F1F0', lighter:'#FBF7F6' },
       },
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'serif'],
+        display: ['Newsreader', 'Georgia', 'serif'],
         sans:    ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: { '4xl': '2rem' },
